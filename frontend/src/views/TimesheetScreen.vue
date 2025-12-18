@@ -2924,7 +2924,8 @@ export default {
       }
       
       const { withinLegalOvertime } = this.calculateDailyWorkHourBreakdown(day)
-      return withinLegalOvertime > 0
+      // 浮動小数点数の誤差を考慮して、分単位で判定（1分以上の場合のみ表示）
+      return Math.round(withinLegalOvertime * 60) >= 1
     },
     
     // ツールチップ: 法定時間外残業を表示するかどうか
@@ -2934,7 +2935,8 @@ export default {
       }
       
       const { overLegalOvertime } = this.calculateDailyWorkHourBreakdown(day)
-      return overLegalOvertime > 0
+      // 浮動小数点数の誤差を考慮して、分単位で判定（1分以上の場合のみ表示）
+      return Math.round(overLegalOvertime * 60) >= 1
     },
     
     // ツールチップ: 法定時間内残業を取得

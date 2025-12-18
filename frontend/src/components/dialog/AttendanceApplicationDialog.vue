@@ -312,7 +312,7 @@
                   </div>
                 </div>
                 
-                <div v-if="vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY'" class="form-group form-group-inline compensatory-leave-balance-section">
+                <div v-if="vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY'" class="form-group form-group-inline">
                   <label class="label-inline">代休取得可能日数</label>
                   <div class="info-text info-text-inline">{{ compensatoryLeaveBalance }}日</div>
                 </div>
@@ -384,9 +384,11 @@
                     class="text-input"
                   />
                 </div>
-                
-                <!-- 代休取得可能日数（編集フォーム側） -->
-                <div v-if="vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY'" class="form-group form-group-inline compensatory-leave-balance-section">
+              </template>
+              
+              <!-- 代休取得可能日数（編集フォーム側） -->
+              <template v-if="!isPendingOrApproved('vacation')">
+                <div v-if="vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY'" class="form-group form-group-inline">
                   <label class="label-inline">代休取得可能日数</label>
                   <div class="info-text info-text-inline">{{ compensatoryLeaveBalance }}日</div>
                 </div>
@@ -1204,9 +1206,9 @@ export default {
     // フィルタ済み休暇種別リスト（代休は条件付きで表示）
     filteredVacationTypes() {
       return this.vacationTypes.filter(type => {
-        // 代休（SUBSTITUTE_HOLIDAY）は休日出勤申請があり、かつ代休取得可能日数が0より大きい場合のみ表示
+        // 代休（SUBSTITUTE_HOLIDAY）は休日出勤申請がある場合のみ表示
         if (type.code === 'SUBSTITUTE_HOLIDAY') {
-          return this.hasHolidayWorkApplication && this.compensatoryLeaveBalance > 0
+          return this.hasHolidayWorkApplication
         }
         // その他の休暇種別は常に表示
         return true
@@ -1369,10 +1371,9 @@ export default {
       immediate: true
     },
     targetDate() {
-      // targetDateが変更された時に勤怠データと有休残日数を再取得
+      // targetDateが変更された時に勤怠データを再取得
       if (this.visible) {
         this.loadAttendanceDataForButtonControl()
-        this.loadPaidLeaveBalance()
       }
     },
     'vacationForm.enableEndDate'(newVal) {
@@ -1503,14 +1504,15 @@ export default {
         if (response.success) {
           // 対象日の休日出勤申請または過去の休日出勤申請がある場合、代休を表示可能
           this.hasHolidayWorkApplication = response.hasHolidayWorkApplication || false
-          // 代休取得可能日数を常に再計算（休日出勤申請がない場合も0を設定するため）
-          await this.loadCompensatoryLeaveBalance()
+          // 休日出勤申請がある場合、代休取得可能日数を取得
+          if (this.hasHolidayWorkApplication) {
+            await this.loadCompensatoryLeaveBalance()
+          }
         }
       } catch (error) {
         console.error('休日出勤申請状態取得エラー:', error)
         // エラー時はfalseとして扱う
         this.hasHolidayWorkApplication = false
-        this.compensatoryLeaveBalance = 0
       }
     },
     
@@ -2647,9 +2649,9 @@ export default {
           // 休日出勤申請を取り消した場合、代休取得可能日数を再計算
           if (applicationType === 'holidayWork') {
             await this.loadHolidayWorkStatus()
-            // 代休が選択されている場合、代休取得可能日数が0になったら選択を解除
-            if (this.vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY' && this.compensatoryLeaveBalance <= 0) {
-              this.vacationForm.vacationType = ''
+            // 代休が選択されている場合、代休取得可能日数を再計算
+            if (this.vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY') {
+              await this.loadCompensatoryLeaveBalance()
             }
           }
           this.$emit('application-submitted')
@@ -3816,8 +3818,8 @@ textarea[readonly] {
 
 
 /* 休暇申請フォームの「有休残日数」「期間」「備考」「連絡先」を上にずらす */
-/* 有休残日数セクション（info-text-inlineを含むform-group-inline、ただし代休取得可能日数は除く） */
-.form-content-left > .form-group-inline:has(.info-text-inline):not(.compensatory-leave-balance-section) {
+/* 有休残日数セクション（info-text-inlineを含むform-group-inline） */
+.form-content-left > .form-group-inline:has(.info-text-inline) {
   margin-top: -20px;
   margin-bottom: 8px;
   gap: 2px;
@@ -3895,11 +3897,5 @@ textarea[readonly] {
 .form-content-left > .form-group-inline:has(.info-text-inline) .info-text-inline {
   margin-top: -7px;
   font-size: 14px;
-}
-
-/* 代休取得可能日数セクション（連絡先の下に表示される）を下にずらす */
-.form-content-left > .compensatory-leave-balance-section {
-  margin-top: 0px;
-  margin-bottom: 20px;
 }
 </style>
