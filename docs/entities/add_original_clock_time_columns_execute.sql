@@ -1,0 +1,39 @@
+-- ====================================================================
+-- TeamSpirit勤怠管理システム
+-- ORIGINAL_CLOCK_IN_TIMEとORIGINAL_CLOCK_OUT_TIMEカラム追加スクリプト
+-- 作成日: 2025-12-09
+-- 
+-- 打刻時刻を手入力で変更した場合でも、元の打刻時刻を保持するためのカラムを追加
+-- ====================================================================
+
+USE teamspirit_db;
+
+-- ATTENDANCE_RECORDテーブルにORIGINAL_CLOCK_IN_TIMEとORIGINAL_CLOCK_OUT_TIMEカラムを追加
+-- カラムが既に存在する場合はエラーになりますが、無視して続行します
+ALTER TABLE ATTENDANCE_RECORD 
+ADD COLUMN IF NOT EXISTS ORIGINAL_CLOCK_IN_TIME DATETIME COMMENT '出勤打刻時刻: 打刻機による元の時刻。手入力で変更されても保持される。形式YYYY-MM-DD HH:MM:SS' AFTER CLOCK_OUT_TYPE,
+ADD COLUMN IF NOT EXISTS ORIGINAL_CLOCK_OUT_TIME DATETIME COMMENT '退勤打刻時刻: 打刻機による元の時刻。手入力で変更されても保持される。形式YYYY-MM-DD HH:MM:SS' AFTER ORIGINAL_CLOCK_IN_TIME;
+
+-- 既存データの移行（CLOCK_IN_TYPEがSTAMPの場合はCLOCK_IN_TIMEをORIGINAL_CLOCK_IN_TIMEに設定）
+-- MySQLのsafe update modeに対応するため、WHERE句に主キー（ATTENDANCE_ID）を含める
+UPDATE ATTENDANCE_RECORD 
+SET ORIGINAL_CLOCK_IN_TIME = CLOCK_IN_TIME 
+WHERE ATTENDANCE_ID > 0 
+  AND CLOCK_IN_TYPE = 'STAMP' 
+  AND (ORIGINAL_CLOCK_IN_TIME IS NULL OR ORIGINAL_CLOCK_IN_TIME = '0000-00-00 00:00:00');
+
+-- 既存データの移行（CLOCK_OUT_TYPEがSTAMPの場合はCLOCK_OUT_TIMEをORIGINAL_CLOCK_OUT_TIMEに設定）
+-- MySQLのsafe update modeに対応するため、WHERE句に主キー（ATTENDANCE_ID）を含める
+UPDATE ATTENDANCE_RECORD 
+SET ORIGINAL_CLOCK_OUT_TIME = CLOCK_OUT_TIME 
+WHERE ATTENDANCE_ID > 0 
+  AND CLOCK_OUT_TYPE = 'STAMP' 
+  AND (ORIGINAL_CLOCK_OUT_TIME IS NULL OR ORIGINAL_CLOCK_OUT_TIME = '0000-00-00 00:00:00');
+
+
+
+
+
+
+
+

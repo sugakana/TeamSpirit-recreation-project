@@ -1,0 +1,157 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1400" height="900" fill="#f5f5f5"/>
+  
+  <!-- ヘッダー -->
+  <rect width="1400" height="60" fill="#0070d2"/>
+  <image href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23ffffff' d='M20 5 L35 15 L35 25 L20 35 L5 25 L5 15 Z'/%3E%3C/svg%3E" x="10" y="10" width="40" height="40"/>
+  <text x="60" y="38" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="bold">TeamSpirit</text>
+  
+  <!-- ナビゲーション -->
+  <text x="140" y="38" font-family="Arial, sans-serif" font-size="14" fill="white">ホーム</text>
+  <text x="220" y="38" font-family="Arial, sans-serif" font-size="14" fill="white">勤務表</text>
+  <text x="300" y="38" font-family="Arial, sans-serif" font-size="14" fill="white">工数実績</text>
+  <text x="390" y="38" font-family="Arial, sans-serif" font-size="14" fill="white">レポート</text>
+  
+  <!-- 検索ボックス -->
+  <rect x="1100" y="18" width="250" height="30" rx="15" fill="white"/>
+  <text x="1120" y="37" font-family="Arial, sans-serif" font-size="12" fill="#999">検索...</text>
+  
+  <!-- お知らせセクション -->
+  <rect x="20" y="80" width="1360" height="140" rx="5" fill="white" stroke="#ddd"/>
+  <text x="35" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">お知らせ</text>
+  <text x="35" y="135" font-family="Arial, sans-serif" font-size="13" fill="#666">10月・11月の年休取得推奨日は、10/28(金)、10/31(金)、11/25(火)です。運営日をホリトルかんでまして休むようにしましょう。年休を取得しましょう。</text>
+  <text x="35" y="160" font-family="Arial, sans-serif" font-size="13" fill="#666">[延べからのお知らせ] 毎日KUKAへログインして後続ポータルのポケット、日々の受給・時勤の気味を伝えまよう！</text>
+  <text x="35" y="185" font-family="Arial, sans-serif" font-size="13" fill="#666">[情シより] 不明点はますばFAQでご確認ください。また、追件メニューは「勤務表」「工数実績」の「?HELP」タグから取得できます。</text>
+  <text x="35" y="210" font-family="Arial, sans-serif" font-size="13" fill="#666">日次承認承方の工数実績モデータとして取得可能となりました。レポートから「のY工数実績出力レポート」を選択してください。詳細は手順はHelpサイトにあります。</text>
+  
+  <!-- TeamSpirit セクション -->
+  <rect x="20" y="240" width="1360" height="140" rx="5" fill="white" stroke="#ddd"/>
+  <text x="35" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">TeamSpirit</text>
+  
+  <!-- 時計表示 -->
+  <rect x="35" y="290" width="110" height="80" rx="3" fill="#1a73e8"/>
+  <text x="90" y="315" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">2025/11/25</text>
+  <text x="90" y="340" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold" text-anchor="middle">11:59</text>
+  <text x="90" y="360" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">(TUE)</text>
+  
+  <!-- 勤怠情報を修正して下さい -->
+  <text x="165" y="310" font-family="Arial, sans-serif" font-size="13" fill="#333">勤怠情報を修正して下さい。</text>
+  
+  <!-- 打刻ボタンエリア -->
+  <rect x="165" y="320" width="60" height="35" rx="3" fill="#5a9fd4"/>
+  <text x="195" y="343" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">出社</text>
+  
+  <rect x="235" y="320" width="60" height="35" rx="3" fill="#5a9fd4"/>
+  <text x="265" y="343" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">退社</text>
+  
+  <rect x="305" y="320" width="60" height="35" rx="3" fill="#d9d9d9"/>
+  <text x="335" y="343" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">直行</text>
+  
+  <rect x="375" y="320" width="60" height="35" rx="3" fill="#d9d9d9"/>
+  <text x="405" y="343" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">直帰/退社</text>
+  
+  <rect x="445" y="320" width="60" height="35" rx="3" fill="#d9d9d9"/>
+  <text x="475" y="343" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">外出</text>
+  
+  <!-- 遅刻ボタン -->
+  <rect x="460" y="290" width="90" height="50" rx="3" fill="#90c8f5"/>
+  <text x="505" y="320" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold" text-anchor="middle">遅刻</text>
+  
+  <!-- その他ボタン -->
+  <rect x="460" y="290" width="50" height="30" rx="3" fill="#f0f0f0"/>
+  <text x="485" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">休出</text>
+  
+  <rect x="520" y="290" width="50" height="30" rx="3" fill="#c8e6c9"/>
+  <rect x="580" y="290" width="50" height="30" rx="3" fill="#f0f0f0"/>
+  <text x="605" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">戻る</text>
+  
+  <rect x="520" y="330" width="50" height="30" rx="3" fill="#f0f0f0"/>
+  <text x="545" y="350" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">遅刻</text>
+  
+  <rect x="580" y="330" width="50" height="30" rx="3" fill="#f0f0f0"/>
+  <text x="605" y="350" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">早退</text>
+  
+  <!-- カレンダーセクションの開始 -->
+  <g id="calendar">
+    <rect x="20" y="400" width="1360" height="480" rx="5" fill="white" stroke="#ddd"/>
+    
+    <!-- 月選択 -->
+    <rect x="30" y="410" width="100" height="25" fill="white" stroke="#999"/>
+    <text x="80" y="428" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">2025年11月</text>
+    <polygon points="115,423 120,418 120,428" fill="#333"/>
+    
+    <text x="145" y="428" font-family="Arial, sans-serif" font-size="12" fill="#0070d2" text-decoration="underline">&lt;&lt;前月</text>
+    <text x="220" y="428" font-family="Arial, sans-serif" font-size="12" fill="#0070d2" text-decoration="underline">今月</text>
+    <text x="270" y="428" font-family="Arial, sans-serif" font-size="12" fill="#0070d2" text-decoration="underline">次月&gt;&gt;</text>
+    
+    <!-- カレンダーヘッダー -->
+    <rect x="30" y="445" width="1340" height="30" fill="#e8f4ff"/>
+    <text x="50" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">日付</text>
+    <text x="110" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">勤務パターン</text>
+    <text x="180" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">出社</text>
+    <text x="230" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">退社</text>
+    <text x="280" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">遅刻</text>
+    <text x="330" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">勤務場所</text>
+    <text x="400" y="463" font-family="Arial, sans-serif" font-size="11" fill="#333">工数</text>
+    <text x="450" y="463" font-family="Arial, sans-serif" font-size="10" fill="#333">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24...</text>
+    
+    <!-- カレンダー行 -->
+    <!-- 11/1 -->
+    <rect x="30" y="475" width="1340" height="25" fill="#fff"/>
+    <text x="40" y="492" font-family="Arial, sans-serif" font-size="11" fill="#333">11/1 金</text>
+    
+    <!-- 11/2 土 -->
+    <rect x="30" y="500" width="1340" height="25" fill="#ffe8d9"/>
+    <text x="40" y="517" font-family="Arial, sans-serif" font-size="11" fill="#333">2 土</text>
+    
+    <!-- 11/3 日 -->
+    <rect x="30" y="525" width="1340" height="25" fill="#ffe8d9"/>
+    <text x="40" y="542" font-family="Arial, sans-serif" font-size="11" fill="#333">3 月</text>
+    
+    <!-- 11/4 水 -->
+    <rect x="30" y="550" width="1340" height="25" fill="#e8f5ff"/>
+    <text x="40" y="567" font-family="Arial, sans-serif" font-size="11" fill="#333">4 火</text>
+    <text x="180" y="567" font-family="Arial, sans-serif" font-size="11" fill="#333">8:48</text>
+    <text x="230" y="567" font-family="Arial, sans-serif" font-size="11" fill="#333">17:48</text>
+    <text x="280" y="567" font-family="Arial, sans-serif" font-size="11" fill="#333">在宅</text>
+    <text x="400" y="567" font-family="Arial, sans-serif" font-size="11" fill="#0070d2">8:00</text>
+    <rect x="520" y="555" width="220" height="15" fill="#4a9eff" rx="2"/>
+    
+    <!-- 11/5 木 -->
+    <rect x="30" y="575" width="1340" height="25" fill="#e8f5ff"/>
+    <text x="40" y="592" font-family="Arial, sans-serif" font-size="11" fill="#333">5 水</text>
+    <text x="180" y="592" font-family="Arial, sans-serif" font-size="11" fill="#333">8:50</text>
+    <text x="230" y="592" font-family="Arial, sans-serif" font-size="11" fill="#333">19:03</text>
+    <text x="280" y="592" font-family="Arial, sans-serif" font-size="11" fill="#333">渋谷</text>
+    <text x="400" y="592" font-family="Arial, sans-serif" font-size="11" fill="#0070d2">9:13</text>
+    <rect x="524" y="580" width="240" height="15" fill="#4a9eff" rx="2"/>
+    
+    <!-- 11/6 金 -->
+    <rect x="30" y="600" width="1340" height="25" fill="#e8f5ff"/>
+    <text x="40" y="617" font-family="Arial, sans-serif" font-size="11" fill="#333">6 木</text>
+    <text x="180" y="617" font-family="Arial, sans-serif" font-size="11" fill="#333">8:47</text>
+    <text x="230" y="617" font-family="Arial, sans-serif" font-size="11" fill="#333">17:52</text>
+    <text x="280" y="617" font-family="Arial, sans-serif" font-size="11" fill="#333">在宅</text>
+    <text x="400" y="617" font-family="Arial, sans-serif" font-size="11" fill="#0070d2">8:05</text>
+    <rect x="520" y="605" width="220" height="15" fill="#4a9eff" rx="2"/>
+    
+    <!-- 11/7 土 -->
+    <rect x="30" y="625" width="1340" height="25" fill="#e8f5ff"/>
+    <text x="40" y="642" font-family="Arial, sans-serif" font-size="11" fill="#333">7 金</text>
+    <text x="180" y="642" font-family="Arial, sans-serif" font-size="11" fill="#333">8:46</text>
+    <text x="230" y="642" font-family="Arial, sans-serif" font-size="11" fill="#333">17:47</text>
+    <text x="280" y="642" font-family="Arial, sans-serif" font-size="11" fill="#333">在宅</text>
+    <text x="400" y="642" font-family="Arial, sans-serif" font-size="11" fill="#0070d2">8:01</text>
+    <rect x="520" y="630" width="215" height="15" fill="#4a9eff" rx="2"/>
+  </g>
+  
+  <!-- 画面下部の統計情報 -->
+  <rect x="30" y="855" width="200" height="20" fill="#f0f0f0"/>
+  <text x="35" y="868" font-family="Arial, sans-serif" font-size="11" fill="#333">所定出勤日数</text>
+  <text x="220" y="868" font-family="Arial, sans-serif" font-size="11" fill="#333">18 日</text>
+  
+  <text x="290" y="868" font-family="Arial, sans-serif" font-size="11" fill="#6ba5d2">過不足時間(11/24まで)</text>
+  <text x="480" y="868" font-family="Arial, sans-serif" font-size="11" fill="#333">+9:05</text>
+</svg>
+

@@ -1,0 +1,240 @@
+---
+description: エンティティ一覧を作成する処理に対して、docs/entities配下のMarkdownファイルを対象とするルール
+globs: docs/entities/**/*.md
+alwaysApply: false
+---
+# エンティティ一覧のルール
+
+## 概要
+このルールは、プロジェクト内のエンティティ一覧を作成・管理するためのガイドラインを提供します。
+
+## エンティティ一覧の基本構造
+
+### 1. ファイル配置
+- エンティティ一覧は `docs/entities/` ディレクトリに配置する
+- 各エンティティの詳細は個別のMarkdownファイルとして管理
+- メインの一覧ファイルは `entity-list.md` として作成
+
+### 2. エンティティ一覧
+
+#### 2.1 ドキュメント作成ルール
+- 以下の内容を記載すること
+  - タイトル
+    - システム名を明記すること。
+  - エンティティ一覧
+    - 以下のテーブルヘッダー及びルールで記載する
+      | No | エンティティ名 | 正式英名 | 説明 |
+      | --- | --- | --- | --- |
+      | 自動採番（1から昇順） | 日本語名称（短く分かりやすく） | テーブル英名（全大文字＋アンダースコア） | そのエンティティの役割や保有情報を簡潔に記述 |
+    - 「エンティティ名」には一般ユーザーが理解しやすい名称を使う。
+    - 「正式英名」は物理テーブル名をそのまま記載（命名規則：大文字・スネークケース）。
+    - 「説明」は業務知識のない読者にも分かるように、簡潔に書く（30~50字程度を目安）。
+  - 変更履歴
+    - 以下のテーブルヘッダー及びルールで記載する
+      | 日付 | 変更内容 | 変更者 |
+      | --- | --- | --- |
+      | yyyy-mm-dd | 修正・追加内容を具体的に記載 | 開発者名 |
+    - 変更があったら都度追記。上書き禁止。
+    - 新規作成時は「初版作成」と記載。
+    - 更新時は「〇〇エンティティを追加」「△△の説明を修正」など具体的に変更内容を記載。
+    - 日付は`yyyy-mm-dd`形式で統一し、更新日を記載すること
+    - 開発者名はCursorのアカウント名を記載すること。
+
+#### 2.2 サンプル
+- 以下はエンティティ一覧のサンプルである。
+  ```markdown
+  # 顧客管理システム
+
+  ## エンティティ一覧
+  | No | エンティティ名 | 正式英名 | 説明 |
+  | --- | --- | --- | --- |
+  | 1 | ユーザーマスタ | USER_MASTER | システム利用ユーザーの基本情報を管理するエンティティです。 |
+  | 2 | 取引情報 | TRANSACTION_INFORMATION | 各ユーザーに紐づく売買や契約などの取引履歴を記録・管理します。 |
+  | 3 | 商品マスタ | PRODUCT_MASTER | システム上で取り扱う商品の情報（商品名・価格など）を保持します。 |
+  | 4 | カテゴリマスタ | CATEGORY_MASTER | 商品に紐づく分類情報を管理するためのエンティティです。 |
+  | 5 | LOGIN_HISTORY | 各ユーザーのシステムログイン日時やIPアドレス等を記録します。 |
+
+  ## 変更履歴
+  | 日付 | 変更内容 | 変更者 |
+  |------|----------|--------|
+  | 2025-03-02 | 初版作成 | dev_user01 |
+  ```
+
+### 3. 個別エンティティファイル
+
+#### 3.1 ドキュメント作成ルール
+- 以下の内容を記載すること
+  - タイトル
+    - システム名とエンティティ名を明記する。
+  - 概要
+    - そのエンティティがなぜ存在するのか、どのような情報を管理するのかを記述する。
+    - 業務視点とデータ管理視点の両面から簡潔に（3~5行程度）。
+  - 属性
+    - 以下のテーブルヘッダー及びルールで記載する。
+      | No | 項目名 | 正式英名 | 略式英名 | 主キー | ソートキー | GSI_PK | GSI_SK | LSI_SK | データ型 | 桁数 | NULL可 | デフォルト | 必須 | 備考 |
+      | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+      | 自動採番（1から昇順） | 日本語で簡潔に記述 | データベースから無名（全大文字、アンダースコア区切り） | APIやフロントで使われる略記（正式英名と同じ場合も可） | 該当項目がパーティションキー（主キー）であれば「〇」、それ以外は空欄（全項目の中で1つ設定） | 該当項目がソートキーであれば「〇」、それ以外は空欄（全項目の中で1つのみ設定可能） | 該当項目がGSI_PKであれば「〇」、それ以外は空欄 | 該当項目がGSI_SKであれば「〇」、それ以外は空欄 | 該当項目がLSI_SKであれば「〇」、それ以外は空欄 | DynamoDBの型（String,Number,Boolean,Binary,Map,Listなど）を記載。 | 業務上の制約がある場合に記載 | 「可」「不可」で記載 | 省略可能。必要に応じて「NULL」「CURRENT_TIMESTAMP」など記載 | アプリケーション上の入力必須項目なら「必須」、そうでなければ空欄 | 必要な場合、日本語で意味や補足説明を記載 |
+  - 関連エンティティ
+    - 関連先のエンティティ名を列挙
+    - 関係性（1対1、1対多、多体多）を明記
+    - どのようにキー設計で関連付けるか を記載する。
+  - ビジネスルール
+    - 入力制限（文字種・長さなど）
+    - 一意制約や複合キー制約
+    - アプリケーション層でのバリデーション要件など
+  - 使用例
+    - SQL文の標準テンプレート（`create_table`/`put_item`/`update_item`/`delete_item`/`get_item/query`）を記載する。
+    - Pythonコード（boto3）を想定し、コメント付きで可読性を高める。
+  - 変更履歴
+    - 以下のテーブルヘッダー及びルールで記載する
+      | 日付 | 変更内容 | 変更者 |
+      | --- | --- | --- |
+      | yyyy-mm-dd | 修正・追加内容を具体的に記載 | 開発者名 |
+    - 変更があったら都度追記。上書き禁止。
+    - 新規作成時は「初版作成」と記載。
+    - 更新時は「〇〇エンティティを追加」「△△の説明を修正」など具体的に変更内容を記載。
+    - 日付は`yyyy-mm-dd`形式で統一し、更新日を記載すること
+    - 開発者名はCursorのアカウント名を記載すること。
+
+#### 3.2 サンプル
+- 以下は個別エンティティファイルのサンプルである。
+  ```markdown
+  # 顧客管理システム
+  # ユーザーマスタ（USER_MASTER）
+
+  ## 概要
+  ユーザーマスタは、本システムを利用するユーザーの基本情報を管理するエンティティである。  
+  業務上はログイン認証、通知送信、顧客識別のための基礎情報として使用される。  
+  データ管理の観点では、主にユーザー識別子、氏名、連絡先メールアドレスを一元管理する役割を持つ。
+
+  ## 属性
+  | No | 項目名 | 正式英名 | 略式英名 | 主キー | ソートキー | GSI_PK | GSI_SK | LSI_SK | データ型 | 桁数 | NULL可 | デフォルト | 必須 | 備考 |
+  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+  | 1 | ユーザーID | USER_ID | USER_ID | 〇 |  |  |  |  | String | 100 | 不可 |  | 必須 | ユーザーの一意識別子 |
+  | 2 | ユーザー名 | USER_NAME | USER_NAME |  |  |  |  |  | String | 156 | 可 | NULL |  | ユーザーの氏名 |
+  | 3 | メールアドレス | EMAIL_ADDRESS | EMAIL_ADDRESS |  |  | 〇 | 〇 |  | String | 256 | 可 | NULL |  | 連絡用のメールアドレス |
+
+  ## 関連エンティティ
+  - 【取引情報（TRANSACTION_INFORMATION）】
+    - 関係性：1対多（1ユーザー：N取引）
+    - 結合キー：PK = USER#<USER_ID>（USER_MASTER）、SK = ORDER#<OrderID>（TRANSACTION_INFORMATION）
+
+  ## ビジネスルール
+  - ユーザーIDは全角文字を含まず、英数字と一部記号（`-`,`_`）のみ許容（最大100文字）
+  - メールアドレスはRFC準拠で一意である必要あり（アプリ層で重複チェック）
+  - ユーザーIDをパーティションキーとし、重複を禁止
+  - ユーザー名は任意だが、最大156文字以内に制限
+  - メールアドレスは形式バリデーション（例：`user@example.com`）
+
+  ## 使用例（Python / boto3）
+
+  ### テーブル作成
+  ```python
+  import boto3
+
+  dynamodb = boto3.client('dynamodb')
+
+  dynamodb.create_table(
+      TableName='USER_MASTER',
+      KeySchema=[
+          {'AttributeName': 'USER_ID', 'KeyType': 'HASH'}  # パーティションキー
+      ],
+      AttributeDefinitions=[
+          {'AttributeName': 'USER_ID', 'AttributeType': 'S'},
+          {'AttributeName': 'EMAIL_ADDRESS', 'AttributeType': 'S'}  # GSI用
+      ],
+      GlobalSecondaryIndexes=[
+          {
+              'IndexName': 'EMAIL_INDEX',
+              'KeySchema': [
+                  {'AttributeName': 'EMAIL_ADDRESS', 'KeyType': 'HASH'}
+              ],
+              'Projection': {'ProjectionType': 'ALL'},
+              'ProvisionedThroughput': {'ReadCapacityUnits': 5, 'WriteCapacityUnits': 5}
+          }
+      ],
+      BillingMode='PROVISIONED',
+      ProvisionedThroughput={'ReadCapacityUnits': 5, 'WriteCapacityUnits': 5}
+  )
+  レコード追加（put_item）
+  python
+  コピーする
+  編集する
+  import boto3
+
+  dynamodb = boto3.client('dynamodb')
+  table = boto3.resource('dynamodb').Table('USER_MASTER')
+
+  table.put_item(
+      Item={
+          'USER_ID': 'user-001',
+          'USER_NAME': '山田太郎',
+          'EMAIL_ADDRESS': 'taro@example.com'
+      }
+  )
+  ```
+
+  ### レコード追加（put=item）
+  ```python
+  import boto3
+
+  dynamodb = boto3.client('dynamodb')
+  table = boto3.resource('dynamodb').Table('USER_MASTER')
+
+  table.put_item(
+      Item={
+          'USER_ID': 'user-001',
+          'USER_NAME': '山田太郎',
+          'EMAIL_ADDRESS': 'taro@example.com'
+      }
+  )
+  ```
+
+  ### レコード更新（update_item）
+  ```python
+  import boto3
+
+  dynamodb = boto3.client('dynamodb')
+  table = boto3.resource('dynamodb').Table('USER_MASTER')
+
+  table.update_item(
+      Key={'USER_ID': 'user-001'},
+      UpdateExpression='SET USER_NAME = :name',
+      ExpressionAttributeValues={':name': '山田次郎'}
+  )
+  ```
+
+  ### レコード削除（delete_item）
+  ```python
+  import boto3
+
+  dynamodb = boto3.client('dynamodb')
+  table = boto3.resource('dynamodb').Table('USER_MASTER')
+
+  table.delete_item(Key={'USER_ID': 'user-001'})
+  ```
+
+  ### レコード取得（SELECT）
+  ```python
+  import boto3
+
+  dynamodb = boto3.client('dynamodb')
+  table = boto3.resource('dynamodb').Table('USER_MASTER')
+
+  # 単一取得
+  response = table.get_item(Key={'USER_ID': 'user-001'})
+  user = response.get('Item')
+
+  # GSIを使った検索
+  response = table.query(
+      IndexName='EMAIL_INDEX',
+      KeyConditionExpression=boto3.dynamodb.conditions.Key('EMAIL_ADDRESS').eq('taro@example.com')
+  )
+  users = response['Items']
+  ```
+
+  ## 変更履歴
+  | 日付 | 変更内容 | 変更者 |
+  |------|----------|--------|
+  | 2025-03-02 | 初版作成 | dev_user01 |
+  ```

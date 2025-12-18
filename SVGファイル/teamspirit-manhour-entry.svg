@@ -1,0 +1,164 @@
+<svg width="930" height="380" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景オーバーレイ -->
+  <rect width="930" height="380" fill="rgba(0,0,0,0.3)"/>
+  
+  <!-- ダイアログボックス -->
+  <rect x="10" y="10" width="910" height="360" rx="5" fill="white" stroke="#ccc" stroke-width="1"/>
+  
+  <!-- ヘッダー -->
+  <rect x="10" y="10" width="910" height="30" rx="5" fill="#d0e8f7"/>
+  <text x="25" y="30" font-family="Arial, sans-serif" font-size="13" fill="#333" font-weight="bold">工数実績入力</text>
+  
+  <!-- 閉じるボタン -->
+  <circle cx="900" cy="25" r="8" fill="#ccc"/>
+  <text x="900" y="29" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">×</text>
+  
+  <!-- 日付と時間 -->
+  <text x="25" y="60" font-family="Arial, sans-serif" font-size="11" fill="#333">2025年11月21日金曜日　実労働時間：8:14</text>
+  <text x="870" y="60" font-family="Arial, sans-serif" font-size="11" fill="#0070d2" text-anchor="end" text-decoration="underline">※配当日次確定済みの為必要更不可</text>
+  
+  <!-- タスク検索エリア -->
+  <rect x="25" y="70" width="420" height="30" rx="3" fill="#d0e8f7"/>
+  <text x="210" y="90" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">タスク</text>
+  
+  <circle cx="250" cy="85" r="8" fill="white" stroke="#ccc"/>
+  <text x="250" y="89" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">🔍</text>
+  
+  <text x="270" y="90" font-family="Arial, sans-serif" font-size="11" fill="#666">(企業表示)</text>
+  
+  <!-- 作業時間・ボリューム列ヘッダー -->
+  <text x="660" y="85" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">作業時間・ボリューム</text>
+  <text x="560" y="95" font-family="Arial, sans-serif" font-size="9" fill="#666">0　1　2　3　4　5　6　7　8　9　10</text>
+  
+  <!-- タスクリスト -->
+  <!-- タスク1 -->
+  <rect x="15" y="105" width="900" height="55" fill="#f9f9f9" stroke="#e0e0e0"/>
+  <text x="25" y="125" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">1</text>
+  <text x="45" y="125" font-family="Arial, sans-serif" font-size="10" fill="#0070d2">ZXXA2506B 人頭_昇格試験実施25152025-300／00X100 00X間接</text>
+  
+  <!-- スライダー背景 -->
+  <rect x="560" y="112" width="200" height="8" rx="4" fill="#e0e0e0"/>
+  <!-- スライダー値部分（0.49時間 = 4.9%） -->
+  <rect x="560" y="112" width="10" height="8" rx="4" fill="#4a9eff"/>
+  <!-- スライダーつまみ -->
+  <circle cx="570" cy="116" r="5" fill="white" stroke="#4a9eff" stroke-width="2"/>
+  
+  <!-- 目盛り点 -->
+  <circle cx="560" cy="116" r="1.5" fill="white"/>
+  <circle cx="580" cy="116" r="1.5" fill="white"/>
+  <circle cx="600" cy="116" r="1.5" fill="white"/>
+  <circle cx="620" cy="116" r="1.5" fill="white"/>
+  <circle cx="640" cy="116" r="1.5" fill="white"/>
+  <circle cx="660" cy="116" r="1.5" fill="white"/>
+  <circle cx="680" cy="116" r="1.5" fill="white"/>
+  <circle cx="700" cy="116" r="1.5" fill="white"/>
+  <circle cx="720" cy="116" r="1.5" fill="white"/>
+  <circle cx="740" cy="116" r="1.5" fill="white"/>
+  <circle cx="760" cy="116" r="1.5" fill="white"/>
+  
+  <!-- 時間表示 -->
+  <rect x="780" y="108" width="50" height="20" fill="white" stroke="#ccc" rx="2"/>
+  <text x="805" y="121" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">0:49</text>
+  
+  <!-- 更新ボタン -->
+  <circle cx="850" cy="118" r="12" fill="#0096ff"/>
+  <text x="850" y="122" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">↻</text>
+  
+  <!-- 作業コード -->
+  <text x="560" y="140" font-family="Arial, sans-serif" font-size="9" fill="#666">作業コード</text>
+  <rect x="620" y="130" width="100" height="18" fill="white" stroke="#ccc" rx="2"/>
+  
+  <circle cx="895" cy="148" r="4" fill="#ccc"/>
+  
+  <!-- タスク2 -->
+  <rect x="15" y="160" width="900" height="55" fill="white" stroke="#e0e0e0"/>
+  <text x="25" y="180" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">2</text>
+  <text x="45" y="180" font-family="Arial, sans-serif" font-size="10" fill="#0070d2">ZXXA2503F S一般戦略-自社サービスソリューションZプロダクト開発2025-611／00X100 00X間接</text>
+  
+  <!-- スライダー背景 -->
+  <rect x="560" y="167" width="200" height="8" rx="4" fill="#e0e0e0"/>
+  <!-- スライダー値部分（7.25時間 = 72.5%） -->
+  <rect x="560" y="167" width="145" height="8" rx="4" fill="#4a9eff"/>
+  <!-- スライダーつまみ -->
+  <circle cx="705" cy="171" r="5" fill="white" stroke="#4a9eff" stroke-width="2"/>
+  
+  <!-- 目盛り点 -->
+  <circle cx="560" cy="171" r="1.5" fill="white"/>
+  <circle cx="580" cy="171" r="1.5" fill="white"/>
+  <circle cx="600" cy="171" r="1.5" fill="white"/>
+  <circle cx="620" cy="171" r="1.5" fill="white"/>
+  <circle cx="640" cy="171" r="1.5" fill="white"/>
+  <circle cx="660" cy="171" r="1.5" fill="white"/>
+  <circle cx="680" cy="171" r="1.5" fill="white"/>
+  <circle cx="700" cy="171" r="1.5" fill="white"/>
+  <circle cx="720" cy="171" r="1.5" fill="white"/>
+  <circle cx="740" cy="171" r="1.5" fill="white"/>
+  <circle cx="760" cy="171" r="1.5" fill="white"/>
+  
+  <!-- 時間表示 -->
+  <rect x="780" y="163" width="50" height="20" fill="white" stroke="#ccc" rx="2"/>
+  <text x="805" y="176" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">7:25</text>
+  
+  <!-- 更新ボタン -->
+  <circle cx="850" cy="173" r="12" fill="#0096ff"/>
+  <text x="850" y="177" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">↻</text>
+  
+  <!-- 作業コード -->
+  <text x="560" y="195" font-family="Arial, sans-serif" font-size="9" fill="#666">作業コード</text>
+  <rect x="620" y="185" width="100" height="18" fill="white" stroke="#ccc" rx="2"/>
+  
+  <circle cx="895" cy="203" r="4" fill="#ccc"/>
+  
+  <!-- タスク3 -->
+  <rect x="15" y="215" width="900" height="55" fill="#f9f9f9" stroke="#e0e0e0"/>
+  <text x="25" y="235" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">3</text>
+  <text x="45" y="235" font-family="Arial, sans-serif" font-size="10" fill="#0070d2">ZZW64 囲碁作業 研修（全社払い）✓00X100 00X間接</text>
+  
+  <!-- スライダー背景 -->
+  <rect x="560" y="222" width="200" height="8" rx="4" fill="#e0e0e0"/>
+  <!-- スライダー値部分（0時間 = 0%） -->
+  <rect x="560" y="222" width="0" height="8" rx="4" fill="#4a9eff"/>
+  <!-- スライダーつまみ -->
+  <circle cx="560" cy="226" r="5" fill="white" stroke="#4a9eff" stroke-width="2"/>
+  
+  <!-- 目盛り点 -->
+  <circle cx="560" cy="226" r="1.5" fill="white"/>
+  <circle cx="580" cy="226" r="1.5" fill="white"/>
+  <circle cx="600" cy="226" r="1.5" fill="white"/>
+  <circle cx="620" cy="226" r="1.5" fill="white"/>
+  <circle cx="640" cy="226" r="1.5" fill="white"/>
+  <circle cx="660" cy="226" r="1.5" fill="white"/>
+  <circle cx="680" cy="226" r="1.5" fill="white"/>
+  <circle cx="700" cy="226" r="1.5" fill="white"/>
+  <circle cx="720" cy="226" r="1.5" fill="white"/>
+  <circle cx="740" cy="226" r="1.5" fill="white"/>
+  <circle cx="760" cy="226" r="1.5" fill="white"/>
+  
+  <!-- 時間表示 -->
+  <rect x="780" y="218" width="50" height="20" fill="white" stroke="#ccc" rx="2"/>
+  <text x="805" y="231" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">0:00</text>
+  
+  <!-- 更新ボタン -->
+  <circle cx="850" cy="228" r="12" fill="#0096ff"/>
+  <text x="850" y="232" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">↻</text>
+  
+  <!-- 作業コード -->
+  <text x="560" y="250" font-family="Arial, sans-serif" font-size="9" fill="#666">作業コード</text>
+  <rect x="620" y="240" width="100" height="18" fill="white" stroke="#ccc" rx="2"/>
+  
+  <circle cx="895" cy="258" r="4" fill="#ccc"/>
+  
+  <!-- 合計行 -->
+  <rect x="15" y="270" width="900" height="25" fill="white" stroke="#e0e0e0"/>
+  <text x="45" y="287" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">合計</text>
+  <text x="805" y="287" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold" text-anchor="middle">8:14</text>
+  
+  <!-- 下部のスクロールバー（視覚的表現） -->
+  <rect x="15" y="295" width="900" height="3" fill="#f0f0f0"/>
+  <rect x="15" y="295" width="300" height="3" fill="#ccc" rx="1"/>
+  
+  <!-- ボタン群 -->
+  <text x="460" y="330" font-family="Arial, sans-serif" font-size="12" fill="#0070d2" text-anchor="middle" text-decoration="underline">閉じる</text>
+  
+  <text x="870" y="330" font-family="Arial, sans-serif" font-size="12" fill="#0070d2" text-anchor="end" text-decoration="underline">設定</text>
+</svg>

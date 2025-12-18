@@ -1,0 +1,26 @@
+{
+  "originalFile": "header.json",
+  "conversion": {
+    "startedAt": "2025-01-27T12:00:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成と全ノードの変換",
+        "startedAt": "2025-01-27T12:00:00.000Z",
+        "completedAt": "2025-01-27T12:00:00.000Z",
+        "processedLines": "1-882",
+        "totalLines": 882,
+        "nodesProcessed": 15,
+        "notes": "全ノードを処理完了。GROUP、VECTOR、TEXT、LINEノードをHTMLに変換しました。GROUP内の子要素の相対位置を正確に計算し、LINEノードの回転も正しく処理しました。"
+      }
+    },
+    "completedAt": "2025-01-27T12:00:00.000Z",
+    "summary": {
+      "totalFilesProcessed": 1,
+      "totalNodesProcessed": 15,
+      "totalLinesProcessed": 882,
+      "allPhasesCompleted": true
+    }
+  }
+}
+

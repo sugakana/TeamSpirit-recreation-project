@@ -1,0 +1,994 @@
+[
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 376",
+    "x": -3214,
+    "y": 1929,
+    "width": 710,
+    "height": 396,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.4588235318660736,
+          "g": 0.615686297416687,
+          "b": 0.7529411911964417
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 377",
+    "x": -3214,
+    "y": 1929,
+    "width": 710,
+    "height": 35,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8039215803146362,
+          "g": 0.9058823585510254,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "勤怠関連申請",
+    "x": -3204,
+    "y": 1939,
+    "width": 139,
+    "height": 17,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.09615384787321091,
+          "g": 0.09569156914949417,
+          "b": 0.09569156914949417
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "勤怠関連申請",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "2025年11月26日水曜日",
+    "x": -3191,
+    "y": 1975,
+    "width": 162,
+    "height": 17,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.09615384787321091,
+          "g": 0.09569156914949417,
+          "b": 0.09569156914949417
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "2025年11月26日水曜日",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "VECTOR",
+    "name": "Rectangle 378",
+    "x": -3204,
+    "y": 2032,
+    "width": 687,
+    "height": 241,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.9904597401618958,
+          "g": 0.9904597401618958,
+          "b": 0.9904597401618958
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.7098039388656616,
+          "g": 0.7372549176216125,
+          "b": 0.7803921699523926
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "vectorPaths": [
+      {
+        "data": "M 0 0 L 687 0 L 687 241 L 0 241 L 0 0 Z",
+        "windingRule": "NONZERO"
+      }
+    ]
+  },
+  {
+    "type": "VECTOR",
+    "name": "Rectangle 379",
+    "x": -3204,
+    "y": 1998,
+    "width": 75,
+    "height": 34,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.9904597401618958,
+          "g": 0.9904597401618958,
+          "b": 0.9904597401618958
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.7098039388656616,
+          "g": 0.7372549176216125,
+          "b": 0.7803921699523926
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "vectorPaths": [
+      {
+        "data": "M 0 0 L 75 0 L 75 34 L 0 34 L 0 0 Z",
+        "windingRule": "NONZERO"
+      }
+    ]
+  },
+  {
+    "type": "TEXT",
+    "name": "メニュー",
+    "x": -3192,
+    "y": 2007,
+    "width": 57,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "メニュー",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 380",
+    "x": -3189,
+    "y": 2038,
+    "width": 199,
+    "height": 31,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "日時確定",
+    "x": -3180,
+    "y": 2044,
+    "width": 60,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "日時確定",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "日時確定を申請します。",
+    "x": -2967,
+    "y": 2044,
+    "width": 172,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "日時確定を申請します。",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 381",
+    "x": -3190,
+    "y": 2073,
+    "width": 199,
+    "height": 31,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "休暇申請",
+    "x": -3181,
+    "y": 2079,
+    "width": 60,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "休暇申請",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "休暇、代休、時間単位休暇を申請します。",
+    "x": -2967,
+    "y": 2079,
+    "width": 292,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "休暇、代休、時間単位休暇を申請します。",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 382",
+    "x": -3189,
+    "y": 2111,
+    "width": 199,
+    "height": 31,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "休日出勤申請",
+    "x": -3180,
+    "y": 2117,
+    "width": 136,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "休日出勤申請",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 383",
+    "x": -3190,
+    "y": 2150,
+    "width": 199,
+    "height": 31,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "残業申請",
+    "x": -3181,
+    "y": 2156,
+    "width": 60,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "残業申請",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 384",
+    "x": -3190,
+    "y": 2188,
+    "width": 199,
+    "height": 31,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "早朝勤務申請",
+    "x": -3181,
+    "y": 2194,
+    "width": 94,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "早朝勤務申請",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 385",
+    "x": -3191,
+    "y": 2227,
+    "width": 199,
+    "height": 31,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "振替申請",
+    "x": -3182,
+    "y": 2233,
+    "width": 60,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "振替申請",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "休日出勤を申請します。",
+    "x": -2967,
+    "y": 2117,
+    "width": 292,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "休日出勤を申請します。",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "残業出勤を申請します。",
+    "x": -2967,
+    "y": 2156,
+    "width": 292,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "残業出勤を申請します。",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "早朝勤務を申請します。",
+    "x": -2967,
+    "y": 2194,
+    "width": 292,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "早朝勤務を申請します。",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "振替を申請します。",
+    "x": -2967,
+    "y": 2233,
+    "width": 292,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "振替を申請します。",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "閉じる",
+    "x": -2857,
+    "y": 2289,
+    "width": 62,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.3764705955982208,
+          "g": 0.3764705955982208,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "閉じる",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "textDecoration": "UNDERLINE",
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "×",
+    "x": -2522,
+    "y": 1933,
+    "width": 18,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.5333333611488342,
+          "g": 0.6431372761726379,
+          "b": 0.7490196228027344
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "×",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  }
+]

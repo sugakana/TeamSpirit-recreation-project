@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工数実績入力 - job</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .container {
+      position: relative;
+      width: 1010px;
+      height: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Vector 2: ヘッダー背景（水色） -->
+    <div style="position: absolute; left: 0px; top: 0px; width: 1010.03px; height: 33.3px; background-color: rgb(208, 232, 247);"></div>
+
+    <!-- Text: 工数実績入力（タイトル） -->
+    <span style="position: absolute; left: 16.65px; top: 7.77px; font-size: 14.43px; font-family: Arial; color: rgb(51, 51, 51);">工数実績入力</span>
+
+    <!-- Text: × -->
+    <span style="position: absolute; left: 983.39px; top: 7.77px; width: 8px; font-size: 13.32px; font-family: Arial; color: #7C96AE; text-align: center;">×</span>
+
+    <!-- Text: 日付と実労働時間 -->
+    <span style="position: absolute; left: 16.65px; top: 43.29px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51);">2025年11月21日金曜日　実労働時間：8:14</span>
+
+    <!-- Vector: タスクヘッダー背景 -->
+    <div style="position: absolute; left: 5.55px; top: 66.6px; width: 998.93px; height: 33.3px; background-color: rgb(208, 232, 247); border-radius: 7.14px;"></div>
+
+    <!-- Text: タスク -->
+    <span style="position: absolute; left: 202.01px; top: 73px; font-size: 13.32px; font-family: Arial; color: rgb(51, 51, 51); text-align: center;">タスク</span>
+
+
+    <!-- Text: 作業時間・ボリューム -->
+    <span style="position: absolute; left: 677.05px; top: 69.92px; font-size: 9.99px; font-family: Arial; color: rgb(51, 51, 51);">作業時間・ボリューム</span>
+
+    <!-- Text: 0 (スケールラベル) -->
+    <span style="position: absolute; left: 609.35px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">0 </span>
+
+    <!-- Vector: 行1背景（グレー） -->
+    <div style="position: absolute; left: 5.55px; top: 105.44px; width: 998.93px; height: 61.05px; background-color: rgb(249, 249, 249); border: 1.11px solid rgb(224, 224, 224);"></div>
+
+    <!-- Text: 1 -->
+    <span style="position: absolute; left: 16.65px; top: 115.43px; font-size: 12.21px; font-family: Arial; font-weight: bold; font-style: italic; color: rgb(51, 51, 51);">1</span>
+
+    <!-- Text: タスク1名 -->
+    <span style="position: absolute; left: 38.85px; top: 116.54px; font-size: 11.1px; font-family: Arial; color: rgb(0, 112, 210);">ZXXA2506B 人推_育成活動実施25152025-300／00X100 00X間接</span>
+
+    <!-- Vector: プログレスバー背景 -->
+    <div style="position: absolute; left: 590.48px; top: 114.32px; width: 245.29px; height: 8.88px; background-color: rgb(224, 224, 224); border-radius: 4.91px;"></div>
+
+    <!-- Vector: プログレスバー進捗（青） -->
+    <div style="position: absolute; left: 590.48px; top: 114.32px; width: 11.1px; height: 8.88px; background-color: rgb(74, 158, 255); border-radius: 4.44px;"></div>
+
+    <!-- Vector: プログレスバースライダー（白円、青枠） -->
+    <div style="position: absolute; left: 596.03px; top: 113.21px; width: 11.1px; height: 11.1px; background-color: rgb(255, 255, 255); border: 2.22px solid rgb(74, 158, 255); border-radius: 50%;"></div>
+
+    <!-- スケールマーカー（白い点）行1 -->
+    <div style="position: absolute; left: 588.81px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 611.01px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 633.21px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 655.41px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 677.61px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 699.8px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 722px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 744.2px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 766.4px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 788.6px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 810.8px; top: 117.1px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+
+    <!-- Vector: 時間入力ボックス（行1） -->
+    <div style="position: absolute; left: 854.64px; top: 108.77px; width: 55.5px; height: 22.2px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(204, 204, 204); border-radius: 2.22px;"></div>
+
+    <!-- Text: 0:49 -->
+    <span style="position: absolute; left: 870.18px; top: 110.99px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51); text-align: center;">0:49</span>
+
+    <!-- Vector: 時計アイコン背景（青円、行1） -->
+    <div style="position: absolute; left: 919.01px; top: 106.55px; width: 26.64px; height: 26.64px; background-color: rgb(0, 150, 255); border-radius: 50%;"></div>
+
+    <!-- Text: 🕓 -->
+    <span style="position: absolute; left: 921px; top: 108px; font-size: 15.54px; font-family: Arial; color: rgb(255, 255, 255); text-align: center;">🕓</span>
+
+    <!-- Text: 作業コード（行1） -->
+    <span style="position: absolute; left: 610.46px; top: 134.3px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">作業コード</span>
+
+    <!-- Vector: 作業コード入力ボックス（行1） -->
+    <div style="position: absolute; left: 677.05px; top: 133.19px; width: 110.99px; height: 19.98px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(204, 204, 204); border-radius: 2.22px;"></div>
+
+    <!-- Vector: 行2背景（白） -->
+    <div style="position: absolute; left: 5.55px; top: 166.49px; width: 998.93px; height: 61.05px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(224, 224, 224);"></div>
+
+    <!-- Text: 2 -->
+    <span style="position: absolute; left: 16.65px; top: 176.48px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51);">2</span>
+
+    <!-- Text: タスク2名 -->
+    <span style="position: absolute; left: 38.85px; top: 177.59px; font-size: 11.1px; font-family: Arial; color: rgb(0, 112, 210);">ZXXA2503F S一般開発-自社サービス/ソリューションZプロダクト開発2025-611／00X100 00X間接</span>
+
+    <!-- Vector: プログレスバー背景（行2） -->
+    <div style="position: absolute; left: 590.48px; top: 175.37px; width: 245.29px; height: 8.88px; background-color: rgb(224, 224, 224); border-radius: 4.91px;"></div>
+
+    <!-- Vector: プログレスバー進捗（行2、青） -->
+    <div style="position: absolute; left: 590.48px; top: 175.37px; width: 160.94px; height: 8.88px; background-color: rgb(74, 158, 255); border-radius: 4.44px;"></div>
+
+    <!-- Vector: プログレスバースライダー（行2） -->
+    <div style="position: absolute; left: 745.87px; top: 174.26px; width: 11.1px; height: 11.1px; background-color: rgb(255, 255, 255); border: 2.22px solid rgb(74, 158, 255); border-radius: 50%;"></div>
+
+    <!-- スケールマーカー（白い点）行2 -->
+    <div style="position: absolute; left: 588.81px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 611.01px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 633.21px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 655.41px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 677.61px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 699.8px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 722px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 744.2px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 766.4px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 788.6px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 810.8px; top: 178.14px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+
+    <!-- Vector: 時間入力ボックス（行2） -->
+    <div style="position: absolute; left: 854.64px; top: 169.82px; width: 55.5px; height: 22.2px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(204, 204, 204); border-radius: 2.22px;"></div>
+
+    <!-- Text: 7:25 -->
+    <span style="position: absolute; left: 870.18px; top: 172.04px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51); text-align: center;">7:25</span>
+
+    <!-- Vector: 時計アイコン背景（青円、行2） -->
+    <div style="position: absolute; left: 919.01px; top: 167.6px; width: 26.64px; height: 26.64px; background-color: rgb(0, 150, 255); border-radius: 50%;"></div>
+
+    <!-- Text: 🕓（行2） -->
+    <span style="position: absolute; left: 921px; top: 169px; font-size: 15.54px; font-family: Arial; color: rgb(255, 255, 255); text-align: center;">🕓</span>
+
+    <!-- Text: 作業コード（行2） -->
+    <span style="position: absolute; left: 610.46px; top: 195.35px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">作業コード</span>
+
+    <!-- Vector: 作業コード入力ボックス（行2） -->
+    <div style="position: absolute; left: 677.05px; top: 194.24px; width: 110.99px; height: 19.98px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(204, 204, 204); border-radius: 2.22px;"></div>
+
+    <!-- Vector: 行3背景（グレー） -->
+    <div style="position: absolute; left: 5.55px; top: 227.53px; width: 998.93px; height: 61.05px; background-color: rgb(249, 249, 249); border: 1.11px solid rgb(224, 224, 224);"></div>
+
+    <!-- Text: 3 -->
+    <span style="position: absolute; left: 16.65px; top: 237.52px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51);">3</span>
+
+    <!-- Text: タスク3名 -->
+    <span style="position: absolute; left: 38.85px; top: 238.63px; font-size: 11.1px; font-family: Arial; color: rgb(0, 112, 210);">ZZW64 関節作業 研修（全社払い）／00X100 00X間接</span>
+
+    <!-- Vector: プログレスバー背景（行3） -->
+    <div style="position: absolute; left: 590.48px; top: 236.41px; width: 245.29px; height: 8.88px; background-color: rgb(224, 224, 224); border-radius: 4.91px;"></div>
+
+    <!-- Vector: プログレスバースライダー（行3） -->
+    <div style="position: absolute; left: 584.93px; top: 235.3px; width: 11.1px; height: 11.1px; background-color: rgb(255, 255, 255); border: 2.22px solid rgb(74, 158, 255); border-radius: 50%;"></div>
+
+    <!-- スケールマーカー（白い点）行3 -->
+    <div style="position: absolute; left: 588.81px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 611.01px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 633.21px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 655.41px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 677.61px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 699.8px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 722px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 744.2px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 766.4px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 788.6px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 810.8px; top: 239.19px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+
+    <!-- Vector: 時間入力ボックス（行3） -->
+    <div style="position: absolute; left: 854.64px; top: 230.86px; width: 55.5px; height: 22.2px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(204, 204, 204); border-radius: 2.22px;"></div>
+
+    <!-- Text: 0:00 -->
+    <span style="position: absolute; left: 870.18px; top: 233.08px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51); text-align: center;">0:00</span>
+
+    <!-- Vector: 時計アイコン背景（青円、行3） -->
+    <div style="position: absolute; left: 919.01px; top: 228.64px; width: 26.64px; height: 26.64px; background-color: rgb(0, 150, 255); border-radius: 50%;"></div>
+
+    <!-- Text: 🕓（行3） -->
+    <span style="position: absolute; left: 921px; top: 230px; font-size: 15.54px; font-family: Arial; color: rgb(255, 255, 255); text-align: center;">🕓</span>
+
+    <!-- Text: 作業コード（行3） -->
+    <span style="position: absolute; left: 610.46px; top: 256.39px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">作業コード</span>
+
+    <!-- Vector: 作業コード入力ボックス（行3） -->
+    <div style="position: absolute; left: 677.05px; top: 255.28px; width: 110.99px; height: 19.98px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(204, 204, 204); border-radius: 2.22px;"></div>
+
+    <!-- Vector: 合計行背景 -->
+    <div style="position: absolute; left: 5.55px; top: 288.58px; width: 998.93px; height: 27.75px; background-color: rgb(255, 255, 255); border: 1.11px solid rgb(224, 224, 224);"></div>
+
+    <!-- Text: 合計 -->
+    <span style="position: absolute; left: 38.85px; top: 295.24px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51);">合計</span>
+
+    <!-- Text: 8:14 -->
+    <span style="position: absolute; left: 869.62px; top: 295.24px; font-size: 12.21px; font-family: Arial; color: rgb(51, 51, 51); text-align: center;">8:14</span>
+
+    <!-- Text: キャンセル -->
+    <span style="position: absolute; left: 527.21px; top: 339.64px; font-size: 13.32px; font-family: Arial; color: rgb(0, 112, 210); text-align: center; text-decoration: underline; cursor: pointer;">キャンセル</span>
+
+    <!-- Rectangle: タスク選択白背景（検索ボックス） -->
+    <div style="position: absolute; left: 253.06px; top: 69.92px; width: 174.26px; height: 25.53px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204);"></div>
+    <!-- Text: 検索プレースホルダー -->
+    <span style="position: absolute; left: 260px; top: 75px; font-size: 12px; font-family: Arial; color: rgb(180, 180, 180);">🔍（全件検索）</span>
+
+    <!-- Rectangle: 登録ボタン -->
+    <div style="position: absolute; left: 421.77px; top: 330.76px; width: 51.06px; height: 33.3px; background-color: rgb(16, 141, 197); border-radius: 0px;"></div>
+
+    <!-- Text: 登録 -->
+    <span style="position: absolute; left: 416.22px; top: 338px; width: 62.16px; font-size: 13.32px; font-family: Arial; color: rgb(255, 255, 255); text-align: center;">登録</span>
+
+    <!-- スケールラベル（0-10） -->
+    <span style="position: absolute; left: 632.66px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">1</span>
+    <span style="position: absolute; left: 654.85px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">2</span>
+    <span style="position: absolute; left: 675.94px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">3</span>
+    <span style="position: absolute; left: 698.14px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">4</span>
+    <span style="position: absolute; left: 720.34px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">5</span>
+    <span style="position: absolute; left: 743.65px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">6</span>
+    <span style="position: absolute; left: 764.74px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">7</span>
+    <span style="position: absolute; left: 786.93px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">8</span>
+    <span style="position: absolute; left: 809.13px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">9</span>
+    <span style="position: absolute; left: 830.22px; top: 88.79px; font-size: 9.99px; font-family: Arial; color: rgb(102, 102, 102);">10</span>
+
+    <!-- スケールマーカー（10の位置） -->
+    <div style="position: absolute; left: 832.44px; top: 117.65px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 833.55px; top: 178.7px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+    <div style="position: absolute; left: 833.55px; top: 239.74px; width: 3.33px; height: 3.33px; background-color: rgb(255, 255, 255); border-radius: 50%;"></div>
+  </div>
+</body>
+</html>
+

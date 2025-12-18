@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report Full</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+            overflow: auto;
+            background-color: #f5f5f5;
+        }
+        .container {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+            background-color: #F4F6F9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Background Vector -->
+        <svg style="position: absolute; left: 0px; top: 0px; width: 1920px; height: 1080px;" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+            <rect width="1920" height="1080" fill="#F4F6F9" />
+        </svg>
+
+        <!-- GROUP: header -->
+        <div style="position: absolute; left: 13px; top: 7px; width: 148px; height: 21px;">
+            <!-- Vector: Button background -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 101px; height: 21px;" viewBox="0 0 101.57 21.6" preserveAspectRatio="none">
+                <path d="M 3.047 0 L 98.519 0 C 100.201 0 101.566 1.036 101.566 2.314 L 101.566 19.286 C 101.566 20.564 100.201 21.6 98.519 21.6 L 3.047 21.6 C 1.364 21.6 0 20.564 0 19.286 L 0 2.314 C 0 1.036 1.364 0 3.047 0 Z" fill="#0066CC" />
+            </svg>
+            <!-- TEXT: プリンタへ出力 -->
+            <span style="position: absolute; left: 8px; top: 5px; width: 85px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">プリンタへ出力</span>
+            <!-- TEXT: 閉じる -->
+            <span style="position: absolute; left: 111px; top: 5px; width: 36px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(0, 102, 204); text-align: left; line-height: 10px; white-space: nowrap;">閉じる</span>
+        </div>
+
+        <!-- GROUP: info-header -->
+        <div style="position: absolute; left: 6px; top: 34px; width: 1873px; height: 30px;">
+            <!-- Vector: White background with black border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 1873px; height: 30px;" viewBox="0 0 1873.14 30.86" preserveAspectRatio="none">
+                <rect width="1873.14" height="30.86" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="1" />
+            </svg>
+            <!-- TEXT: 2025年11月 -->
+            <span style="position: absolute; left: 55px; top: 2px; width: 65px; height: 11px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: center; line-height: 11px; white-space: nowrap;">2025年11月</span>
+            <!-- TEXT: 承認済み -->
+            <span style="position: absolute; left: 50px; top: 17px; width: 65px; height: 11px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: center; line-height: 11px; white-space: nowrap;">承認済み</span>
+            <!-- TEXT: 勤務表 -->
+            <span style="position: absolute; left: 0px; top: 2px; width: 43px; height: 11px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: center; line-height: 11px; white-space: nowrap;">勤務表</span>
+            <!-- TEXT: ステータス -->
+            <span style="position: absolute; left: 4px; top: 17px; width: 53px; height: 11px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: center; line-height: 11px; white-space: nowrap;">ステータス</span>
+            <!-- TEXT: 社員コード -->
+            <span style="position: absolute; left: 1220px; top: 2px; width: 74px; height: 10px; font-size: 9px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">社員コード</span>
+            <!-- TEXT: 224104 -->
+            <span style="position: absolute; left: 1092px; top: 18px; width: 49px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">224104</span>
+        </div>
+
+        <!-- Additional info-header elements -->
+        <!-- TEXT: 勤怠体系 -->
+        <span style="position: absolute; left: 856px; top: 37px; width: 60px; height: 10px; font-size: 9px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">勤怠体系</span>
+        <!-- TEXT: フレックスタイム制(一般) -->
+        <span style="position: absolute; left: 660px; top: 53px; width: 131px; height: 10px; font-size: 9px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">フレックスタイム制(一般)</span>
+        <!-- TEXT: 社員名 -->
+        <span style="position: absolute; left: 1653px; top: 37px; width: 45px; height: 10px; font-size: 9px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">社員名</span>
+        <!-- TEXT: 須賀 敏斗 -->
+        <span style="position: absolute; left: 1445px; top: 53px; width: 44px; height: 10px; font-size: 9px; font-family: Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">須賀 敏斗</span>
+        <!-- TEXT: 部署 -->
+        <span style="position: absolute; left: 363px; top: 37px; width: 50px; height: 11px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(0, 0, 0); text-align: left; line-height: 11px; white-space: nowrap;">部署</span>
+        <!-- TEXT: 310 TechE -->
+        <span style="position: absolute; left: 134px; top: 53px; width: 80px; height: 10px; font-size: 9px; font-family: Arial, sans-serif; color: rgb(0, 0, 0); text-align: left; line-height: 10px; white-space: nowrap;">310 TechE</span>
+
+        <!-- Table border lines for 部署/勤怠体系/社員コード/社員名 -->
+        <!-- Left border (positioned at the right edge of "2025年11月": 6.86 + 55.28 + 65.98 = 128px) -->
+        <svg style="position: absolute; left: 128px; top: 35px; width: 1px; height: 30px;" viewBox="0 0 1 30" preserveAspectRatio="none">
+            <line x1="0.5" y1="0" x2="0.5" y2="30" stroke="rgb(0, 0, 0)" stroke-width="1" />
+        </svg>
+        <!-- Vertical divider: 部署 | 勤怠体系 -->
+        <svg style="position: absolute; left: 655px; top: 35px; width: 1px; height: 30px;" viewBox="0 0 1 30" preserveAspectRatio="none">
+            <line x1="0.5" y1="0" x2="0.5" y2="30" stroke="rgb(0, 0, 0)" stroke-width="1" />
+        </svg>
+        <!-- Vertical divider: 勤怠体系 | 社員コード -->
+        <svg style="position: absolute; left: 1093px; top: 35px; width: 1px; height: 30px;" viewBox="0 0 1 30" preserveAspectRatio="none">
+            <line x1="0.5" y1="0" x2="0.5" y2="30" stroke="rgb(0, 0, 0)" stroke-width="1" />
+        </svg>
+        <!-- Vertical divider: 社員コード | 社員名 -->
+        <svg style="position: absolute; left: 1440px; top: 35px; width: 1px; height: 30px;" viewBox="0 0 1 30" preserveAspectRatio="none">
+            <line x1="0.5" y1="0" x2="0.5" y2="30" stroke="rgb(0, 0, 0)" stroke-width="1" />
+        </svg>
+        <!-- Horizontal divider: Header row | Data row (extended to right edge) -->
+        <svg style="position: absolute; left: 128px; top: 50px; width: 1751px; height: 1px;" viewBox="0 0 1751.88 1" preserveAspectRatio="none">
+            <line x1="0" y1="0.5" x2="1751.88" y2="0.5" stroke="rgb(0, 0, 0)" stroke-width="1" />
+        </svg>
+
+        <!-- Dashed vertical lines -->
+        <svg style="position: absolute; left: 1465px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 1330px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 1200px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 1070px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 935px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 805px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 670px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 530px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+        <svg style="position: absolute; left: 229px; top: 73px; width: 2px; height: 513px; z-index: 10;" viewBox="0 0 2.04 513" preserveAspectRatio="none">
+            <line x1="1.02" y1="0" x2="1.02" y2="513" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+
+        <!-- Table Header Background -->
+        <svg style="position: absolute; left: 6px; top: 73px; width: 1873px; height: 30px;" viewBox="0 0 1873.14 30" preserveAspectRatio="none">
+            <rect width="1873.14" height="30" fill="#6B9BC3" stroke="#5A8AAC" stroke-width="1" />
+        </svg>
+
+        <!-- Table Header Text -->
+        <!-- 日付列: 6px～229px、中央117.5px、テキスト幅29px → left: 117.5-14.5=103px -->
+        <span style="position: absolute; left: 103px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">日付</span>
+        <!-- イベント列: 229px～530px、中央379.5px、テキスト幅187px → left: 379.5-93.5=286px -->
+        <span style="position: absolute; left: 286px; top: 83px; width: 187px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">イベント/勤務状況/勤務場所</span>
+        <!-- 出社列: 530px～670px、中央600px、テキスト幅29px → left: 600-14.5=585.5px -->
+        <span style="position: absolute; left: 585.5px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">出社</span>
+        <!-- 退社列: 670px～805px、中央737.5px、テキスト幅29px → left: 737.5-14.5=723px -->
+        <span style="position: absolute; left: 723px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">退社</span>
+        <!-- 休憩列: 805px～935px、中央870px、テキスト幅29px → left: 870-14.5=855.5px -->
+        <span style="position: absolute; left: 855.5px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">休憩</span>
+        <!-- 実労働時間列: 935px～1070px、中央1002.5px、テキスト幅45px → left: 1002.5-22.5=980px、高さ27px、ヘッダー中央88px → top: 88-13.5=74.5px -->
+        <span style="position: absolute; left: 980px; top: 77px; width: 45px; height: 27px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 1.15em; white-space: pre-line;">実労働<br>時間</span>
+        <!-- 残業列: 1070px～1200px、中央1135px、テキスト幅29px → left: 1135-14.5=1120.5px -->
+        <span style="position: absolute; left: 1120.5px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">残業</span>
+        <!-- 休日列: 1200px～1330px、中央1265px、テキスト幅29px → left: 1265-14.5=1250.5px -->
+        <span style="position: absolute; left: 1250.5px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">休日</span>
+        <!-- 深夜列: 1330px～1465px、中央1397.5px、テキスト幅29px → left: 1397.5-14.5=1383px -->
+        <span style="position: absolute; left: 1383px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">深夜</span>
+        <!-- 備考列: 1465px～1879px、中央1672px、テキスト幅29px → left: 1672-14.5=1657.5px -->
+        <span style="position: absolute; left: 1657.5px; top: 83px; width: 29px; height: 10px; font-size: 10px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(255, 255, 255); text-align: center; line-height: 10px; white-space: nowrap;">備考</span>
+
+        <!-- GROUP: table-rows -->
+        <div style="position: absolute; left: 7px; top: 103px; width: 1873px; height: 479px;">
+            <!-- Row backgrounds and content will be added here -->
+            <!-- Day 1 (11/1) -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 64px; top: 4px; width: 26px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">11/1</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 0px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 4px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">土</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 0px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <!-- Circle icon for Saturday -->
+            <svg style="position: absolute; left: 180px; top: 2px; width: 11px; height: 11px;" viewBox="0 0 11 11" preserveAspectRatio="none">
+                <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="rgb(51, 51, 51)" stroke-width="1" />
+            </svg>
+
+            <!-- Day 2 (11/2) -->
+            <svg style="position: absolute; left: 0px; top: 15px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 19px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">2</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 15px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 19px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 15px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 3 (11/3) -->
+            <svg style="position: absolute; left: 0px; top: 30px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 34px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">3</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 30px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 34px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">月</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 30px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 34px; width: 82px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">(文化の日)</span>
+
+            <!-- Day 4 (11/4) -->
+            <svg style="position: absolute; left: 0px; top: 46px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 50px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">4</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 46px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 50px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">火</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 46px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 50px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 50px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:48</span>
+            <span style="position: absolute; left: 709px; top: 50px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:48</span>
+            <span style="position: absolute; left: 850px; top: 50px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 50px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:00</span>
+
+            <!-- Day 5 (11/5) -->
+            <svg style="position: absolute; left: 0px; top: 61px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 65px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">5</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 61px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 65px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">水</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 61px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 65px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-出勤</span>
+            <span style="position: absolute; left: 577px; top: 65px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:50</span>
+            <span style="position: absolute; left: 709px; top: 65px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">19:03</span>
+            <span style="position: absolute; left: 850px; top: 65px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 65px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">9:13</span>
+
+            <!-- Day 6 (11/6) -->
+            <svg style="position: absolute; left: 0px; top: 77px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 81px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">6</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 77px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 81px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">木</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 77px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 81px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 81px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:47</span>
+            <span style="position: absolute; left: 709px; top: 81px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:52</span>
+            <span style="position: absolute; left: 850px; top: 81px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 81px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:05</span>
+
+            <!-- Day 7 (11/7) -->
+            <svg style="position: absolute; left: 0px; top: 92px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 96px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">7</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 92px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 96px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">金</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 92px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 96px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 96px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:46</span>
+            <span style="position: absolute; left: 709px; top: 96px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:47</span>
+            <span style="position: absolute; left: 850px; top: 96px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 96px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:01</span>
+
+            <!-- Day 8 (11/8) -->
+            <svg style="position: absolute; left: 0px; top: 108px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <svg style="position: absolute; left: 180px; top: 110px; width: 11px; height: 11px;" viewBox="0 0 11 11" preserveAspectRatio="none">
+                <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="rgb(51, 51, 51)" stroke-width="1" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 112px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">8</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 108px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 112px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">土</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 108px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 9 (11/9) -->
+            <svg style="position: absolute; left: 0px; top: 123px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 77px; top: 127px; width: 8px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">9</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 123px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 127px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 123px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 10 (11/10) -->
+            <svg style="position: absolute; left: 0px; top: 139px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 143px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">10</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 139px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 143px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">月</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 139px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 143px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 143px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:46</span>
+            <span style="position: absolute; left: 709px; top: 143px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:31</span>
+            <span style="position: absolute; left: 850px; top: 143px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 143px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">7:45</span>
+
+            <!-- Day 11 (11/11) -->
+            <svg style="position: absolute; left: 0px; top: 154px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 158px; width: 15px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">11</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 154px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 158px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">火</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 154px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 158px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 158px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:50</span>
+            <span style="position: absolute; left: 709px; top: 158px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:40</span>
+            <span style="position: absolute; left: 850px; top: 158px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 158px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">7:50</span>
+
+            <!-- Day 12 (11/12) -->
+            <svg style="position: absolute; left: 0px; top: 170px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 174px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">12</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 170px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 174px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">水</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 170px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 174px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-出勤</span>
+            <span style="position: absolute; left: 577px; top: 174px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:42</span>
+            <span style="position: absolute; left: 709px; top: 174px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">18:52</span>
+            <span style="position: absolute; left: 850px; top: 174px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 174px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">9:10</span>
+
+            <!-- Day 13 (11/13) -->
+            <svg style="position: absolute; left: 0px; top: 185px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 189px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">13</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 185px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 189px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">木</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 185px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 189px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 189px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:51</span>
+            <span style="position: absolute; left: 709px; top: 189px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:36</span>
+            <span style="position: absolute; left: 850px; top: 189px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 189px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">7:45</span>
+
+            <!-- Day 14 (11/14) -->
+            <svg style="position: absolute; left: 0px; top: 201px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 205px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">14</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 201px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 205px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">金</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 201px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 205px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 205px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:52</span>
+            <span style="position: absolute; left: 709px; top: 205px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">18:01</span>
+            <span style="position: absolute; left: 850px; top: 205px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 205px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:09</span>
+
+            <!-- Day 15 (11/15) -->
+            <svg style="position: absolute; left: 0px; top: 216px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 220px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">15</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 216px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 220px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">土</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 216px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 16 (11/16) -->
+            <svg style="position: absolute; left: 0px; top: 232px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 236px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">16</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 232px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 236px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 232px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 17 (11/17) -->
+            <svg style="position: absolute; left: 0px; top: 247px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 251px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">17</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 247px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 251px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">月</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 247px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 251px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 251px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:42</span>
+            <span style="position: absolute; left: 709px; top: 251px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:32</span>
+            <span style="position: absolute; left: 850px; top: 251px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 251px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">7:50</span>
+
+            <!-- Day 18 (11/18) -->
+            <svg style="position: absolute; left: 0px; top: 263px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 267px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">18</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 263px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 267px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">火</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 263px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 267px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 267px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:49</span>
+            <span style="position: absolute; left: 709px; top: 267px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:41</span>
+            <span style="position: absolute; left: 850px; top: 267px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 267px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">7:52</span>
+
+            <!-- Day 19 (11/19) -->
+            <svg style="position: absolute; left: 0px; top: 278px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 282px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">19</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 278px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 282px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">水</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 278px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 282px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-出勤</span>
+            <span style="position: absolute; left: 577px; top: 282px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:51</span>
+            <span style="position: absolute; left: 709px; top: 282px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">18:02</span>
+            <span style="position: absolute; left: 850px; top: 282px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 282px; width: 26px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:11</span>
+
+            <!-- Day 20 (11/20) -->
+            <svg style="position: absolute; left: 0px; top: 293px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 297px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">20</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 293px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 297px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">木</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 293px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 297px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 297px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:49</span>
+            <span style="position: absolute; left: 709px; top: 297px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">17:49</span>
+            <span style="position: absolute; left: 850px; top: 297px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 297px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:00</span>
+
+            <!-- Day 21 (11/21) -->
+            <svg style="position: absolute; left: 0px; top: 309px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 313px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">21</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 309px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 313px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">金</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 309px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 313px; width: 87px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日次確定-在宅</span>
+            <span style="position: absolute; left: 577px; top: 313px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:46</span>
+            <span style="position: absolute; left: 709px; top: 313px; width: 35px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">18:00</span>
+            <span style="position: absolute; left: 850px; top: 313px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">1:00</span>
+            <span style="position: absolute; left: 978px; top: 313px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:14</span>
+            <span style="position: absolute; left: 1474px; top: 310px; height: 13px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(103, 136, 217); text-align: left; line-height: 13px; white-space: nowrap;">(退社打刻なし)</span>
+            <span style="position: absolute; left: 1546px; top: 310px; height: 13px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(0, 0, 0); text-align: left; line-height: 13px; white-space: nowrap;">退勤打刻忘れ</span>
+
+            <!-- Day 22 (11/22) -->
+            <svg style="position: absolute; left: 0px; top: 324px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 328px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">22</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 324px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 328px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">土</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 324px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 23 (11/23) -->
+            <svg style="position: absolute; left: 0px; top: 340px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 344px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">23</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 340px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 344px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 340px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <svg style="position: absolute; left: 180px; top: 342px; width: 11px; height: 11px;" viewBox="0 0 11 11" preserveAspectRatio="none">
+                <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="rgb(51, 51, 51)" stroke-width="1" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 344px; width: 109px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">(勤労感謝の日)</span>
+
+            <!-- Day 24 (11/24) -->
+            <svg style="position: absolute; left: 0px; top: 355px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 359px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">24</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 355px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 359px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">月</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 355px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 359px; width: 82px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">(振替休日)</span>
+
+            <!-- Day 25 (11/25) -->
+            <svg style="position: absolute; left: 0px; top: 371px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 375px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">25</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 371px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 375px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">火</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 371px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 230px; top: 375px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">在宅</span>
+            <span style="position: absolute; left: 577px; top: 375px; width: 27px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 8px; white-space: nowrap;">8:44</span>
+
+            <!-- Day 26 (11/26) -->
+            <svg style="position: absolute; left: 0px; top: 386px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 390px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">26</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 386px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 390px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">水</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 386px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 27 (11/27) -->
+            <svg style="position: absolute; left: 0px; top: 402px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 406px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">27</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 402px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 406px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">木</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 402px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 28 (11/28) -->
+            <svg style="position: absolute; left: 0px; top: 417px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 421px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">28</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 417px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 421px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">金</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 417px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 29 (11/29) -->
+            <svg style="position: absolute; left: 0px; top: 432px; width: 1873px; height: 16px;" viewBox="0 0 1873 16" preserveAspectRatio="none">
+                <rect width="1873" height="16" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 436px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">29</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 432px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 436px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">土</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 432px; width: 1px; height: 16px;" viewBox="0 0 1 16" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- Day 30 (11/30) -->
+            <svg style="position: absolute; left: 0px; top: 448px; width: 1873px; height: 15px;" viewBox="0 0 1873 15" preserveAspectRatio="none">
+                <rect width="1873" height="15" fill="rgb(255, 255, 255)" stroke="#DDDDDD" stroke-width="0.5" />
+            </svg>
+            <span style="position: absolute; left: 72px; top: 452px; width: 16px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">30</span>
+            <!-- Dashed line between date and weekday -->
+            <svg style="position: absolute; left: 90px; top: 448px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <span style="position: absolute; left: 114px; top: 452px; width: 13px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 8px; white-space: nowrap;">日</span>
+            <!-- Dashed line between weekday and symbol -->
+            <svg style="position: absolute; left: 150px; top: 448px; width: 1px; height: 15px;" viewBox="0 0 1 15" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="15" stroke="rgb(51, 51, 51)" stroke-width="0.5" stroke-dasharray="2 2" />
+            </svg>
+            <!-- Circle icons -->
+            <svg style="position: absolute; left: 180px; top: 450px; width: 11px; height: 11px;" viewBox="0 0 11 11" preserveAspectRatio="none">
+                <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="rgb(51, 51, 51)" stroke-width="1" />
+            </svg>
+            </div>
+            
+        <!-- Total Row (moved outside table-rows group, positioned after day 30) -->
+        <!-- Day 30 ends at 448+15=463px, so total row starts at 103+463=566px -->
+        <svg style="position: absolute; left: 7px; top: 566px; width: 1873px; height: 20px;" viewBox="0 0 1873 20" preserveAspectRatio="none">
+            <rect width="1873" height="20" fill="#E8F4F8" stroke="#5A8AAC" stroke-width="1" />
+        </svg>
+        <span style="position: absolute; left: 13px; top: 571px; width: 30px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; font-weight: 700; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">合計</span>
+        <!-- Total row values aligned with table header columns (出社, 退社, 休憩, 実労働時間, 残業, 休日, 深夜) -->
+        <span style="position: absolute; left: 583px; top: 571px; width: 29px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">14:00</span>
+        <span style="position: absolute; left: 719px; top: 571px; width: 29px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">0:00</span>
+        <span style="position: absolute; left: 856px; top: 571px; width: 29px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">0:00</span>
+        <span style="position: absolute; left: 977px; top: 571px; width: 45px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">114:05</span>
+        <span style="position: absolute; left: 1119px; top: 571px; width: 29px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">0:00</span>
+        <span style="position: absolute; left: 1249px; top: 571px; width: 29px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">0:00</span>
+        <span style="position: absolute; left: 1376px; top: 571px; width: 29px; height: 10px; font-size: 11px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: center; line-height: 10px; white-space: nowrap;">0:00</span>
+
+        <!-- Symbol Explanation -->
+        <span style="position: absolute; left: 20px; top: 596px; width: 379px; height: 8px; font-size: 10px; font-family: Arial, sans-serif; color: rgb(102, 102, 102); text-align: left; line-height: 8px; white-space: nowrap;">記号の説明 ○＝所定休日、◎＝法定休日、△＝有休休暇届け日</span>
+
+        <!-- Monthly Summary Title -->
+        <span style="position: absolute; left: 27px; top: 615px; width: 248px; height: 13px; font-size: 16px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 13px; white-space: nowrap;">2025年11月月次サマリー</span>
+
+        <!-- Section 1: 所定出勤日数から所定休日出勤日数 -->
+        <div style="position: absolute; left: 27px; top: 643px; width: 603px; height: 92px; border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 92px;" viewBox="0 0 603 92" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 602.5 0.5 M 0.5 0.5 L 0.5 91.5 M 602.5 0.5 L 602.5 91.5 M 0.5 91.5 L 602.5 91.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 98px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">所定出勤日数</span>
+            <span style="position: absolute; left: 453px; top: 5px; width: 39px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">18 日</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 82px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">実出勤日数</span>
+            <span style="position: absolute; left: 453px; top: 28px; width: 39px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">14 日</span>
+            <svg style="position: absolute; left: 0px; top: 46px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 51px; width: 131px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">法定休日出勤日数</span>
+            <span style="position: absolute; left: 462px; top: 51px; width: 31px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0 日</span>
+            <svg style="position: absolute; left: 0px; top: 69px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23 M 0 23 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 74px; width: 131px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">所定休日出勤日数</span>
+            <span style="position: absolute; left: 462px; top: 74px; width: 31px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0 日</span>
+        </div>
+
+        <!-- Section 2: 所定労働時間から過不足時間 -->
+        <div style="position: absolute; left: 27px; top: 745px; width: 603px; height: 92px; border: 1px solid rgb(0, 0, 0); background-color: rgb(245, 245, 245);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 92px;" viewBox="0 0 603 92" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 602.5 0.5 M 0.5 0.5 L 0.5 91.5 M 602.5 0.5 L 602.5 91.5 M 0.5 91.5 L 602.5 91.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 98px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">所定労働時間</span>
+            <span style="position: absolute; left: 442px; top: 5px; width: 50px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">136:00</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 175px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">総労働時間(有休を含む)</span>
+            <span style="position: absolute; left: 444px; top: 28px; width: 49px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">114:05</span>
+            <svg style="position: absolute; left: 0px; top: 46px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 51px; width: 279px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">総労働時間-法定休日労働(有休を含む)</span>
+            <span style="position: absolute; left: 444px; top: 51px; width: 49px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">114:05</span>
+            <svg style="position: absolute; left: 0px; top: 69px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23 M 0 23 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 74px; width: 82px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">過不足時間</span>
+            <span style="position: absolute; left: 445px; top: 74px; width: 48px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(217, 83, 79); text-align: right; line-height: 10px; white-space: nowrap;">-20:55</span>
+        </div>
+
+        <!-- Section 3: 当月度の超過時間と安全配慮上の超過時間 -->
+        <div style="position: absolute; left: 27px; top: 847px; width: 603px; height: 46px; border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 46px;" viewBox="0 0 603 46" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 602.5 0.5 M 0.5 0.5 L 0.5 45.5 M 602.5 0.5 L 602.5 45.5 M 0.5 45.5 L 602.5 45.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 131px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">当月度の超過時間</span>
+            <span style="position: absolute; left: 460px; top: 5px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23 M 0 23 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 164px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">安全配慮上の超過時間</span>
+            <span style="position: absolute; left: 460px; top: 28px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+        </div>
+            
+        <!-- Section 4: 法定労働時間から法定休日労働時間 -->
+        <div style="position: absolute; left: 644px; top: 643px; width: 603px; height: 115px; border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 115px;" viewBox="0 0 603 115" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 602.5 0.5 M 0.5 0.5 L 0.5 114.5 M 602.5 0.5 L 602.5 114.5 M 0.5 114.5 L 602.5 114.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 98px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">法定労働時間</span>
+            <span style="position: absolute; left: 442px; top: 5px; width: 50px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">144:05</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 312px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">実労働時間-法定休日労働(有休を含めない)</span>
+            <span style="position: absolute; left: 444px; top: 28px; width: 49px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">114:05</span>
+            <svg style="position: absolute; left: 0px; top: 46px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 51px; width: 115px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">法定時間内残業</span>
+            <span style="position: absolute; left: 460px; top: 51px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 69px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 74px; width: 115px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">法定時間外残業</span>
+            <span style="position: absolute; left: 460px; top: 74px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 92px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23 M 0 23 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 97px; width: 131px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">法定休日労働時間</span>
+            <span style="position: absolute; left: 460px; top: 97px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+        </div>
+
+        <!-- Section 5: 深夜労働時間から60時間を超える時間外労働 -->
+        <div style="position: absolute; left: 644px; top: 768px; width: 603px; height: 69px; border: 1px solid rgb(0, 0, 0); background-color: rgb(245, 245, 245);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 69px;" viewBox="0 0 603 69" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 602.5 0.5 M 0.5 0.5 L 0.5 68.5 M 602.5 0.5 L 602.5 68.5 M 0.5 68.5 L 602.5 68.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 98px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">深夜労働時間</span>
+            <span style="position: absolute; left: 460px; top: 5px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 198px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">45時間を超える時間外労働</span>
+            <span style="position: absolute; left: 460px; top: 28px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 46px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23 M 0 23 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 51px; width: 198px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">60時間を超える時間外労働</span>
+            <span style="position: absolute; left: 460px; top: 51px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+        </div>
+
+        <!-- Section 6: 遅刻回数-時間からコア時間内の私用外出回数・時間 -->
+        <div style="position: absolute; left: 644px; top: 847px; width: 603px; height: 69px; border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 69px;" viewBox="0 0 603 69" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 602.5 0.5 M 0.5 0.5 L 0.5 68.5 M 602.5 0.5 L 602.5 68.5 M 0.5 68.5 L 602.5 68.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 104px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">遅刻回数-時間</span>
+            <span style="position: absolute; left: 460px; top: 5px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 104px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">早退回数-時間</span>
+            <span style="position: absolute; left: 460px; top: 28px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 46px; width: 603px; height: 23px;" viewBox="0 0 603 23" preserveAspectRatio="none">
+                <rect width="603" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 603 0 M 0 0 L 0 23 M 603 0 L 603 23 M 0 23 L 603 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 51px; width: 235px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">コア時間内の私用外出回数-時間</span>
+            <span style="position: absolute; left: 460px; top: 51px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+        </div>
+        
+        <!-- Section 7: 有給取得日数から時間単位有休取得時間（[内訳]を含む） -->
+        <div style="position: absolute; left: 1261px; top: 643px; width: 630px; height: 46px; border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 46px;" viewBox="0 0 630 46" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 629.5 0.5 M 0.5 0.5 L 0.5 45.5 M 629.5 0.5 L 629.5 45.5 M 0.5 45.5 L 629.5 45.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 115px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">有給取得日数</span>
+            <span style="position: absolute; left: 489px; top: 5px; width: 31px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0 日</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23 M 0 23 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 113px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(153, 153, 153); text-align: left; line-height: 10px; white-space: nowrap;">[内訳] ――――</span>
+        </div>
+
+        <!-- Section 8: 代休取得日数と内訳 -->
+        <div style="position: absolute; left: 1261px; top: 699px; width: 630px; height: 46px; border: 1px solid rgb(0, 0, 0); background-color: rgb(245, 245, 245);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 46px;" viewBox="0 0 630 46" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 629.5 0.5 M 0.5 0.5 L 0.5 45.5 M 629.5 0.5 L 629.5 45.5 M 0.5 45.5 L 629.5 45.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 98px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">代休取得日数</span>
+            <span style="position: absolute; left: 488px; top: 5px; width: 32px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0:00</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23 M 0 23 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 113px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(153, 153, 153); text-align: left; line-height: 10px; white-space: nowrap;">[内訳] ――――</span>
+        </div>
+
+        <!-- Section 9: 無給休暇日数と内訳 -->
+        <div style="position: absolute; left: 1261px; top: 755px; width: 630px; height: 46px; border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 46px;" viewBox="0 0 630 46" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 629.5 0.5 M 0.5 0.5 L 0.5 45.5 M 629.5 0.5 L 629.5 45.5 M 0.5 45.5 L 629.5 45.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 98px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">無給休暇日数</span>
+            <span style="position: absolute; left: 489px; top: 5px; width: 31px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0 日</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23 M 0 23 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 113px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(153, 153, 153); text-align: left; line-height: 10px; white-space: nowrap;">[内訳] ――――</span>
+        </div>
+
+        <!-- Section 10: 有休残日数と2025年12月度以降の計画付与予定日 -->
+        <div style="position: absolute; left: 1261px; top: 811px; width: 630px; height: 46px; border: 1px solid rgb(0, 0, 0); background-color: rgb(245, 245, 245);">
+            <!-- Outer border -->
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 46px;" viewBox="0 0 630 46" preserveAspectRatio="none">
+                <path d="M 0.5 0.5 L 629.5 0.5 M 0.5 0.5 L 0.5 45.5 M 629.5 0.5 L 629.5 45.5 M 0.5 45.5 L 629.5 45.5" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <svg style="position: absolute; left: 0px; top: 0px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(255, 255, 255)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 5px; width: 82px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">有休残日数</span>
+            <span style="position: absolute; left: 489px; top: 5px; width: 31px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">0 日</span>
+            <svg style="position: absolute; left: 0px; top: 23px; width: 630px; height: 23px;" viewBox="0 0 630 23" preserveAspectRatio="none">
+                <rect width="630" height="23" fill="rgb(245, 245, 245)" />
+                <path d="M 0 0 L 630 0 M 0 0 L 0 23 M 630 0 L 630 23 M 0 23 L 630 23" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
+            </svg>
+            <span style="position: absolute; left: 13px; top: 28px; width: 270px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: left; line-height: 10px; white-space: nowrap;">2025年12月度以降の計画付与予定日</span>
+            <span style="position: absolute; left: 481px; top: 28px; width: 39px; height: 10px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); text-align: right; line-height: 10px; white-space: nowrap;">16 日</span>
+        </div>
+    </div>
+</body>
+</html>

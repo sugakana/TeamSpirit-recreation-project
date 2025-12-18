@@ -1,0 +1,28 @@
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景オーバーレイ -->
+  <rect width="600" height="350" fill="rgba(0,0,0,0.3)"/>
+  
+  <!-- ダイアログボックス -->
+  <rect x="100" y="50" width="400" height="250" rx="5" fill="white" stroke="#ccc" stroke-width="2"/>
+  
+  <!-- ヘッダー -->
+  <rect x="100" y="50" width="400" height="35" rx="5" fill="#e8e8e8"/>
+  <text x="300" y="73" font-family="Arial, sans-serif" font-size="15" fill="#333" font-weight="bold" text-anchor="middle">備考</text>
+  
+  <!-- 閉じるボタン -->
+  <circle cx="480" cy="67" r="10" fill="#ccc"/>
+  <text x="480" y="72" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">×</text>
+  
+  <!-- 日付 -->
+  <text x="120" y="110" font-family="Arial, sans-serif" font-size="12" fill="#333">2025年11月21日金曜日</text>
+  
+  <!-- テキストエリア -->
+  <rect x="120" y="130" width="360" height="120" rx="3" fill="white" stroke="#999" stroke-width="1"/>
+  
+  <!-- ボタン -->
+  <rect x="220" y="265" width="70" height="30" rx="5" fill="#0096ff"/>
+  <text x="255" y="285" font-family="Arial, sans-serif" font-size="13" fill="white" font-weight="bold" text-anchor="middle">登録</text>
+  
+  <text x="330" y="285" font-family="Arial, sans-serif" font-size="13" fill="#ff69b4" text-anchor="middle">キャンセル</text>
+</svg>
+

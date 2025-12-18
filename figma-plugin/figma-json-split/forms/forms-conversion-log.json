@@ -1,0 +1,36 @@
+{
+  "originalFile": "forms.json",
+  "conversion": {
+    "startedAt": "2025-01-27T00:00:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成と全ノードの変換",
+        "completedAt": "2025-01-27T00:00:00.000Z",
+        "processedLines": "1-994",
+        "totalLines": 994,
+        "nodesProcessed": 25,
+        "notes": "全25ノード（RECTANGLE: 7個、TEXT: 16個、VECTOR: 2個）をHTMLに変換完了"
+      }
+    },
+    "completedAt": "2025-01-27T00:00:00.000Z",
+    "summary": {
+      "totalFilesProcessed": 1,
+      "totalNodesProcessed": 25,
+      "totalLinesProcessed": 994,
+      "allPhasesCompleted": true
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

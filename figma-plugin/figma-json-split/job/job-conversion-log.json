@@ -1,0 +1,42 @@
+{
+  "originalFile": "job.json",
+  "splitDate": "2025-12-09T00:00:00.000Z",
+  "splitOptions": {
+    "maxSize": 50000,
+    "maxNodes": 50,
+    "maxDepth": 3
+  },
+  "splitStatistics": {
+    "originalNodes": 96,
+    "originalSize": 97190,
+    "splitFiles": 1
+  },
+  "splitFiles": [
+    {
+      "file": "job-root.json",
+      "size": 225,
+      "sizeKB": "0.22"
+    }
+  ],
+  "conversion": {
+    "startedAt": "2025-12-09T00:00:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成とjob.jsonの全ノード処理",
+        "completedAt": "2025-12-09T00:01:00.000Z",
+        "processedLines": "1-3814",
+        "totalLines": 3814,
+        "nodesProcessed": 96,
+        "notes": "job.jsonの全96ノードを処理完了。座標オフセット（x: +3587, y: +624）を適用。VECTOR, TEXT, RECTANGLE要素をHTML/CSSに変換。"
+      }
+    },
+    "completedAt": "2025-12-09T00:01:00.000Z",
+    "summary": {
+      "totalFilesProcessed": 1,
+      "totalNodesProcessed": 96,
+      "totalLinesProcessed": 3814,
+      "allPhasesCompleted": true
+    }
+  }
+}

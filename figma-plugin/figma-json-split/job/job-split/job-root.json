@@ -1,0 +1,12 @@
+{
+  "type": "SPLIT_ROOT",
+  "version": "1.0",
+  "originalStructure": {
+    "type": "VECTOR",
+    "name": "Vector",
+    "width": 1010.02783203125,
+    "height": 399.5714416503906
+  },
+  "children": [],
+  "splitFiles": []
+}

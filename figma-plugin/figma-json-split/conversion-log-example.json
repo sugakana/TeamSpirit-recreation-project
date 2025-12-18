@@ -1,0 +1,185 @@
+{
+  "originalFile": "work-table-screen1.json",
+  "splitDate": "2025-11-27T03:42:09.711Z",
+  "splitOptions": {
+    "maxSize": 50000,
+    "maxNodes": 50,
+    "maxDepth": 3
+  },
+  "splitStatistics": {
+    "originalNodes": 547,
+    "originalSize": 259394,
+    "splitFiles": 11
+  },
+  "splitFiles": [
+    {
+      "file": "work-table-screen1.json",
+      "size": 42227,
+      "sizeKB": "41.24"
+    },
+    {
+      "file": "work-table-screen1-1.json",
+      "size": 42771,
+      "sizeKB": "41.77"
+    },
+    {
+      "file": "work-table-screen1-2.json",
+      "size": 46250,
+      "sizeKB": "45.17"
+    },
+    {
+      "file": "work-table-screen1-3.json",
+      "size": 46974,
+      "sizeKB": "45.87"
+    },
+    {
+      "file": "work-table-screen1-4.json",
+      "size": 46072,
+      "sizeKB": "44.99"
+    },
+    {
+      "file": "work-table-screen1-5.json",
+      "size": 46267,
+      "sizeKB": "45.18"
+    },
+    {
+      "file": "work-table-screen1-6.json",
+      "size": 45677,
+      "sizeKB": "44.61"
+    },
+    {
+      "file": "work-table-screen1-7.json",
+      "size": 45829,
+      "sizeKB": "44.75"
+    },
+    {
+      "file": "work-table-screen1-8.json",
+      "size": 46058,
+      "sizeKB": "44.98"
+    },
+    {
+      "file": "work-table-screen1-9.json",
+      "size": 45753,
+      "sizeKB": "44.68"
+    },
+    {
+      "file": "work-table-screen1-10.json",
+      "size": 47214,
+      "sizeKB": "46.11"
+    }
+  ],
+  "conversion": {
+    "startedAt": "2025-01-27T00:00:00Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成",
+        "completedAt": "2025-01-27T00:00:00Z"
+      },
+      "phase2": {
+        "status": "completed",
+        "description": "分割ファイル1-3の処理",
+        "files": {
+          "work-table-screen1-1.json": {
+            "status": "completed",
+            "processedLines": "1-1600",
+            "totalLines": 1600,
+            "nodesProcessed": 25,
+            "notes": "全ノードを処理完了。背景、ヘッダー、ロゴ、ナビゲーション、検索ボックス、ボタン群、青い線と背景、時計アイコン、テキストをすべてHTMLに変換"
+          },
+          "work-table-screen1-2.json": {
+            "status": "completed",
+            "processedLines": "1-1912",
+            "totalLines": 1912,
+            "nodesProcessed": 28,
+            "notes": "全ノードを処理完了。テキスト、グループ、ベクター、ボタン、テーブルヘッダーをすべてHTMLに変換"
+          },
+          "work-table-screen1-3.json": {
+            "status": "completed",
+            "processedLines": "1-2055",
+            "totalLines": 2055,
+            "nodesProcessed": 50,
+            "notes": "全ノードを処理完了。工数ヘッダー数字(9-48)、備考、線、背景、テキスト、アイコンをすべてHTMLに変換"
+          }
+        }
+      },
+      "phase3": {
+        "status": "completed",
+        "description": "分割ファイル4-6の処理",
+        "files": {
+          "work-table-screen1-4.json": {
+            "status": "completed",
+            "processedLines": "1-1935",
+            "totalLines": 1935,
+            "nodesProcessed": 35,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          },
+          "work-table-screen1-5.json": {
+            "status": "completed",
+            "processedLines": "1-1926",
+            "totalLines": 1926,
+            "nodesProcessed": 30,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          },
+          "work-table-screen1-6.json": {
+            "status": "completed",
+            "processedLines": "1-1897",
+            "totalLines": 1897,
+            "nodesProcessed": 28,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          }
+        }
+      },
+      "phase4": {
+        "status": "completed",
+        "description": "分割ファイル7-10の処理",
+        "files": {
+          "work-table-screen1-7.json": {
+            "status": "completed",
+            "processedLines": "1-1888",
+            "totalLines": 1888,
+            "nodesProcessed": 25,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          },
+          "work-table-screen1-8.json": {
+            "status": "completed",
+            "processedLines": "1-1935",
+            "totalLines": 1935,
+            "nodesProcessed": 30,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          },
+          "work-table-screen1-9.json": {
+            "status": "completed",
+            "processedLines": "1-1875",
+            "totalLines": 1875,
+            "nodesProcessed": 25,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          },
+          "work-table-screen1-10.json": {
+            "status": "completed",
+            "processedLines": "1-2024",
+            "totalLines": 2024,
+            "nodesProcessed": 30,
+            "notes": "全ノードを処理完了。テーブル行、線、背景、テキスト、アイコン、工数バーをすべてHTMLに変換"
+          }
+        }
+      },
+      "phase5": {
+        "status": "completed",
+        "description": "メインファイルの直接ノード処理",
+        "processedLines": "112-1946",
+        "totalLines": 1961,
+        "nodesProcessed": 46,
+        "notes": "全ノードを処理完了。工数バー、円アイコン、線、テーブル行、縦線、グループをすべてHTMLに変換"
+      }
+    },
+    "completedAt": "2025-01-27T00:00:00Z",
+    "summary": {
+      "totalFilesProcessed": 11,
+      "totalNodesProcessed": 312,
+      "totalLinesProcessed": 19460,
+      "allPhasesCompleted": true
+    }
+  }
+}
+

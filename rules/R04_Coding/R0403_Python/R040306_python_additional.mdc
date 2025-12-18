@@ -1,0 +1,25 @@
+---
+description: Pythonコードの補足的な規約やスタイルガイド
+globs: **/*.py
+alwaysApply: false
+---
+# Python その他の規約
+
+## 8.1 推奨する例外クラスについて
+- Pythonで標準提供されている例外を使用し、不必要に独自の例外クラスを作成しない。
+- 以下に、Pythonで標準提供されている例外と、Javaの例外クラスとの対応関係を示す。
+  | 一般的によく使用されるJavaの例外 | 対応するPythonの例外 | 用途 |
+  | --- | --- | --- |
+  | IllegalArgumentException | ValueError | パラメータ値が不適切な場合に使用。正しい型だが適切でない値を持つ引数を受け取ったときなどに使用。 |
+  | IllegalStateException | RuntimeError | メソッド呼び出しに対して前提となる条件が整っていない場合に使用。Pythonでは、適切な名前の標準例外クラスが存在しないため、RutimeErrorで代用。 |
+  | NullPointerException | AttributeError | Noneを許可しないパラメータがNoneだった場合に使用。「ValueError」を使用しても、構わない。 |
+  | IndexOutOfBoundsException | IndexError/TypeError | インデックスパラメータ値が不正だった場合に使用。「ValueError」を使用しても、構わない。 |
+  | unsupportedOperationException | NotImplementedError | サポートしていないメソッドを呼び出した場合に使用 |
+
+## 8.2 共通化について
+コードの共通化には継承と委譲の2つの方式があります。
+- 継承を利用する場合は、親クラスを作成し、共通するメソッドを親クラス側に移動する。
+- 委譲を利用する場合は、継承関係の無い単なる共通クラスに処理を定義（CommonClass）し、元のクラスのメソッドには、共通クラスのメソッドを呼び出す処理を記述する。また、直接的な継承関係が無いSomeClassOneとSomeClassTwoの間に多態性を持たい場合には、インターフェースを利用して、擬似的な継承関係を構築する。
+- 一般的には、継承方式よりも委譲方式（委譲＋インターフェース）の方が、柔軟性が高いため、原則として、委譲方式を利用する。
+
+- Pythonは、言語使用的に多重継承が可能であるが、「Effective Python」では「多重継承は避けた方が賢明」とされているため、原則として、委譲方式を利用すること。

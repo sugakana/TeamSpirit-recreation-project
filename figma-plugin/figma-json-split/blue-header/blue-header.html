@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Header - TeamSpirit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        #figma-root {
+            position: relative;
+            width: 1920px;
+            height: 68px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="figma-root">
+        <!-- Blue Header -->
+        <div style="position: absolute; left: 1px; top: 2px; width: 1904px; height: 68px;">
+            <!-- Rectangle 120: 青色の背景（左端の角が丸い） -->
+            <svg style="position: absolute; left: 1px; top: 2px; width: 1904px; height: 68px;">
+                <path d="M 3 0 L 1904 0 L 1904 68 L 3 68 Q 0 68 0 65 L 0 3 Q 0 0 3 0 Z" fill="rgb(37, 100, 153)" />
+            </svg>
+            
+            <!-- Rectangle 174: 灰色の縦線 -->
+            <div style="position: absolute; left: 91.04px; top: 14px; width: 2.87px; height: 47px; background-color: rgb(217, 217, 217);"></div>
+            
+            <!-- 勤務表 -->
+            <span style="position: absolute; left: 104.44px; top: 16px; width: 72.74px; height: 27px; color: rgb(255, 255, 255); font-size: 23.03px; font-family: Arial;  text-align: center; display: flex; align-items: center; justify-content: center;">勤務表</span>
+            
+            <!-- 部署情報 -->
+            <span style="position: absolute; left: 619.26px; top: 27px; width: 328.30px; height: 38px; color: rgb(255, 255, 255); font-size: 14.90px; font-family: Arial; text-align: left; white-space: pre-line;">　　部署　 310 TechE
+勤務体系　フレックスタイム制（一般）</span>
+            
+            <!-- Rectangle 179: 青緑色の矩形 -->
+            <div style="position: absolute; left: 1594.58px; top: 10px; width: 54.56px; height: 51px; background-color: rgb(129, 153, 175);"></div>
+            
+            <!-- 人物アイコン Group -->
+            <div style="position: absolute; left: 1609px; top: 16.96px; width: 26px; height: 46.03px;">
+                <!-- 頭部 -->
+                <svg style="position: absolute; left: 4px; top: 0px; width: 19px; height: 17px;">
+                    <path d="M 19 8.5 C 19 13.19 14.746 17 9.5 17 C 4.254 17 0 13.19 0 8.5 C 0 3.81 4.254 0 9.5 0 C 14.746 0 19 3.81 19 8.5 Z" fill="rgb(255, 255, 255)" />
+                </svg>
+                <!-- 身体 -->
+                <svg style="position: absolute; left: 2px; top: 18px; width: 22px; height: 20px;">
+                    <path d="M 11 0 C 4.888888888888889 0 0 3.336441333332519 0 8.675758129664551 L 0 16.68589461538163 C 0 18.677777777777777 1.2222222222222223 20.01198225631409 3.0555555555555554 20.01198225631409 L 18.944444444444443 20.01198225631409 C 20.777777777777775 20.01198225631409 22 18.677777777777777 22 16.68589461538163 L 22 8.675758129664551 C 22 3.336441333332519 17.11111111111111 0 11 0 Z" fill="rgb(255, 255, 255)" />
+                </svg>
+            </div>
+            
+            <!-- Rectangle 180: 黄緑色のボタン -->
+            <div style="position: absolute; left: 1657px; top: 2px; width: 64px; height: 51px; background-color: rgb(179, 210, 44); border-radius: 0 0 10px 10px;"></div>
+            
+            <!-- Rectangle 181: 青色のボタン -->
+            <div style="position: absolute; left: 1729px; top: 2px; width: 64px; height: 51px; background-color: rgb(94, 168, 197); border-radius: 0 0 10px 10px;"></div>
+            
+            <!-- Rectangle 182: 黄色のボタン (HELP) -->
+            <div style="position: absolute; left: 1803px; top: 2px; width: 64px; height: 51px; background-color: rgb(242, 183, 27); border-radius: 0 0 10px 10px;"></div>
+            
+            <!-- TEXT: ？ -->
+            <span style="position: absolute; left: 1820px; top: 5px; width: 31.59px; height: 25px; color: rgb(255, 255, 255); font-size: 28.16px; font-family: Arial; text-align: center; display: flex; align-items: center; justify-content: center;">？</span>
+            
+            <!-- TEXT: HELP -->
+            <span style="position: absolute; left: 1820px; top: 38px; width: 33.50px; height: 11px; color: rgb(255, 255, 255); font-size: 11.16px; font-family: Arial; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center;">HELP</span>
+            
+            <!-- カレンダーアイコン -->
+            <div style="position: absolute; left: 1745px; top: 6px; width: 34px; height: 31px;">
+                <svg width="34" height="31" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29.7832 25.5H18.7832" stroke="white" stroke-linecap="round"/>
+                    <path d="M15.7832 25.5H4.7832" stroke="white" stroke-linecap="round"/>
+                    <path d="M0.544632 21.4285L0.5 5.68018" stroke="white" stroke-linecap="round"/>
+                    <path d="M33.4997 21.5L33.4551 5.75171" stroke="white" stroke-linecap="round"/>
+                    <path d="M4.7832 25.5C2.11654 25.5 0.5 24.1667 0.5 21.5" stroke="white" stroke-linecap="round"/>
+                    <path d="M33.5 21.5C33.4471 24.2706 32.1415 25.6223 29.583 25.5551" stroke="white" stroke-linecap="round"/>
+                    <path d="M15.9805 25.5C14.7805 26.8333 13.2805 28.5 12.4805 30.5" stroke="white" stroke-linecap="round"/>
+                    <path d="M7.5 0.5L27.5 0.5" stroke="white" stroke-linecap="round"/>
+                    <path d="M27.5 0.5C31.5 0.5 33.5 2.16667 33.5 5.5" stroke="white" stroke-linecap="round"/>
+                    <path d="M0.5 6C0.488337 2.73188 2.23248 0.521597 7.5 0.5" stroke="white" stroke-linecap="round"/>
+                    <path d="M18.4805 25.5C17.3896 26.8333 15.3896 28.5 12.4805 30.5" stroke="white" stroke-linecap="round"/>
+                    <path d="M7.04688 13C7.75975 13 8.23727 13.5032 8.2373 14.0068C8.2373 14.5104 7.75977 15.0136 7.04688 15.0137C6.33392 15.0137 5.85645 14.5105 5.85645 14.0068C5.85648 13.5032 6.33395 13 7.04688 13Z" fill="white" stroke="white"/>
+                    <path d="M13.8086 13C14.5215 13 14.999 13.5032 14.999 14.0068C14.999 14.5104 14.5215 15.0136 13.8086 15.0137C13.0956 15.0137 12.6182 14.5105 12.6182 14.0068C12.6182 13.5032 13.0957 13 13.8086 13Z" fill="white" stroke="white"/>
+                    <path d="M20.5698 13C21.2827 13 21.7602 13.5032 21.7603 14.0068C21.7603 14.5104 21.2827 15.0136 20.5698 15.0137C19.8569 15.0137 19.3794 14.5105 19.3794 14.0068C19.3794 13.5032 19.8569 13 20.5698 13Z" fill="white" stroke="white"/>
+                    <path d="M27.3306 13C28.0434 13 28.521 13.5032 28.521 14.0068C28.521 14.5104 28.0435 15.0136 27.3306 15.0137C26.6176 15.0137 26.1401 14.5105 26.1401 14.0068C26.1402 13.5032 26.6176 13 27.3306 13Z" fill="white" stroke="white"/>
+                </svg>
+            </div>
+            
+            <!-- TEXT: 休暇情報 -->
+            <span style="position: absolute; left: 1737px; top: 38px; width: 48.81px; height: 11px; color: rgb(255, 255, 255); font-size: 11.16px; font-family: Arial; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center;">休暇情報</span>
+            
+            <!-- ロゴ: 楕円 (Ellipse 3) -->
+            <svg style="position: absolute; left: 30px; top: 20px; width: 34px; height: 32px;" viewBox="0 0 34 32">
+                <ellipse cx="17" cy="16" rx="16" ry="15" fill="rgb(30, 83, 125)" stroke="rgb(25, 158, 214)" stroke-width="0.877" />
+            </svg>
+            
+            <!-- ロゴ: 時計の針 (Line 4 - 長針) -->
+            <svg style="position: absolute; left: 40px; top: 29px; width: 15px; height: 1px; transform: rotate(-90deg);">
+                <line x1="0" y1="0" x2="13" y2="0" stroke="rgb(255, 255, 255)" stroke-width="0.738" />
+            </svg>
+            
+            <!-- ロゴ: 時計の針 (Line 5 - 短針) -->
+            <svg style="position: absolute; left: 47px; top: 37px; width: 8px; height: 1px;">
+                <line x1="0" y1="0" x2="8" y2="0" stroke="rgb(255, 255, 255)" stroke-width="0.738" />
+            </svg>
+        </div>
+        
+        <!-- Attendance Sheet テキスト -->
+        <span style="position: absolute; left: 85px; top: 50px; width: 133px; height: 19px; color: rgb(137, 164, 188); font-size: 12.19px; font-family: Arial; text-align: center; display: flex; align-items: center; justify-content: center;">Attendance Sheet</span>
+        
+        <!-- 社員名 -->
+        <span style="position: absolute; left: 1405px; top: 48px; width: 146px; height: 20px; color: rgb(255, 255, 255); font-size: 14.90px; font-family: Arial; text-align: left;">社員名　須賀哉斗</span>
+    </div>
+</body>
+</html>
+

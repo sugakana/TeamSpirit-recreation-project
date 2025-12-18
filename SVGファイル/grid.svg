@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- 背景（白） -->
+  <rect width="240" height="240" fill="white"/>
+  
+  <!-- 3x3グリッドの黒丸 -->
+  <g fill="#333333" filter="url(#softBlur)">
+    <!-- 1行目 -->
+    <circle cx="60" cy="60" r="12"/>
+    <circle cx="120" cy="60" r="12"/>
+    <circle cx="180" cy="60" r="12"/>
+    
+    <!-- 2行目 -->
+    <circle cx="60" cy="120" r="12"/>
+    <circle cx="120" cy="120" r="12"/>
+    <circle cx="180" cy="120" r="12"/>
+    
+    <!-- 3行目 -->
+    <circle cx="60" cy="180" r="12"/>
+    <circle cx="120" cy="180" r="12"/>
+    <circle cx="180" cy="180" r="12"/>
+  </g>
+  
+  <!-- ソフトなエッジ効果 -->
+  <defs>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+    </filter>
+  </defs>
+</svg>
+

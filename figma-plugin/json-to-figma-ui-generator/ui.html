@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON ↔ Figma 双方向ジェネレーター</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --card-bg: #ffffff;
+      --hint-color: #666666;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #1e1e1e;
+        --text-color: #e0e0e0;
+        --border-color: rgba(255, 255, 255, 0.15);
+        --card-bg: #2a2a2a;
+        --hint-color: #a0a0a0;
+      }
+    }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      margin: 0;
+      padding: 16px;
+      line-height: 1.5;
+      background: var(--figma-color-bg, var(--bg-color));
+      color: var(--figma-color-text, var(--text-color));
+    }
+    h1 {
+      font-size: 14px;
+      margin: 0 0 12px;
+      font-weight: 600;
+      color: var(--figma-color-text, var(--text-color));
+    }
+    h2 {
+      font-size: 12px;
+      margin: 16px 0 8px;
+      font-weight: 600;
+      color: var(--figma-color-text, var(--text-color));
+      opacity: 0.9;
+    }
+    .card {
+      border: 1px solid var(--figma-color-border, var(--border-color));
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--figma-color-bg-secondary, var(--card-bg));
+      margin-bottom: 12px;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .hint {
+      font-size: 11px;
+      margin-top: 8px;
+      color: var(--hint-color);
+    }
+    input[type="file"] {
+      width: 100%;
+      color: var(--figma-color-text, var(--text-color));
+    }
+    input[type="checkbox"] {
+      cursor: pointer;
+    }
+    label {
+      color: var(--figma-color-text, var(--text-color));
+    }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+      font-weight: 600;
+      font-size: 12px;
+      transition: opacity 0.2s;
+    }
+    button:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+    button:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+    button.secondary {
+      background: #6b7280;
+    }
+    button.success {
+      background: #10b981;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      resize: vertical;
+      border-radius: 6px;
+      padding: 8px;
+      border: 1px solid var(--figma-color-border, var(--border-color));
+      box-sizing: border-box;
+      background: var(--figma-color-bg, var(--bg-color));
+      color: var(--figma-color-text, var(--text-color));
+    }
+    textarea.large {
+      height: 200px;
+    }
+    .button-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .status {
+      font-size: 11px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+      display: none;
+    }
+    .status.success {
+      background: #d1fae5;
+      color: #065f46;
+      display: block;
+    }
+    @media (prefers-color-scheme: dark) {
+      .status.success {
+        background: #064e3b;
+        color: #d1fae5;
+      }
+    }
+    .status.error {
+      background: #fee2e2;
+      color: #991b1b;
+      display: block;
+    }
+    @media (prefers-color-scheme: dark) {
+      .status.error {
+        background: #7f1d1d;
+        color: #fee2e2;
+      }
+    }
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--figma-color-border, var(--border-color));
+    }
+    .tab {
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 12px;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      opacity: 0.6;
+      color: var(--figma-color-text, var(--text-color));
+      transition: opacity 0.2s;
+    }
+    .tab:hover {
+      opacity: 0.8;
+    }
+    .tab.active {
+      opacity: 1;
+      border-bottom-color: #2563eb;
+      font-weight: 600;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>JSON ↔ Figma 双方向ジェネレーター</h1>
+  
+  <div class="tabs">
+    <div class="tab active" data-tab="to-figma">JSON → Figma</div>
+    <div class="tab" data-tab="to-json">Figma → JSON</div>
+  </div>
+
+  <!-- JSON → Figma Tab -->
+  <div class="tab-content active" data-content="to-figma">
+    <h2>JSON を読み込み、Figma に描画</h2>
+    <div class="card">
+      <div class="row" style="margin-bottom:8px;">
+        <input id="file" type="file" accept=".json,application/json" />
+        <button id="send" disabled>送信</button>
+      </div>
+      <div class="hint">- JSON ファイルを選択して「送信」を押してください。<br/>- 直接ペーストも可能です。</div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between; margin-bottom:8px;">
+        <div style="font-weight:600;">JSON ペースト</div>
+        <div class="button-group">
+          <button id="sendPaste">送信</button>
+          <button id="updatePaste" class="secondary">更新</button>
+        </div>
+      </div>
+      <textarea id="paste" placeholder='[ { "type": "FRAME", "name": "Root", "children": [] } ]'></textarea>
+      <div id="statusToFigma" class="status"></div>
+    </div>
+  </div>
+
+  <!-- Figma → JSON Tab -->
+  <div class="tab-content" data-content="to-json">
+    <h2>Figma を JSON にエクスポート</h2>
+    <div class="card">
+      <div class="button-group" style="margin-bottom:8px;">
+        <button id="exportSelected" class="success">選択をエクスポート</button>
+        <button id="exportPage" class="success">ページ全体をエクスポート</button>
+      </div>
+      <div style="margin-bottom:8px;">
+        <label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer;">
+          <input type="checkbox" id="exportImages" style="cursor:pointer;" />
+          <span>画像をbase64としてエクスポート（重い処理のため注意）</span>
+        </label>
+      </div>
+      <div class="hint">- ノードを選択して「選択をエクスポート」を押すか、<br/>- 「ページ全体をエクスポート」で全ノードをエクスポートします。<br/>- 画像エクスポートは処理が重いため、必要な場合のみ有効にしてください。</div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between; margin-bottom:8px;">
+        <div style="font-weight:600;">エクスポートされた JSON</div>
+        <div class="button-group">
+          <button id="copyJson" class="secondary" disabled>コピー</button>
+          <button id="saveJson" class="secondary" disabled>保存</button>
+          <button id="loadExported" disabled>Figma に読み込み</button>
+        </div>
+      </div>
+      <textarea id="exportedJson" class="large" placeholder="エクスポートされた JSON がここに表示されます..." readonly></textarea>
+      <div id="statusToJson" class="status"></div>
+    </div>
+  </div>
+
+  <script>
+    const $file = document.getElementById('file');
+    const $send = document.getElementById('send');
+    const $paste = document.getElementById('paste');
+    const $sendPaste = document.getElementById('sendPaste');
+    const $updatePaste = document.getElementById('updatePaste');
+    const $exportSelected = document.getElementById('exportSelected');
+    const $exportPage = document.getElementById('exportPage');
+    const $exportedJson = document.getElementById('exportedJson');
+    const $copyJson = document.getElementById('copyJson');
+    const $saveJson = document.getElementById('saveJson');
+    const $loadExported = document.getElementById('loadExported');
+    const $statusToFigma = document.getElementById('statusToFigma');
+    const $statusToJson = document.getElementById('statusToJson');
+    const $tabs = document.querySelectorAll('.tab');
+    const $tabContents = document.querySelectorAll('.tab-content');
+
+    let lastText = '';
+    let exportedJsonData = null;
+
+    // Tab switching
+    $tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetTab = tab.dataset.tab;
+        $tabs.forEach(t => t.classList.remove('active'));
+        $tabContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelector(`[data-content="${targetTab}"]`).classList.add('active');
+      });
+    });
+
+    function showStatus(element, message, isError = false) {
+      element.textContent = message;
+      element.className = 'status ' + (isError ? 'error' : 'success');
+      setTimeout(() => {
+        element.className = 'status';
+      }, 3000);
+    }
+
+    $file.addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) {
+        $send.disabled = true;
+        return;
+      }
+      try {
+        const text = await file.text();
+        lastText = text;
+        $send.disabled = false;
+      } catch (err) {
+        console.error('ファイル読み込みに失敗:', err);
+        showStatus($statusToFigma, 'ファイル読み込みに失敗しました。', true);
+        parent.postMessage({ pluginMessage: { type: 'ui-error', error: 'ファイル読み込みに失敗しました。' } }, '*');
+      }
+    });
+
+    $send.addEventListener('click', () => {
+      if (!lastText) return;
+      parent.postMessage({ pluginMessage: { type: 'load-json', json: lastText } }, '*');
+      showStatus($statusToFigma, 'Figma に読み込みました。');
+    });
+
+    $sendPaste.addEventListener('click', () => {
+      const text = $paste.value || '';
+      if (!text.trim()) {
+        showStatus($statusToFigma, 'JSON を入力してください。', true);
+        return;
+      }
+      parent.postMessage({ pluginMessage: { type: 'load-json', json: text } }, '*');
+      showStatus($statusToFigma, 'Figma に読み込みました。');
+    });
+
+    $updatePaste.addEventListener('click', () => {
+      const text = $paste.value || '';
+      if (!text.trim()) {
+        showStatus($statusToFigma, 'JSON を入力してください。', true);
+        return;
+      }
+      parent.postMessage({ pluginMessage: { type: 'update-from-json', json: text } }, '*');
+      showStatus($statusToFigma, 'Figma を更新しました。');
+    });
+
+    $exportSelected.addEventListener('click', () => {
+      $exportSelected.disabled = true;
+      $exportPage.disabled = true;
+      $copyJson.disabled = true;
+      $saveJson.disabled = true;
+      $loadExported.disabled = true;
+      $exportedJson.value = '';
+      const exportImages = document.getElementById('exportImages').checked;
+      showStatus($statusToJson, 'エクスポート中...', false);
+      parent.postMessage({ pluginMessage: { type: 'export-to-json', exportImages: exportImages } }, '*');
+    });
+
+    $exportPage.addEventListener('click', () => {
+      $exportSelected.disabled = true;
+      $exportPage.disabled = true;
+      $copyJson.disabled = true;
+      $saveJson.disabled = true;
+      $loadExported.disabled = true;
+      $exportedJson.value = '';
+      const exportImages = document.getElementById('exportImages').checked;
+      showStatus($statusToJson, 'エクスポート中...', false);
+      parent.postMessage({ pluginMessage: { type: 'export-to-json', exportImages: exportImages } }, '*');
+    });
+
+    $copyJson.addEventListener('click', async () => {
+      if (!exportedJsonData) return;
+      try {
+        const jsonString = JSON.stringify(exportedJsonData, null, 2);
+        
+        // テキストエリアの内容を更新（既に更新されている可能性があるが念のため）
+        $exportedJson.value = jsonString;
+        
+        // テキストエリアを選択してコピー
+        $exportedJson.select();
+        $exportedJson.setSelectionRange(0, jsonString.length);
+        
+        // execCommandを使用してコピー（Figmaプラグインのiframe環境で動作する）
+        const success = document.execCommand('copy');
+        
+        if (success) {
+          showStatus($statusToJson, 'JSON をクリップボードにコピーしました。');
+        } else {
+          // execCommandが失敗した場合、navigator.clipboardを試す
+          try {
+            await navigator.clipboard.writeText(jsonString);
+            showStatus($statusToJson, 'JSON をクリップボードにコピーしました。');
+          } catch (clipboardErr) {
+            // 両方失敗した場合、フォールバックとしてテキストエリアを選択状態にする
+            $exportedJson.focus();
+            $exportedJson.select();
+            showStatus($statusToJson, 'コピーに失敗しました。テキストエリアの内容を手動でコピーしてください。', true);
+          }
+        }
+      } catch (err) {
+        console.error('コピーに失敗:', err);
+        // エラーが発生した場合でも、テキストエリアを選択状態にしてユーザーに手動コピーの機会を提供
+        try {
+          $exportedJson.focus();
+          $exportedJson.select();
+        } catch (selectErr) {
+          // 選択も失敗した場合は無視
+        }
+        showStatus($statusToJson, 'コピーに失敗しました。テキストエリアの内容を手動でコピーしてください。', true);
+      }
+    });
+
+    $saveJson.addEventListener('click', () => {
+      if (!exportedJsonData) return;
+      try {
+        const jsonString = JSON.stringify(exportedJsonData, null, 2);
+        
+        // ファイル名を生成（一番親のコンポーネント名を使用）
+        let fileName = 'figma-export.json'; // デフォルト名
+        
+        // 一番親のコンポーネント名を取得
+        let rootName = null;
+        if (Array.isArray(exportedJsonData)) {
+          // 配列の場合、最初の要素のnameを使用
+          if (exportedJsonData.length > 0 && exportedJsonData[0] && exportedJsonData[0].name) {
+            rootName = exportedJsonData[0].name;
+          }
+        } else if (exportedJsonData && typeof exportedJsonData === 'object') {
+          // オブジェクトの場合、そのnameを使用
+          if (exportedJsonData.name) {
+            rootName = exportedJsonData.name;
+          }
+        }
+        
+        // ファイル名に使用できない文字をサニタイズ
+        if (rootName) {
+          // ファイル名に使用できない文字を置換: / \ : * ? " < > |
+          const sanitizedName = rootName
+            .replace(/[/\\:*?"<>|]/g, '-')  // 無効な文字をハイフンに置換
+            .replace(/\s+/g, '-')           // 連続する空白をハイフンに置換
+            .replace(/-+/g, '-')              // 連続するハイフンを1つに
+            .replace(/^-|-$/g, '');          // 先頭・末尾のハイフンを削除
+          
+          if (sanitizedName && sanitizedName.length > 0) {
+            fileName = `${sanitizedName}.json`;
+          }
+        }
+        
+        // Blobを作成
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        
+        // Blob URLを作成
+        const url = URL.createObjectURL(blob);
+        
+        // ダウンロードリンクを作成してクリック
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        
+        // クリーンアップ
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        showStatus($statusToJson, `JSON を ${fileName} として保存しました。`);
+      } catch (err) {
+        console.error('保存に失敗:', err);
+        showStatus($statusToJson, '保存に失敗しました。', true);
+      }
+    });
+
+    $loadExported.addEventListener('click', () => {
+      if (!exportedJsonData) return;
+      const jsonString = JSON.stringify(exportedJsonData, null, 2);
+      parent.postMessage({ pluginMessage: { type: 'load-json', json: jsonString } }, '*');
+      showStatus($statusToJson, 'Figma に読み込みました。');
+    });
+
+    // Listen for messages from plugin
+    window.onmessage = (event) => {
+      const msg = event.data.pluginMessage;
+      if (!msg) return;
+
+      if (msg.type === 'export-start') {
+        $exportSelected.disabled = true;
+        $exportPage.disabled = true;
+        $copyJson.disabled = true;
+        $saveJson.disabled = true;
+        $loadExported.disabled = true;
+        showStatus($statusToJson, 'エクスポートを開始しました...', false);
+      } else if (msg.type === 'export-progress') {
+        const progress = Math.round((msg.current / msg.total) * 100);
+        showStatus($statusToJson, `エクスポート中... ${msg.current}/${msg.total} (${progress}%)`, false);
+      } else if (msg.type === 'export-result') {
+        exportedJsonData = msg.json;
+        const jsonString = JSON.stringify(msg.json, null, 2);
+        $exportedJson.value = jsonString;
+        $copyJson.disabled = false;
+        $saveJson.disabled = false;
+        $loadExported.disabled = false;
+        $exportSelected.disabled = false;
+        $exportPage.disabled = false;
+        showStatus($statusToJson, 'エクスポートが完了しました。');
+      } else if (msg.type === 'export-error') {
+        $exportSelected.disabled = false;
+        $exportPage.disabled = false;
+        $copyJson.disabled = true;
+        $saveJson.disabled = true;
+        $loadExported.disabled = true;
+        showStatus($statusToJson, 'エクスポートエラー: ' + msg.error, true);
+      } else if (msg.type === 'update-error') {
+        showStatus($statusToFigma, msg.error, true);
+      } else if (msg.type === 'update-success') {
+        showStatus($statusToFigma, 'Figma を更新しました。');
+      }
+    };
+  </script>
+</body>
+</html>
+
+
+

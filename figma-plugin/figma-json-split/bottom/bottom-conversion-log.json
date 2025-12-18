@@ -1,0 +1,53 @@
+{
+  "originalFile": "bottom.json",
+  "splitDate": "2025-12-05T00:00:00.000Z",
+  "splitOptions": {
+    "maxSize": 50000,
+    "maxNodes": 50,
+    "maxDepth": 3
+  },
+  "splitStatistics": {
+    "originalNodes": 23,
+    "originalSize": 18666,
+    "splitFiles": 1
+  },
+  "splitFiles": [
+    {
+      "file": "bottom-root.json",
+      "size": 18666,
+      "sizeKB": "18.23"
+    }
+  ],
+  "conversion": {
+    "startedAt": "2025-12-05T00:00:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成",
+        "completedAt": "2025-12-05T00:00:00.000Z"
+      },
+      "phase2": {
+        "status": "completed",
+        "description": "JSONノードの処理とHTML変換",
+        "completedAt": "2025-12-05T00:00:00.000Z",
+        "files": {
+          "bottom-root.json": {
+            "status": "completed",
+            "processedLines": "1-779",
+            "totalLines": 779,
+            "nodesProcessed": 23,
+            "notes": "全ノード処理完了: ルートGROUP (Bottom), Group 7 (Rectangle 344 + 8 TEXT + 1 LINE), Group 6 (Rectangle 343 + 8 TEXT + 1 LINE)"
+          }
+        }
+      }
+    },
+    "completedAt": "2025-12-05T00:00:00.000Z",
+    "summary": {
+      "totalFilesProcessed": 1,
+      "totalNodesProcessed": 23,
+      "totalLinesProcessed": 779,
+      "allPhasesCompleted": true
+    }
+  }
+}
+

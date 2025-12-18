@@ -1,0 +1,2 @@
+﻿customerId,userFamilyName,userFirstName,userFamilyNameFurigana,userFirstNameFurigana,groupPath,enabledDate,disabledDate,serviceId,serviceEnabledFlag,serviceEnabledDate,serviceDisabledDate
+,田中,太郎,タナカ,タロウ,人事部_人事課,2011-11-11,2030-11-11,AAA111111,TRUE,2011-11-11,2030-11-11

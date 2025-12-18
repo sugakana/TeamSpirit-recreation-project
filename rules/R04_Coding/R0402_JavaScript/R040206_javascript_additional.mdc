@@ -1,0 +1,91 @@
+---
+description: JavaScriptおよびVue.jsに関する補足的規約を定義
+globs: src/**/*.js,src/**/*.vue
+alwaysApply: false
+---
+# JavaScript/Vue.js その他の規約と基本事項
+
+## 8.1 推奨する例外クラス
+
+### 8.1.1 標準例外の使用
+- 基本的にJavaScriptで標準提供されている例外を使用し、不必要に独自の例外クラスを作成しない
+- 以下に、JavaScriptで標準提供されている例外と、Javaの例外クラスとの対応関係を示す
+
+| 例外クラス | 対応するJavaの例外 | 用途 |
+|---|---|---|
+| Error | Exception、RuntimeException | 汎用の例外。極力、より具象的な、他の例外クラスを用いること。 |
+| ReferenceError | NullPointerExceptionなど | 存在しない変数が参照された場合のエラー。あるオブジェクトの、nullなプロパティのメソッドを実行しようとした場合など。 |
+| TypeError | ClassCastException | 期待される型でない場合のエラー。型チェック時などに使用。 |
+
+> 注意: JavaScriptの処理系（ブラウザ）によっては、Null参照も、ReferenceErrorでは無くTypeErrorがスローされる場合もある。しかし、実装者が実際にコーディングする範囲においては、Null参照の場合はTypeErrorではなくReferenceErrorを使用する方が適切である。
+
+### 8.1.2 その他の例外ケース
+- Javaと比較して不足している例外クラス（IllegalArgumentException、IllegalStateException、UnsupportedOperationExceptionなど）は、Errorで代用してもよい
+
+## 8.2 共通化について
+
+### 8.2.1 共通化の方式
+- 継承方式：単一ファイルコンポーネント/ミックスインを利用した共通化
+- 委譲方式：ユーティリティファイルを利用した共通化
+
+### 8.2.2 方式の選択
+- JavaScript/Vue.jsのミックスインは多重継承に制限がなく、慣例的にミックスインがよく用いられている
+- 方式がどちらでもよいようなケースは、継承方式を採用してよい
+
+## 9. JavaScriptの基本
+
+### 9.1 データ型
+
+#### 9.1.1 代表的なデータ型
+| 型 | 対応するJavaの型 | 説明 | 初期値 |
+|---|---|---|---|
+| string\|null | (String) | 文字列 | undefined |
+| number\|null | double | 倍精度（64ビット）浮動小数値 | undefined |
+| boolean\|null | boolean | 真偽値 | undefined |
+| Date | Date | 日時。ミリ秒単位。 | undefined |
+| String | String | 文字列 | undefined |
+| Number | Double | 倍精度（64ビット）浮動小数値 | undefined |
+| Boolean | Boolean | 真偽値 | undefined |
+| Object | Object | 全てのクラスの基本クラス。 | undefined |
+| ? | (連想配列) | 型不明状態だが、いわゆる連想配列として利用できる。 | undefined |
+| Array | (配列) | 配列。一般的な配列と異なり、要素の追加や削除ができる。JavaのListに近い。 | undefined |
+
+#### 9.1.2 基本型とラッパー型
+- 基本的には、string, number, booleanを使用
+- substring()等の型に固有の関数を使用する場合に、String, Number, Booleanを使用
+- nullを代入する可能性がある場合は、以下のようにJSDocで型を明示する：
+
+```javascript
+/**
+ * 顧客ID。
+ *
+ * @type {string|null}
+ */
+customerId = null;
+```
+
+### 9.2 演算子
+
+#### 9.2.1 代表的な演算子
+| 演算子 | 働き | 使い方 | 意味 | 備考 |
+|---|---|---|---|---|
+| == | =（等しい） | a == b | aとbの値は等しい | 非推奨 |
+| === | =（等しい） | a === b | aとbの値は等しく、型も同じ | |
+| < | <（小なり） | a < b | aはbより小さい | |
+| > | >（大なり） | a > b | aはbより大きい | |
+| <= | ≦（以下） | a <= b | aはb以下 | |
+| >= | ≧（以上） | a >= b | aはb以上 | |
+| != | ≠（等しくない） | a != b | aとbは等しくない | 非推奨 |
+| !== | ≠（等しくない） | a !== b | 「aとbは等しくない」「aとbは型が異なる」のいずれかまたは両方が成り立つ | |
+| && | かつ | 条件式A && 条件式B | 条件式Aが真 かつ 条件式Bが真 | |
+| \|\| | または | 条件式A \|\| 条件式B | 条件式Aが真 または 条件式Bが真 | |
+
+#### 9.2.2 ラッパークラスの比較
+- 基本型のラッパークラス（String、Number、Boolean）の場合、値同士を比較する場合は`valueOf()`を使用する：
+
+```javascript
+if (a.valueOf() === b.valueOf()) {
+    // ...
+}
+```
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤怠情報入力</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        input[type="text"] {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 2px 4px;
+            font-size: 13px;
+        }
+        input[type="checkbox"] {
+            width: 18px;
+            height: 15px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Rectangle 386 - メインダイアログ -->
+        <div style="position: absolute; left: 182px; top: 50px; width: 339px; height: 336px; background-color: rgb(255, 255, 255); border: 1px solid rgb(117, 157, 192);"></div>
+        
+        <!-- Rectangle 387 - ヘッダー -->
+        <div style="position: absolute; left: 181px; top: 19px; width: 339px; height: 32px; background-color: rgb(191, 223, 255); border: 1px solid #759DC0;"></div>
+        
+        <!-- 勤怠情報入力 -->
+        <span style="position: absolute; left: 190px; top: 28px; width: 155px; height: 19px; font-size: 14.159px; font-family: Arial, sans-serif; font-weight: normal; font-style: normal; color: rgb(0, 0, 0); text-align: left;">勤怠情報入力</span>
+        
+        <!-- 2025年11月26日水曜日 -->
+        <span style="position: absolute; left: 194px; top: 62px; width: 155px; height: 19px; font-size: 14.159px; font-family: Arial, sans-serif; font-weight: normal; font-style: normal; color: rgb(0, 0, 0); text-align: left;">2025年11月26日水曜日</span>
+        
+        <!-- Rectangle 388 - 入力エリア背景 -->
+        <div style="position: absolute; left: 194px; top: 83px; width: 318px; height: 217px; background-color: rgb(239, 239, 239);"></div>
+        
+        <!-- Rectangle 390 - 出社ボタン -->
+        <div style="position: absolute; left: 211px; top: 87px; width: 121px; height: 26px; background-color: rgb(75, 158, 228);"></div>
+        <span style="position: absolute; left: 242px; top: 92px; width: 59px; height: 16px; font-size: 13.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(255, 255, 255); text-align: center;">出社</span>
+        <!-- Rectangle 397 - 出社時間入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 87px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        
+        <!-- Rectangle 391 - 退社ボタン -->
+        <div style="position: absolute; left: 211px; top: 119px; width: 121px; height: 26px; background-color: rgb(75, 158, 228);"></div>
+        <span style="position: absolute; left: 242px; top: 124px; width: 59px; height: 16px; font-size: 13.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(255, 255, 255); text-align: center;">退社</span>
+        <!-- Rectangle 398 - 退社時間入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 119px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        
+        <!-- Rectangle 393 - 休憩1ボタン -->
+        <div style="position: absolute; left: 211px; top: 151px; width: 121px; height: 26px; background-color: rgb(26, 105, 171);"></div>
+        <span style="position: absolute; left: 242px; top: 156px; width: 59px; height: 16px; font-size: 13.319px; font-family: Roboto, sans-serif; font-weight: normal; font-style: normal; color: rgb(255, 255, 255); text-align: center;">休憩1</span>
+        <!-- Rectangle 399 - 休憩1時間入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 151px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- ～記号 -->
+        <span style="position: absolute; left: 384px; top: 151px; width: 52px; height: 23px; font-size: 19.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(0, 0, 0); text-align: center;">～</span>
+        <!-- Rectangle 405 - 休憩1時間終了入力 -->
+        <input type="text" style="position: absolute; left: 427px; top: 153px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        
+        <!-- Rectangle 394 - 休憩2ボタン -->
+        <div style="position: absolute; left: 211px; top: 182px; width: 121px; height: 26px; background-color: rgb(26, 105, 171);"></div>
+        <span style="position: absolute; left: 242px; top: 187px; width: 59px; height: 16px; font-size: 13.319px; font-family: Roboto, sans-serif; font-weight: normal; font-style: normal; color: rgb(255, 255, 255); text-align: center;">休憩2</span>
+        <!-- Rectangle 400 - 休憩2時間入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 183px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- ～記号 -->
+        <span style="position: absolute; left: 384px; top: 183px; width: 52px; height: 23px; font-size: 19.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(0, 0, 0); text-align: center;">～</span>
+        <!-- Rectangle 406 - 休憩2時間終了入力 -->
+        <input type="text" style="position: absolute; left: 427px; top: 184px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- Ellipse 93 - 時計アイコン -->
+        <div style="position: absolute; left: 483px; top: 187px; width: 20px; height: 20px; background-color: rgb(217, 217, 217); border-radius: 50%;"></div>
+        <!-- Rectangle 256 - 時計の針1 -->
+        <div style="position: absolute; left: 491px; top: 192px; width: 4px; height: 10px; background-color: rgb(255, 255, 255);"></div>
+        <!-- Rectangle 257 - 時計の針2 -->
+        <div style="position: absolute; left: 491px; top: 192px; width: 3.53px; height: 10.59px; background-color: rgb(255, 255, 255); transform: rotate(-90deg);"></div>
+        
+        <!-- Rectangle 395 - 公用外出1ボタン -->
+        <div style="position: absolute; left: 211px; top: 212px; width: 121px; height: 26px; background-color: rgb(26, 105, 171);"></div>
+        <span style="position: absolute; left: 236px; top: 217px; width: 71px; height: 16px; font-size: 13.319px; font-family: Roboto, sans-serif; font-weight: normal; font-style: normal; color: rgb(255, 255, 255); text-align: center;">公用外出1</span>
+        <!-- Rectangle 401 - 公用外出1時間入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 212px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- ～記号 -->
+        <span style="position: absolute; left: 384px; top: 213px; width: 52px; height: 23px; font-size: 19.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(0, 0, 0); text-align: center;">～</span>
+        <!-- Rectangle 407 - 公用外出1時間終了入力 -->
+        <input type="text" style="position: absolute; left: 427px; top: 213px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        
+        <!-- Rectangle 396 - 公用外出2ボタン -->
+        <div style="position: absolute; left: 211px; top: 242px; width: 121px; height: 26px; background-color: rgb(26, 105, 171);"></div>
+        <span style="position: absolute; left: 235px; top: 247px; width: 71px; height: 16px; font-size: 13.319px; font-family: Roboto, sans-serif; font-weight: normal; font-style: normal; color: rgb(255, 255, 255); text-align: center;">公用外出2</span>
+        <!-- Rectangle 402 - 公用外出2時間入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 242px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- ～記号 -->
+        <span style="position: absolute; left: 384px; top: 240px; width: 52px; height: 23px; font-size: 19.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(0, 0, 0); text-align: center;">～</span>
+        <!-- Rectangle 407 - 公用外出2時間終了入力 -->
+        <input type="text" style="position: absolute; left: 427px; top: 243px; width: 40px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- Ellipse 94 - 時計アイコン -->
+        <div style="position: absolute; left: 483px; top: 245px; width: 20px; height: 20px; background-color: rgb(217, 217, 217); border-radius: 50%;"></div>
+        <!-- Rectangle 408 - 時計の針1 -->
+        <div style="position: absolute; left: 491px; top: 250px; width: 4px; height: 10px; background-color: rgb(255, 255, 255);"></div>
+        <!-- Rectangle 409 - 時計の針2 -->
+        <div style="position: absolute; left: 491px; top: 250px; width: 3.53px; height: 10.59px; background-color: rgb(255, 255, 255); transform: rotate(-89.32deg);"></div>
+        
+        <!-- Rectangle 392 - 勤務場所ボタン -->
+        <div style="position: absolute; left: 211px; top: 271px; width: 121px; height: 26px; background-color: rgb(75, 158, 228);"></div>
+        <span style="position: absolute; left: 242px; top: 276px; width: 59px; height: 16px; font-size: 13.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(255, 255, 255); text-align: center;">勤務場所</span>
+        <!-- Rectangle 403 - 勤務場所入力 -->
+        <input type="text" style="position: absolute; left: 340px; top: 271px; width: 145px; height: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+        <!-- 下向き矢印 -->
+        <span style="position: absolute; left: 480px; top: 280px; width: 15px; height: 13px; font-size: 19.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(0, 0, 0); text-align: center; transform: rotate(179.62deg);">^</span>
+        
+        <!-- Rectangle 410 - 登録ボタン -->
+        <div style="position: absolute; left: 291px; top: 313px; width: 49px; height: 30px; background-color: rgb(16, 141, 197);"></div>
+        <span style="position: absolute; left: 289px; top: 316px; width: 54px; height: 24px; font-size: 16.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(255, 255, 255); text-align: center;">登録</span>
+        
+        <!-- キャンセル -->
+        <span style="position: absolute; left: 351px; top: 319px; width: 82px; height: 27px; font-size: 14.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(74, 74, 255); text-align: center; text-decoration: underline;">キャンセル</span>
+        
+        <!-- Rectangle 411 - リセットボタン -->
+        <div style="position: absolute; left: 459px; top: 305px; width: 47px; height: 18px; background-color: rgb(240, 145, 153);"></div>
+        <span style="position: absolute; left: 459px; top: 307px; width: 46px; height: 14px; font-size: 9.319px; font-family: Arial, sans-serif; font-weight: bold; font-style: normal; color: rgb(255, 255, 255); text-align: center;">リセット</span>
+        
+        <!-- Rectangle 412 - チェックボックス -->
+        <input type="checkbox" style="position: absolute; left: 322px; top: 359px; width: 18px; height: 15px; border: 1px solid rgb(0, 0, 0);">
+        <!-- 日時確定する -->
+        <span style="position: absolute; left: 348px; top: 359px; width: 94px; height: 19px; font-size: 14.159px; font-family: Arial, sans-serif; font-weight: normal; font-style: normal; color: rgb(0, 0, 0); text-align: left;">日時確定する</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景オーバーレイ -->
+  <rect width="600" height="400" fill="rgba(0,0,0,0.3)"/>
+  
+  <!-- ダイアログボックス -->
+  <rect x="80" y="40" width="440" height="320" rx="5" fill="white" stroke="#ccc" stroke-width="2"/>
+  
+  <!-- ヘッダー -->
+  <rect x="80" y="40" width="440" height="35" rx="5" fill="#e8e8e8"/>
+  <text x="300" y="63" font-family="Arial, sans-serif" font-size="15" fill="#333" font-weight="bold" text-anchor="middle">勤怠登録申請</text>
+  
+  <!-- 閉じるボタン -->
+  <circle cx="500" cy="57" r="10" fill="#ccc"/>
+  <text x="500" y="62" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">×</text>
+  
+  <!-- 日付 -->
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="12" fill="#333">2025年11月19日水曜日</text>
+  
+  <!-- メニュー -->
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="12" fill="#333" font-weight="bold">メニュー</text>
+  
+  <!-- メニュー項目 -->
+  <rect x="100" y="135" width="400" height="35" fill="#e8e8e8"/>
+  <text x="110" y="157" font-family="Arial, sans-serif" font-size="12" fill="#333">日次確定</text>
+  <text x="220" y="157" font-family="Arial, sans-serif" font-size="12" fill="#666">日次確定を申請します。</text>
+  
+  <rect x="100" y="175" width="400" height="35" fill="#f5f5f5"/>
+  <text x="110" y="197" font-family="Arial, sans-serif" font-size="12" fill="#333">4時間申請</text>
+  <text x="220" y="197" font-family="Arial, sans-serif" font-size="12" fill="#666">4時間・FVA・勤怠画面6時間を申請します。</text>
+  
+  <rect x="100" y="210" width="400" height="35" fill="#e8e8e8"/>
+  <text x="110" y="232" font-family="Arial, sans-serif" font-size="12" fill="#333">FG出勤申請</text>
+  <text x="220" y="232" font-family="Arial, sans-serif" font-size="12" fill="#666">FG出勤を申請します。</text>
+  
+  <rect x="100" y="245" width="400" height="35" fill="#f5f5f5"/>
+  <text x="110" y="267" font-family="Arial, sans-serif" font-size="12" fill="#333">残業申請</text>
+  <text x="220" y="267" font-family="Arial, sans-serif" font-size="12" fill="#666">残業を申請します。</text>
+  
+  <rect x="100" y="280" width="400" height="35" fill="#e8e8e8"/>
+  <text x="110" y="302" font-family="Arial, sans-serif" font-size="12" fill="#333">中抜時間申請</text>
+  <text x="220" y="302" font-family="Arial, sans-serif" font-size="12" fill="#666">中抜時間を申請します。</text>
+  
+  <rect x="100" y="315" width="400" height="35" fill="#f5f5f5"/>
+  <text x="110" y="337" font-family="Arial, sans-serif" font-size="12" fill="#333">即日申請</text>
+  <text x="220" y="337" font-family="Arial, sans-serif" font-size="12" fill="#666">即日を申請します。</text>
+  
+  <!-- 閉じるリンク -->
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="12" fill="#0070d2" text-anchor="middle" text-decoration="underline">閉じる</text>
+</svg>
+

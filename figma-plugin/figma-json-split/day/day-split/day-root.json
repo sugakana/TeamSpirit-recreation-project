@@ -1,0 +1,12 @@
+{
+  "type": "SPLIT_ROOT",
+  "version": "1.0",
+  "originalStructure": {
+    "type": "TEXT",
+    "name": "日付",
+    "width": 27.429033279418945,
+    "height": 14.992271423339844
+  },
+  "children": [],
+  "splitFiles": []
+}

@@ -1,0 +1,81 @@
+{
+  "originalFile": "day.json",
+  "splitDate": "2025-12-07T00:00:00.000Z",
+  "splitOptions": {
+    "maxSize": 500000,
+    "maxNodes": 100,
+    "maxDepth": 3
+  },
+  "splitStatistics": {
+    "originalNodes": 1,
+    "originalSize": 35598,
+    "splitFiles": 1
+  },
+  "splitFiles": [
+    {
+      "file": "day-root.json",
+      "size": 225,
+      "sizeKB": "0.22"
+    }
+  ],
+  "conversion": {
+    "startedAt": "2025-12-07T00:00:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成",
+        "startedAt": "2025-12-07T00:00:00.000Z",
+        "completedAt": "2025-12-07T00:01:00.000Z"
+      },
+      "phase2-1": {
+        "status": "completed",
+        "description": "day.json 1-680行の処理（ヘッダー、背景、日付テキスト）",
+        "startedAt": "2025-12-07T00:01:00.000Z",
+        "completedAt": "2025-12-07T00:05:00.000Z",
+        "processedLines": "1-680",
+        "totalLines": 1766,
+        "nodesProcessed": 15,
+        "notes": "TEXT要素（ヘッダー、日付）、RECTANGLE要素（背景）を処理"
+      },
+      "phase2-2": {
+        "status": "completed",
+        "description": "day.json 681-1200行の処理（LINE、TEXT、RECTANGLE、VECTOR、GROUP）",
+        "startedAt": "2025-12-07T00:05:00.000Z",
+        "completedAt": "2025-12-07T00:10:00.000Z",
+        "processedLines": "681-1200",
+        "totalLines": 1766,
+        "nodesProcessed": 12,
+        "notes": "LINE要素（チェックマーク）、TEXT要素（時刻、場所、工数）、RECTANGLE要素（工数バー）、VECTOR要素（三角形、口）、GROUP要素（顔アイコン、プラスアイコン開始）を処理"
+      },
+      "phase2-3": {
+        "status": "completed",
+        "description": "day.json 1201-1600行の処理（GROUP要素 - プラスアイコン）",
+        "startedAt": "2025-12-07T00:10:00.000Z",
+        "completedAt": "2025-12-07T00:15:00.000Z",
+        "processedLines": "1201-1600",
+        "totalLines": 1766,
+        "nodesProcessed": 6,
+        "notes": "GROUP要素（プラスアイコン）を処理 - Group 25, 26, 27, 44, 45, 46の一部"
+      },
+      "phase2-4": {
+        "status": "completed",
+        "description": "day.json 1601-1766行の処理（最終フェーズ - GROUP要素）",
+        "startedAt": "2025-12-07T00:15:00.000Z",
+        "completedAt": "2025-12-07T00:20:00.000Z",
+        "processedLines": "1601-1766",
+        "totalLines": 1766,
+        "nodesProcessed": 2,
+        "notes": "GROUP要素（プラスアイコン）を処理 - Group 46, 47の残り部分"
+      }
+    },
+    "completedAt": "2025-12-07T00:20:00.000Z",
+    "summary": {
+      "totalFilesProcessed": 1,
+      "totalNodesProcessed": 35,
+      "totalLinesProcessed": 1766,
+      "allPhasesCompleted": true,
+      "notes": "day.jsonの全ノードをHTMLに変換完了。TEXT、RECTANGLE、LINE、VECTOR、GROUP、ELLIPSEの各要素を処理。"
+    }
+  }
+}
+

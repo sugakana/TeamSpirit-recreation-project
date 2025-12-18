@@ -1,0 +1,13 @@
+# MySQL接続設定
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=Kanato0819#28
+DB_NAME=teamspirit_db
+
+# サーバー設定
+PORT=3000
+
+
+
+

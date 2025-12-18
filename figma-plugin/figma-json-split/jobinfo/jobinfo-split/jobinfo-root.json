@@ -1,0 +1,12 @@
+{
+  "type": "SPLIT_ROOT",
+  "version": "1.0",
+  "originalStructure": {
+    "type": "RECTANGLE",
+    "name": "Rectangle 386",
+    "width": 339,
+    "height": 336
+  },
+  "children": [],
+  "splitFiles": []
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <!-- 背景 -->
+  <rect width="320" height="240" fill="#2D6CA4"/>
+  
+  <!-- TeamSpiritロゴ（白/水色） -->
+  <g opacity="0.9">
+    <!-- 左の人物の頭 -->
+    <rect x="120" y="30" width="30" height="30" fill="#C5D9E8"/>
+    
+    <!-- 右の人物の頭 -->
+    <rect x="170" y="30" width="30" height="30" fill="#C5D9E8"/>
+    
+    <!-- 上部の緩やかな上向きの曲線（中央が低く、両端が高い） -->
+    <path d="M 110,80 Q 160,100 210,80" stroke="#C5D9E8" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- 左の垂直な直線（足） -->
+    <line x1="110" y1="80" x2="110" y2="200" stroke="#C5D9E8" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- 右の垂直な直線（足） -->
+    <line x1="210" y1="80" x2="210" y2="200" stroke="#C5D9E8" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

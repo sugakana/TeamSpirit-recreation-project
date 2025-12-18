@@ -1,0 +1,59 @@
+<svg width="650" height="150" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="650" height="150" fill="white"/>
+  
+  <!-- タイトル -->
+  <text x="10" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">TeamSpirit</text>
+  
+  <!-- 時計表示 -->
+  <rect x="10" y="40" width="110" height="80" rx="3" fill="#1a73e8"/>
+  <text x="65" y="60" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">2025/11/25</text>
+  <text x="65" y="85" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold" text-anchor="middle">11:59</text>
+  <text x="65" y="105" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">(TUE)</text>
+  
+  <!-- 勤怠情報を修正して下さい -->
+  <text x="140" y="55" font-family="Arial, sans-serif" font-size="13" fill="#333">勤怠情報を修正して下さい。</text>
+  
+  <!-- 打刻ボタンエリア -->
+  <rect x="140" y="65" width="60" height="35" rx="3" fill="#5a9fd4"/>
+  <text x="170" y="88" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">出社</text>
+  
+  <rect x="210" y="65" width="60" height="35" rx="3" fill="#5a9fd4"/>
+  <text x="240" y="88" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">退社</text>
+  
+  <rect x="280" y="65" width="60" height="35" rx="3" fill="#d9d9d9"/>
+  <text x="310" y="88" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">直行</text>
+  
+  <rect x="350" y="65" width="70" height="35" rx="3" fill="#d9d9d9"/>
+  <text x="385" y="88" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">直帰/退社</text>
+  
+  <rect x="430" y="65" width="60" height="35" rx="3" fill="#d9d9d9"/>
+  <text x="460" y="88" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">外出</text>
+  
+  <!-- 遅刻ボタン -->
+  <rect x="500" y="40" width="90" height="50" rx="3" fill="#90c8f5"/>
+  <text x="545" y="70" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold" text-anchor="middle">遅刻</text>
+  
+  <!-- その他ボタン -->
+  <rect x="500" y="40" width="50" height="28" rx="3" fill="#f0f0f0"/>
+  <text x="525" y="58" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">休出</text>
+  
+  <rect x="560" y="40" width="50" height="28" rx="3" fill="#c8e6c9"/>
+  
+  <rect x="620" y="40" width="50" height="28" rx="3" fill="#f0f0f0"/>
+  <text x="645" y="58" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">戻る</text>
+  
+  <rect x="560" y="75" width="50" height="28" rx="3" fill="#f0f0f0"/>
+  <text x="585" y="93" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">遅刻</text>
+  
+  <rect x="620" y="75" width="50" height="28" rx="3" fill="#f0f0f0"/>
+  <text x="645" y="93" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">早退</text>
+  
+  <!-- 帰宅ボタン -->
+  <rect x="140" y="110" width="60" height="30" rx="3" fill="#f0f0f0"/>
+  <text x="170" y="130" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">帰宅</text>
+  
+  <rect x="210" y="110" width="60" height="30" rx="3" fill="#f0f0f0"/>
+  <text x="240" y="130" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">戻り</text>
+</svg>
+

@@ -1,0 +1,61 @@
+---
+description: 標準Pythonルールを上書きする、本プロジェクト固有の優先ルール
+globs: **/*.py
+alwaysApply: false
+---
+# Python プロジェクトルール
+
+# 優先度宣言
+# このルールファイルは最高優先度（PRIORITY_LEVEL: 0）を持ち、
+# 他の全てのルールファイルと競合する場合は、このルールが優先されます。
+# このルールは、プロジェクト固有の要件を満たすために、一般的なPythonルールを上書きします。
+
+このルールは、本プロジェクトにのみ適用されるルールであり、全てのルールの中で、優先されます。
+
+# ルールの適用順序
+1. 本プロジェクトルール（00_python_project_rules.mdc）
+   - プロジェクト固有の要件や制約を定義
+   - 他のルールと競合する場合は、本ルールが優先
+
+2. 標準Pythonルール
+   - [R040301_python_style.mdc](mdc:.cursor/rules/R04_Coding/R0403_Python/R040301_python_style.mdc) : コーディングスタイル
+   - [R040302_python_package_naming.mdc](mdc:.cursor/rules/R04_Coding/R0403_Python/R040302_python_package_naming.mdc) : パッケージ命名規則
+   - [R040303_python_class.mdc](mdc:.cursor/rules/R04_Coding/R0403_Python/R040303_python_class.mdc) : クラス定義規則
+   - [R040304_python_method.mdc](mdc:.cursor/rules/R04_Coding/R0403_Python/R040304_python_method.mdc) : メソッド定義規則
+   - [R040305_python_variable.mdc](mdc:.cursor/rules/R04_Coding/R0403_Python/R040305_python_variable.mdc) : 変数命名規則
+   - [R040306_python_additional.mdc](mdc:.cursor/rules/R04_Coding/R0403_Python/R040306_python_additional.mdc) : その他の追加規則
+
+# ディレクトリ構造ルール
+
+## 基本構造
+- プロジェクトのルートディレクトリは `FaceHealthStoreLambda` とする
+- 各機能は `FaceHealthStoreLambda` の直下に配置する
+- 機能名は英語で記述し、スネークケース（小文字とアンダースコア）を使用する
+
+## 機能ディレクトリの構成
+- 機能ディレクトリには `lambda_function.py` のみを配置する
+- 機能ディレクトリ内に他のPythonファイルやサブディレクトリを作成してはならない
+
+## 例
+```
+FaceHealthStoreLambda/
+├── user_authentication/
+│   └── lambda_function.py
+├── face_detection/
+│   └── lambda_function.py
+└── health_data_processing/
+    └── lambda_function.py
+```
+
+## 注意事項
+- 機能ディレクトリ名は、その機能の目的を明確に示す英語名を使用する
+- 機能ディレクトリ名は、AWS Lambda関数名と一致させることを推奨する
+- 各機能は独立して動作することを前提とする
+
+# ディレクトリ構成に関するルール
+- Lambdaを起動するためには、`lambda-function.py`を作成する必要がある。
+
+
+
+
+- 

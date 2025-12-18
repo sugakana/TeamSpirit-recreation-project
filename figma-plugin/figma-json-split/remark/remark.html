@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>備考ダイアログ - Figma to HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        .container {
+            position: relative;
+            width: 552px;
+            height: 231px;
+            margin: 50px auto;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Figma要素がここに追加されます -->
+        
+        <!-- ノード1: 外枠 (VECTOR) - オフセット: x+1270, y+1656 -->
+        <svg style="position: absolute; left: 0px; top: 0px; width: 552px; height: 231px;">
+            <path d="M 6.900000095367432 0 L 545.0999755859375 0 C 548.9107403755188 0 552 2.0684441943990635 552 4.619999653072829 L 552 226.3799986122913 C 552 228.93155407096506 548.9107403755188 231 545.0999755859375 231 L 6.900000095367432 231 C 3.089235305786133 231 0 228.93155407096506 0 226.3799986122913 L 0 4.619999653072829 C 0 2.0684441943990635 3.089235305786133 0 6.900000095367432 0 Z" 
+                  fill="rgb(255, 255, 255)" 
+                  stroke="rgb(204, 204, 204)" 
+                  stroke-width="2" />
+        </svg>
+        
+        <!-- ノード2: ヘッダー背景 (VECTOR) - オフセット: x+1270, y+1656 -->
+        <svg style="position: absolute; left: 0px; top: 0px; width: 552px; height: 38px;">
+            <path d="M 6.8999999999999995 0 L 545.0999999999999 0 C 548.9107648801803 0 552 2.430454131535121 552 5.428571428571428 L 552 32.57142857142857 C 552 35.56954586846488 548.9107648801803 38 545.0999999999999 38 L 6.8999999999999995 38 C 3.089235119819641 38 0 35.56954586846488 0 32.57142857142857 L 0 5.428571428571428 C 0 2.430454131535121 3.089235119819641 0 6.8999999999999995 0 Z" 
+                  fill="rgb(215, 235, 255)" />
+        </svg>
+        
+        <!-- ノード3: 備考タイトル (TEXT) - オフセット: x+1270, y+1656 -->
+        <span style="position: absolute; left: 19px; top: 12px; width: 41.4px; height: 23.99px; font-size: 18px; font-family: Arial; font-weight: bold; text-align: center; color: rgb(51, 51, 51); display: flex; align-items: center; justify-content: center;">備考</span>
+        
+        <!-- ノード4: ×閉じるボタン (TEXT) - オフセット: x+1270, y+1656 -->
+        <span style="position: absolute; left: 526px; top: 1px; width: 12.42px; height: 22.58px; font-size: 21px; font-family: Arial; text-align: center; color: rgb(143, 174, 203); display: flex; align-items: center; justify-content: center; cursor: pointer;">×</span>
+        
+        <!-- ノード5: 日付表示 (TEXT) - オフセット: x+1270, y+1656 -->
+        <span style="position: absolute; left: 22px; top: 49px; width: 207px; height: 20px; font-size: 17px; font-family: Arial; text-align: left; color: rgb(51, 51, 51); display: flex; align-items: center;">2025年11月21日金曜日</span>
+        
+        <!-- ノード6: テキストボックス背景 (VECTOR) - オフセット: x+1270, y+1656 -->
+        <svg style="position: absolute; left: 22px; top: 78px; width: 496px; height: 106px;">
+            <path d="M 4.133333333333333 0 L 491.8666666666667 0 C 494.1494436634911 0 496 1.1864453931649526 496 2.65 L 496 103.35 C 496 104.81355460683504 494.1494436634911 106 491.8666666666667 106 L 4.133333333333333 106 C 1.8505563365088564 106 0 104.81355460683504 0 103.35 L 0 2.65 C 0 1.1864453931649526 1.8505563365088564 0 4.133333333333333 0 Z" 
+                  fill="rgb(255, 255, 255)" 
+                  stroke="rgb(153, 153, 153)" 
+                  stroke-width="1" />
+        </svg>
+        <!-- テキスト入力エリア -->
+        <textarea style="position: absolute; left: 26px; top: 80px; width: 488px; height: 102px; border: none; outline: none; font-size: 14px; font-family: Arial; padding: 5px; resize: none; background-color: transparent;"></textarea>
+        
+        <!-- ノード9: 登録ボタン背景 (RECTANGLE) - オフセット: x+1270, y+1656 -->
+        <div style="position: absolute; left: 197px; top: 193px; width: 46px; height: 30px; background-color: rgb(16, 141, 197); border-radius: 0px;"></div>
+        
+        <!-- ノード7: 登録ボタンテキスト (TEXT) - オフセット: x+1270, y+1656 -->
+        <span style="position: absolute; left: 202px; top: 198px; width: 35.88px; height: 21.17px; font-size: 16px; font-family: Arial; font-weight: bold; text-align: center; color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1;">登録</span>
+        
+        <!-- ノード8: キャンセルボタン (TEXT) - オフセット: x+1270, y+1656 -->
+        <span style="position: absolute; left: 253px; top: 198px; width: 89.7px; height: 21.17px; font-size: 13px; font-family: Arial; text-align: center; text-decoration: underline; color: rgb(118, 130, 255); display: flex; align-items: center; justify-content: center; cursor: pointer;">キャンセル</span>
+    </div>
+</body>
+</html>
+

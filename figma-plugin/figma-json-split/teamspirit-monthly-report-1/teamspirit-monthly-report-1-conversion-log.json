@@ -1,0 +1,69 @@
+{
+  "originalFile": "teamspirit-monthly-report-1.json",
+  "splitDate": "2025-12-11T17:54:00.000Z",
+  "splitOptions": {
+    "maxSize": 512000,
+    "maxNodes": 100,
+    "maxDepth": 3
+  },
+  "splitStatistics": {
+    "originalNodes": 326,
+    "originalSize": 335486,
+    "splitFiles": 4
+  },
+  "splitFiles": [
+    {
+      "file": "teamspirit-monthly-report-1-root.json",
+      "size": 11149,
+      "sizeKB": "10.89"
+    },
+    {
+      "file": "teamspirit-monthly-report-1-1.json",
+      "size": 26967,
+      "sizeKB": "26.33"
+    },
+    {
+      "file": "teamspirit-monthly-report-1-2.json",
+      "size": 180412,
+      "sizeKB": "176.18"
+    },
+    {
+      "file": "teamspirit-monthly-report-1-3.json",
+      "size": 113166,
+      "sizeKB": "110.51"
+    }
+  ],
+  "conversion": {
+    "startedAt": "2025-12-11T17:55:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成",
+        "completedAt": "2025-12-11T17:55:00.000Z"
+      },
+      "phase2": {
+        "status": "completed",
+        "description": "分割ファイル1の処理",
+        "files": {
+          "teamspirit-monthly-report-1-1.json": {
+            "status": "completed",
+            "processedLines": "1-996",
+            "totalLines": 996,
+            "nodesProcessed": 25,
+            "notes": "全ノードを処理完了。背景、ヘッダー、info-header、attendance-tableをすべてHTMLに変換",
+            "completedAt": "2025-12-11T17:56:00.000Z"
+          }
+        },
+        "completedAt": "2025-12-11T17:56:00.000Z"
+      }
+    },
+    "completedAt": null,
+    "summary": {
+      "totalFilesProcessed": 0,
+      "totalNodesProcessed": 0,
+      "totalLinesProcessed": 0,
+      "allPhasesCompleted": false
+    }
+  }
+}
+

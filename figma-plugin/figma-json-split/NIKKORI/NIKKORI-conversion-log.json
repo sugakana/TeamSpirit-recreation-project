@@ -1,0 +1,44 @@
+{
+  "originalFile": "NIKKORI.json",
+  "splitDate": "2024-12-19T00:00:00.000Z",
+  "splitOptions": {
+    "maxSize": 512000,
+    "maxNodes": 100,
+    "maxDepth": 3
+  },
+  "splitStatistics": {
+    "originalNodes": 4,
+    "originalSize": 1894,
+    "splitFiles": 0
+  },
+  "splitFiles": [],
+  "conversion": {
+    "startedAt": "2024-12-19T00:00:00.000Z",
+    "phases": {
+      "phase1": {
+        "status": "completed",
+        "description": "HTML基本構造の作成",
+        "startedAt": "2024-12-19T00:00:00.000Z",
+        "completedAt": "2024-12-19T00:00:00.000Z"
+      },
+      "phase2": {
+        "status": "completed",
+        "description": "全ノードの処理（NIKKORI.jsonの直接ノード処理）",
+        "startedAt": "2024-12-19T00:00:00.000Z",
+        "completedAt": "2024-12-19T00:00:00.000Z",
+        "processedLines": "1-112",
+        "totalLines": 112,
+        "nodesProcessed": 4,
+        "notes": "4つのノード（Ellipse 36, Ellipse 37, Ellipse 38, Line 68）をHTMLに変換完了"
+      }
+    },
+    "completedAt": "2024-12-19T00:00:00.000Z",
+    "summary": {
+      "totalFilesProcessed": 1,
+      "totalNodesProcessed": 4,
+      "totalLinesProcessed": 112,
+      "allPhasesCompleted": true
+    }
+  }
+}
+

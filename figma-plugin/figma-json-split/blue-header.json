@@ -1,0 +1,1218 @@
+{
+  "type": "GROUP",
+  "name": "Blue Header",
+  "x": 0.999755859375,
+  "y": 2.0000133514404297,
+  "width": 1904,
+  "height": 68,
+  "rotation": 0,
+  "children": [
+    {
+      "type": "GROUP",
+      "name": "Group 8",
+      "x": 0.999755859375,
+      "y": 2.0000133514404297,
+      "width": 1904,
+      "height": 68,
+      "rotation": 0,
+      "children": [
+        {
+          "type": "VECTOR",
+          "name": "Rectangle 120",
+          "x": 0.999755859375,
+          "y": 2.0000133514404297,
+          "width": 1904,
+          "height": 68,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.14509804546833038,
+                "g": 0.3921568691730499,
+                "b": 0.6000000238418579
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "cornerRadius": {
+            "topLeft": 3,
+            "topRight": 0,
+            "bottomRight": 0,
+            "bottomLeft": 3
+          },
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 3 0 L 1904 0 L 1904 68 L 3 68 Q 0 68 0 65 L 0 3 Q 0 0 3 0 Z",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "RECTANGLE",
+          "name": "Rectangle 174",
+          "x": 91.041748046875,
+          "y": 14.00001335144043,
+          "width": 2.8713858127593994,
+          "height": 47,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.8509804010391235,
+                "g": 0.8509804010391235,
+                "b": 0.8509804010391235
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          }
+        },
+        {
+          "type": "TEXT",
+          "name": "勤務表",
+          "x": 104.441162109375,
+          "y": 16.00001335144043,
+          "width": 72.74177551269531,
+          "height": 27,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "text": "勤務表",
+          "fontSize": 23.03499984741211,
+          "fontName": {
+            "family": "Arial",
+            "style": "Bold Italic"
+          },
+          "textAlign": "center",
+          "lineHeight": {
+            "unit": "AUTO"
+          },
+          "letterSpacing": {
+            "unit": "PERCENT",
+            "value": 0
+          },
+          "children": []
+        },
+        {
+          "type": "TEXT",
+          "name": "　　部署　 310 TechE 勤務体系　フレックスタイム制（一般）",
+          "x": 619.261962890625,
+          "y": 31.00001335144043,
+          "width": 328.29510498046875,
+          "height": 38,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "text": "　　部署　 310 TechE\n勤務体系　フレックスタイム制（一般）",
+          "fontSize": 14.904998779296875,
+          "fontName": {
+            "family": "Arial",
+            "style": "Regular"
+          },
+          "textAlign": "left",
+          "lineHeight": {
+            "unit": "AUTO"
+          },
+          "letterSpacing": {
+            "unit": "PERCENT",
+            "value": 0
+          },
+          "children": []
+        },
+        {
+          "type": "RECTANGLE",
+          "name": "Rectangle 179",
+          "x": 1594.5760498046875,
+          "y": 10.00001335144043,
+          "width": 54.556331634521484,
+          "height": 51,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.5058823823928833,
+                "g": 0.6000000238418579,
+                "b": 0.686274528503418
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          }
+        },
+        {
+          "type": "GROUP",
+          "name": "Group",
+          "x": 1608.9998779296875,
+          "y": 16.95798110961914,
+          "width": 26,
+          "height": 46.02875518798828,
+          "rotation": 0,
+          "children": [
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "x": 1613.9998779296875,
+              "y": 16.95798110961914,
+              "width": 16,
+              "height": 19.380529403686523,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "cornerRadius": 0,
+              "constraints": {
+                "horizontal": "SCALE",
+                "vertical": "SCALE"
+              },
+              "vectorPaths": [
+                {
+                  "data": "M 16 9.690264701843262 C 16 15.04205019083713 12.418278058369953 19.380529403686523 8 19.380529403686523 C 3.581721941630046 19.380529403686523 0 15.04205019083713 0 9.690264701843262 C 0 4.338479212849393 3.581721941630046 0 8 0 C 12.418278058369953 0 16 4.338479212849393 16 9.690264701843262 Z",
+                  "windingRule": "NONE"
+                }
+              ]
+            },
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "x": 1608.9998779296875,
+              "y": 39.972360610961914,
+              "width": 26,
+              "height": 23.01437759399414,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "cornerRadius": 0,
+              "constraints": {
+                "horizontal": "SCALE",
+                "vertical": "SCALE"
+              },
+              "vectorPaths": [
+                {
+                  "data": "M 13 0 C 5.777777777777778 0 0 3.8357295989990234 0 9.972896957397461 L 0 19.178647994995117 C 0 21.48008575439453 1.4444444444444446 23.01437759399414 3.611111111111111 23.01437759399414 L 22.38888888888889 23.01437759399414 C 24.555555555555557 23.01437759399414 26 21.48008575439453 26 19.178647994995117 L 26 9.972896957397461 C 26 3.8357295989990234 20.22222222222222 0 13 0 Z",
+                  "windingRule": "NONZERO"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "RECTANGLE",
+          "name": "Rectangle 180",
+          "x": 1657.7464599609375,
+          "y": 2.0000133514404297,
+          "width": 64.12761688232422,
+          "height": 50,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.7019608020782471,
+                "g": 0.8235294222831726,
+                "b": 0.1725490242242813
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "cornerRadius": {
+            "topLeft": 0,
+            "topRight": 0,
+            "bottomRight": 10,
+            "bottomLeft": 10
+          },
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          }
+        },
+        {
+          "type": "RECTANGLE",
+          "name": "Rectangle 181",
+          "x": 1728.999755859375,
+          "y": 2.0000133514404297,
+          "width": 64.12761688232422,
+          "height": 51,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.3686274588108063,
+                "g": 0.658823549747467,
+                "b": 0.772549033164978
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "cornerRadius": {
+            "topLeft": 0,
+            "topRight": 0,
+            "bottomRight": 10,
+            "bottomLeft": 10
+          },
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          }
+        },
+        {
+          "type": "RECTANGLE",
+          "name": "Rectangle 182",
+          "x": 1802.999755859375,
+          "y": 2.0000133514404297,
+          "width": 64,
+          "height": 51,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.9490196108818054,
+                "g": 0.7176470756530762,
+                "b": 0.10588235408067703
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "cornerRadius": {
+            "topLeft": 0,
+            "topRight": 0,
+            "bottomRight": 10,
+            "bottomLeft": 10
+          },
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          }
+        },
+        {
+          "type": "TEXT",
+          "name": "？",
+          "x": 1819.999755859375,
+          "y": 5.00001335144043,
+          "width": 31.58524513244629,
+          "height": 25,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "text": "？",
+          "fontSize": 28.15900993347168,
+          "fontName": {
+            "family": "Arial",
+            "style": "Regular"
+          },
+          "textAlign": "center",
+          "lineHeight": {
+            "unit": "AUTO"
+          },
+          "letterSpacing": {
+            "unit": "PERCENT",
+            "value": 0
+          },
+          "children": []
+        },
+        {
+          "type": "TEXT",
+          "name": "HELP",
+          "x": 1819.999755859375,
+          "y": 37.00001335144043,
+          "width": 33.4995002746582,
+          "height": 11,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "text": "HELP",
+          "fontSize": 11.15900993347168,
+          "fontName": {
+            "family": "Arial",
+            "style": "Bold"
+          },
+          "textAlign": "center",
+          "lineHeight": {
+            "unit": "AUTO"
+          },
+          "letterSpacing": {
+            "unit": "PERCENT",
+            "value": 0
+          },
+          "children": []
+        },
+        {
+          "type": "GROUP",
+          "name": "Calendar Icon",
+          "x": 1745,
+          "y": 6,
+          "width": 34,
+          "height": 31,
+          "rotation": 0,
+          "children": [
+            {
+              "type": "VECTOR",
+              "name": "Calendar",
+              "x": 1745,
+              "y": 6,
+              "width": 34,
+              "height": 31,
+              "rotation": 0,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokeWeight": 1,
+              "fills": [],
+              "vectorPaths": [
+                {
+                  "data": "M 29.7832 25.5H18.7832M15.7832 25.5H4.7832M0.544632 21.4285L0.5 5.68018M33.4997 21.5L33.4551 5.75171M4.7832 25.5C2.11654 25.5 0.5 24.1667 0.5 21.5M33.5 21.5C33.4471 24.2706 32.1415 25.6223 29.583 25.5551M15.9805 25.5C14.7805 26.8333 13.2805 28.5 12.4805 30.5M7.5 0.5L27.5 0.5M27.5 0.5C31.5 0.5 33.5 2.16667 33.5 5.5M0.5 6C0.488337 2.73188 2.23248 0.521597 7.5 0.5M18.4805 25.5C17.3896 26.8333 15.3896 28.5 12.4805 30.5",
+                  "windingRule": "NONZERO"
+                }
+              ]
+            },
+            {
+              "type": "VECTOR",
+              "name": "Dots",
+              "x": 1745,
+              "y": 6,
+              "width": 34,
+              "height": 31,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokeWeight": 1,
+              "vectorPaths": [
+                {
+                  "data": "M7.04688 13C7.75975 13 8.23727 13.5032 8.2373 14.0068C8.2373 14.5104 7.75977 15.0136 7.04688 15.0137C6.33392 15.0137 5.85645 14.5105 5.85645 14.0068C5.85648 13.5032 6.33395 13 7.04688 13ZM13.8086 13C14.5215 13 14.999 13.5032 14.999 14.0068C14.999 14.5104 14.5215 15.0136 13.8086 15.0137C13.0956 15.0137 12.6182 14.5105 12.6182 14.0068C12.6182 13.5032 13.0957 13 13.8086 13ZM20.5698 13C21.2827 13 21.7602 13.5032 21.7603 14.0068C21.7603 14.5104 21.2827 15.0136 20.5698 15.0137C19.8569 15.0137 19.3794 14.5105 19.3794 14.0068C19.3794 13.5032 19.8569 13 20.5698 13ZM27.3306 13C28.0434 13 28.521 13.5032 28.521 14.0068C28.521 14.5104 28.0435 15.0136 27.3306 15.0137C26.6176 15.0137 26.1401 14.5105 26.1401 14.0068C26.1402 13.5032 26.6176 13 27.3306 13Z",
+                  "windingRule": "NONZERO"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "name": "休暇情報",
+          "x": 1737,
+          "y": 38,
+          "width": 48.813560485839844,
+          "height": 11,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "text": "休暇情報",
+          "fontSize": 11.15900993347168,
+          "fontName": {
+            "family": "Arial",
+            "style": "Bold"
+          },
+          "textAlign": "center",
+          "lineHeight": {
+            "unit": "AUTO"
+          },
+          "letterSpacing": {
+            "unit": "PERCENT",
+            "value": 0
+          },
+          "children": []
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1751.71240234375,
+          "y": 32.09170150756836,
+          "width": 9.395812034606934,
+          "height": 0,
+          "rotation": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 9.395812034606934 0 L 0 0",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1747.716552734375,
+          "y": 12.18019962310791,
+          "width": 0,
+          "height": 15.748374938964844,
+          "rotation": 0.2531667744691598,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 0 15.748374938964844 L 0 0",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1777.031494140625,
+          "y": 12.18019962310791,
+          "width": 0,
+          "height": 15.748374938964844,
+          "rotation": 0.2531667744691598,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 0 15.748374938964844 L 0 0",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1747.755859375,
+          "y": 27.92884063720703,
+          "width": 3.9561314582824707,
+          "height": 4.162933349609375,
+          "rotation": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 3.9561314582824707 4.162933349609375 C 1.3187104074928868 4.162933349609375 0 2.775288982449638 0 0",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1773.3665771484375,
+          "y": 32.05514335632324,
+          "width": 4.1481852531433105,
+          "height": 3.596158504486084,
+          "rotation": 89.03567504304877,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 4.1481852531433105 3.596158504486084 C 1.3827283352974007 3.596158504486084 0 2.3974390744399727 0 0",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1758.7095947265625,
+          "y": 32.88656997680664,
+          "width": 1.8321902751922607,
+          "height": 3.654060125350952,
+          "rotation": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 1.8321902751922607 0 C 1.0993141546628376 0.9744160122796177 0.4885840803529488 2.1924361069315257 0 3.6540601253509526",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "VECTOR",
+          "name": "Vector",
+          "x": 1758.7095947265625,
+          "y": 32.88656997680664,
+          "width": 5.496571063995361,
+          "height": 3.654060125350952,
+          "rotation": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 1,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          },
+          "vectorPaths": [
+            {
+              "data": "M 5.496571063995361 0 C 4.497194506905296 0.9744160624667813 2.665004231663488 2.1924360752105714 0 3.654060125350952",
+              "windingRule": "NONZERO"
+            }
+          ]
+        },
+        {
+          "type": "GROUP",
+          "name": "Group",
+          "x": 1754.128662109375,
+          "y": 18.270326614379883,
+          "width": 16.566011428833008,
+          "height": 3.013789176940918,
+          "rotation": 0,
+          "children": [
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "x": 1754.128619269144,
+              "y": 18.270387649536133,
+              "width": 2.366579294204712,
+              "height": 3.013789176940918,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokeWeight": 1,
+              "cornerRadius": 0,
+              "constraints": {
+                "horizontal": "SCALE",
+                "vertical": "SCALE"
+              },
+              "vectorPaths": [
+                {
+                  "data": "M 2.366579294204712 1.506894588470459 C 2.366579294204712 2.3391295125106124 1.8368024920673804 3.013789176940918 1.183289647102356 3.013789176940918 C 0.5297768021373315 3.013789176940918 0 2.3391295125106124 0 1.506894588470459 C 0 0.6746596644303053 0.5297768021373315 0 1.183289647102356 0 C 1.8368024920673804 0 2.366579294204712 0.6746596644303053 2.366579294204712 1.506894588470459 Z",
+                  "windingRule": "NONE"
+                }
+              ]
+            },
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "x": 1758.8619194030762,
+              "y": 18.270387649536133,
+              "width": 2.366579294204712,
+              "height": 3.013789176940918,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokeWeight": 1,
+              "cornerRadius": 0,
+              "constraints": {
+                "horizontal": "SCALE",
+                "vertical": "SCALE"
+              },
+              "vectorPaths": [
+                {
+                  "data": "M 2.366579294204712 1.506894588470459 C 2.366579294204712 2.3391295125106124 1.8368024920673804 3.013789176940918 1.183289647102356 3.013789176940918 C 0.5297768021373315 3.013789176940918 0 2.3391295125106124 0 1.506894588470459 C 0 0.6746596644303053 0.5297768021373315 0 1.183289647102356 0 C 1.8368024920673804 0 2.366579294204712 0.6746596644303053 2.366579294204712 1.506894588470459 Z",
+                  "windingRule": "NONE"
+                }
+              ]
+            },
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "x": 1763.5952196121216,
+              "y": 18.270387649536133,
+              "width": 2.366579294204712,
+              "height": 3.013789176940918,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokeWeight": 1,
+              "cornerRadius": 0,
+              "constraints": {
+                "horizontal": "SCALE",
+                "vertical": "SCALE"
+              },
+              "vectorPaths": [
+                {
+                  "data": "M 2.366579294204712 1.506894588470459 C 2.366579294204712 2.3391295125106124 1.8368024920673804 3.013789176940918 1.183289647102356 3.013789176940918 C 0.5297768021373315 3.013789176940918 0 2.3391295125106124 0 1.506894588470459 C 0 0.6746596644303053 0.5297768021373315 0 1.183289647102356 0 C 1.8368024920673804 0 2.366579294204712 0.6746596644303053 2.366579294204712 1.506894588470459 Z",
+                  "windingRule": "NONE"
+                }
+              ]
+            },
+            {
+              "type": "VECTOR",
+              "name": "Vector",
+              "x": 1768.328052520752,
+              "y": 18.270387649536133,
+              "width": 2.366579294204712,
+              "height": 3.013789176940918,
+              "rotation": 0,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "opacity": 1,
+                  "visible": true
+                }
+              ],
+              "strokeWeight": 1,
+              "cornerRadius": 0,
+              "constraints": {
+                "horizontal": "SCALE",
+                "vertical": "SCALE"
+              },
+              "vectorPaths": [
+                {
+                  "data": "M 2.366579294204712 1.506894588470459 C 2.366579294204712 2.3391295125106124 1.8368024920673804 3.013789176940918 1.183289647102356 3.013789176940918 C 0.5297768021373315 3.013789176940918 0 2.3391295125106124 0 1.506894588470459 C 0 0.6746596644303053 0.5297768021373315 0 1.183289647102356 0 C 1.8368024920673804 0 2.366579294204712 0.6746596644303053 2.366579294204712 1.506894588470459 Z",
+                  "windingRule": "NONE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ELLIPSE",
+          "name": "Ellipse 3",
+          "x": 30.999755859375,
+          "y": 21.00001335144043,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.11764705926179886,
+                "g": 0.32549020648002625,
+                "b": 0.4901960790157318
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.09803921729326248,
+                "g": 0.6196078658103943,
+                "b": 0.8392156958580017
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 0.8774127960205078,
+          "cornerRadius": 0,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          }
+        },
+        {
+          "type": "LINE",
+          "name": "Line 4",
+          "x": 46.999755859375,
+          "y": 22.00001335144043,
+          "width": 15,
+          "height": 0,
+          "rotation": -90,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 0.7380033135414124,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          }
+        },
+        {
+          "type": "LINE",
+          "name": "Line 5",
+          "x": 47.999755859375,
+          "y": 37.00001335144043,
+          "width": 8,
+          "height": 0,
+          "rotation": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "opacity": 1,
+              "visible": true
+            }
+          ],
+          "strokeWeight": 0.7380033135414124,
+          "constraints": {
+            "horizontal": "SCALE",
+            "vertical": "SCALE"
+          }
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "name": "Attendance Sheet",
+      "x": 89.999755859375,
+      "y": 50.00001335144043,
+      "width": 133,
+      "height": 19,
+      "rotation": 0,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.5372549295425415,
+            "g": 0.6431372761726379,
+            "b": 0.7372549176216125
+          },
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "text": "Attendance Sheet",
+      "fontSize": 12.194998741149902,
+      "fontName": {
+        "family": "Arial",
+        "style": "Regular"
+      },
+      "textAlign": "center",
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "children": []
+    },
+    {
+      "type": "TEXT",
+      "name": "社員名　須賀哉斗",
+      "x": 1404.999755859375,
+      "y": 48.00001335144043,
+      "width": 146,
+      "height": 20,
+      "rotation": 0,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "text": "社員名　須賀哉斗",
+      "fontSize": 14.904998779296875,
+      "fontName": {
+        "family": "Arial",
+        "style": "Regular"
+      },
+      "textAlign": "left",
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "children": []
+    },
+    {
+      "type": "VECTOR",
+      "name": "Vector",
+      "x": 1773.374755859375,
+      "y": 7.291913986206055,
+      "width": 3.6250338554382324,
+      "height": 4.861265182495117,
+      "rotation": 0,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "strokeWeight": 1,
+      "cornerRadius": 0,
+      "constraints": {
+        "horizontal": "SCALE",
+        "vertical": "SCALE"
+      },
+      "vectorPaths": [
+        {
+          "data": "M 0 0 C 2.4166893089817734 0 3.6250338554382324 1.620421630913711 3.6250338554382324 4.861265182495117",
+          "windingRule": "NONZERO"
+        }
+      ]
+    },
+    {
+      "type": "VECTOR",
+      "name": "Vector",
+      "x": 1747.819091796875,
+      "y": 11.934579849243164,
+      "width": 4.405552387237549,
+      "height": 4.000013828277588,
+      "rotation": 90.18033699423593,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "strokeWeight": 1,
+      "cornerRadius": 0,
+      "constraints": {
+        "horizontal": "SCALE",
+        "vertical": "SCALE"
+      },
+      "vectorPaths": [
+        {
+          "data": "M 0 0 C 2.9370350123554942 0 4.405552387237549 1.3333378632860615 4.405552387237549 4.000013828277588",
+          "windingRule": "NONZERO"
+        }
+      ]
+    }
+  ]
+}

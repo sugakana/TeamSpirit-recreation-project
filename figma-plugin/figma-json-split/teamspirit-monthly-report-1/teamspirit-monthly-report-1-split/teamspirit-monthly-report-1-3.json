@@ -1,0 +1,4011 @@
+{
+  "type": "SPLIT_NODE",
+  "version": "1.0",
+  "node": {
+    "type": "FRAME",
+    "name": "teamspirit-monthly-report 1-3",
+    "children": [
+      {
+        "type": "TEXT",
+        "name": "記号の説明 ○＝所定休日、◎＝法定休日、△＝有休休暇届け日",
+        "x": 20.571428298950195,
+        "y": 586.2857055664062,
+        "width": 379.8857116699219,
+        "height": 8.485713958740234,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.4000000059604645,
+              "g": 0.4000000059604645,
+              "b": 0.4000000059604645
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "text": "記号の説明 ○＝所定休日、◎＝法定休日、△＝有休休暇届け日",
+        "fontSize": 10,
+        "fontName": {
+          "family": "Arial",
+          "style": "Regular"
+        },
+        "textAlign": "left",
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "children": []
+      },
+      {
+        "type": "TEXT",
+        "name": "2025年11月月次サマリー",
+        "x": 27.428571701049805,
+        "y": 604.7999877929688,
+        "width": 248.22857666015625,
+        "height": 13.885714530944824,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.20000000298023224,
+              "g": 0.20000000298023224,
+              "b": 0.20000000298023224
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "text": "2025年11月月次サマリー",
+        "fontSize": 16,
+        "fontName": {
+          "family": "Arial",
+          "style": "Regular"
+        },
+        "textAlign": "left",
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "children": []
+      },
+      {
+        "type": "GROUP",
+        "name": "left-column",
+        "x": 27.428571701049805,
+        "y": 632.5714111328125,
+        "width": 603.4285888671875,
+        "height": 231.42857360839844,
+        "rotation": 0,
+        "children": [
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 632.5714111328125,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "所定出勤日数",
+            "x": 41.14285755157471,
+            "y": 637.9714283943176,
+            "width": 98.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "所定出勤日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "18 日",
+            "x": 481.3714427947998,
+            "y": 637.9714283943176,
+            "width": 39.771427154541016,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "18 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 655.7142848968506,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "実出勤日数",
+            "x": 41.14285755157471,
+            "y": 661.1142864227295,
+            "width": 82.28571319580078,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "実出勤日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "14 日",
+            "x": 481.3714427947998,
+            "y": 661.1142864227295,
+            "width": 39.771427154541016,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "14 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 678.8571434020996,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "法定休日出勤日数",
+            "x": 41.14285755157471,
+            "y": 684.2571411132812,
+            "width": 131.6571502685547,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "法定休日出勤日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0 日",
+            "x": 489.59998893737793,
+            "y": 684.2571411132812,
+            "width": 31.542856216430664,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 702,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "所定休日出勤日数",
+            "x": 41.14285755157471,
+            "y": 707.4000015258789,
+            "width": 131.6571502685547,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "所定休日出勤日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0 日",
+            "x": 489.59998893737793,
+            "y": 707.4000015258789,
+            "width": 31.542856216430664,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 725.1428604125977,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "所定労働時間",
+            "x": 41.14285755157471,
+            "y": 730.542854309082,
+            "width": 98.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "所定労働時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "136:00",
+            "x": 470.4000072479248,
+            "y": 730.542854309082,
+            "width": 50.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "136:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 748.2857131958008,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "総労働時間(有休を含む)",
+            "x": 41.14285755157471,
+            "y": 753.6857147216797,
+            "width": 175.54286193847656,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "総労働時間(有休を含む)",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "114:05",
+            "x": 471.7714366912842,
+            "y": 753.6857147216797,
+            "width": 49.371429443359375,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "114:05",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 771.4285736083984,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "総労働時間-法定休日労働(有休を含む)",
+            "x": 41.14285755157471,
+            "y": 776.8285675048828,
+            "width": 279.77142333984375,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "総労働時間-法定休日労働(有休を含む)",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "114:05",
+            "x": 471.7714366912842,
+            "y": 776.8285675048828,
+            "width": 49.371429443359375,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "114:05",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 794.5714263916016,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "過不足時間",
+            "x": 41.14285755157471,
+            "y": 799.971435546875,
+            "width": 82.28571319580078,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "過不足時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "-20:55",
+            "x": 473.14286613464355,
+            "y": 799.971435546875,
+            "width": 48,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8509804010391235,
+                  "g": 0.32549020648002625,
+                  "b": 0.30980393290519714
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "-20:55",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 817.7142791748047,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "当月度の超過時間",
+            "x": 41.14285755157471,
+            "y": 823.1142883300781,
+            "width": 131.6571502685547,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "当月度の超過時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 488.22855949401855,
+            "y": 823.1142883300781,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 27.428571701049805,
+            "y": 840.8571472167969,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "安全配慮上の超過時間",
+            "x": 41.14285755157471,
+            "y": 846.2571411132812,
+            "width": 164.57142639160156,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "安全配慮上の超過時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 488.22855949401855,
+            "y": 846.2571411132812,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "middle-column",
+        "x": 644.5714111328125,
+        "y": 632.5714111328125,
+        "width": 603.4285888671875,
+        "height": 254.57142639160156,
+        "rotation": 0,
+        "children": [
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 632.5714111328125,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "法定労働時間",
+            "x": 658.2857141494751,
+            "y": 637.9714283943176,
+            "width": 98.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "法定労働時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "144:05",
+            "x": 1087.5428466796875,
+            "y": 637.9714283943176,
+            "width": 50.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "144:05",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 655.7142848968506,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "実労働時間-法定休日労働(有休を含めない)",
+            "x": 658.2857141494751,
+            "y": 661.1142864227295,
+            "width": 312.6856994628906,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "実労働時間-法定休日労働(有休を含めない)",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "114:05",
+            "x": 1088.9142761230469,
+            "y": 661.1142864227295,
+            "width": 49.371429443359375,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "114:05",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 678.8571434020996,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "法定時間内残業",
+            "x": 658.2857141494751,
+            "y": 684.2571411132812,
+            "width": 115.19999694824219,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "法定時間内残業",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 684.2571411132812,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 702,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "法定時間外残業",
+            "x": 658.2857141494751,
+            "y": 707.4000015258789,
+            "width": 115.19999694824219,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "法定時間外残業",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 707.4000015258789,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 725.1428604125977,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "法定休日労働時間",
+            "x": 658.2857141494751,
+            "y": 730.542854309082,
+            "width": 131.6571502685547,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "法定休日労働時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 730.542854309082,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 748.2857131958008,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "深夜労働時間",
+            "x": 658.2857141494751,
+            "y": 753.6857147216797,
+            "width": 98.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "深夜労働時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 753.6857147216797,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 771.4285736083984,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "45時間を超える時間外労働",
+            "x": 658.2857141494751,
+            "y": 776.8285675048828,
+            "width": 198.85714721679688,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "45時間を超える時間外労働",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 776.8285675048828,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 794.5714263916016,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "60時間を超える時間外労働",
+            "x": 658.2857141494751,
+            "y": 799.971435546875,
+            "width": 198.85714721679688,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "60時間を超える時間外労働",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 799.971435546875,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 817.7142791748047,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 840.8571472167969,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 644.5714111328125,
+            "y": 864,
+            "width": 603.4285888671875,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 603.4285888671875 0 L 603.4285888671875 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1105.3714294433594,
+            "y": 823.1142883300781,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "遅刻回数-時間",
+            "x": 658.2857141494751,
+            "y": 823.8857116699219,
+            "width": 104.22856903076172,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "遅刻回数-時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "早退回数-時間",
+            "x": 658.2857141494751,
+            "y": 846.2571411132812,
+            "width": 104.22856903076172,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "早退回数-時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "コア時間内の私用外出回数-時間",
+            "x": 658.2857141494751,
+            "y": 870.1714324951172,
+            "width": 235.88571166992188,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "コア時間内の私用外出回数-時間",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "right-column",
+        "x": 1261.7142333984375,
+        "y": 632.5714111328125,
+        "width": 630.8571166992188,
+        "height": 185.14285278320312,
+        "rotation": 0,
+        "children": [
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 632.5714111328125,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "ｋ有給取得日数",
+            "x": 1275.4285717010498,
+            "y": 637.9714283943176,
+            "width": 115.19999694824219,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "ｋ有給取得日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0 日",
+            "x": 1751.3143005371094,
+            "y": 637.9714283943176,
+            "width": 31.542856216430664,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 655.7142848968506,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "[内訳] ――――",
+            "x": 1275.4285717010498,
+            "y": 661.1142864227295,
+            "width": 113.82857513427734,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.6000000238418579,
+                  "g": 0.6000000238418579,
+                  "b": 0.6000000238418579
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "[内訳] ――――",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 678.8571434020996,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "代休取得日数",
+            "x": 1275.4285717010498,
+            "y": 684.2571411132812,
+            "width": 98.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "代休取得日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1749.94287109375,
+            "y": 684.2571411132812,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 702,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "[内訳] ――――",
+            "x": 1275.4285717010498,
+            "y": 707.4000015258789,
+            "width": 113.82857513427734,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.6000000238418579,
+                  "g": 0.6000000238418579,
+                  "b": 0.6000000238418579
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "[内訳] ――――",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 725.1428604125977,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "無給休暇日数",
+            "x": 1275.4285717010498,
+            "y": 730.542854309082,
+            "width": 98.74285888671875,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "無給休暇日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0 日",
+            "x": 1751.3143005371094,
+            "y": 730.542854309082,
+            "width": 31.542856216430664,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 771.4285736083984,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "有給残日数",
+            "x": 1275.4285717010498,
+            "y": 776.8285675048828,
+            "width": 82.28571319580078,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "有給残日数",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0 日",
+            "x": 1751.3143005371094,
+            "y": 753.6857147216797,
+            "width": 31.542856216430664,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 794.5714263916016,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "2025年12月度以降の計画付与予定日",
+            "x": 1275.4285717010498,
+            "y": 799.971435546875,
+            "width": 270.1714172363281,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "2025年12月度以降の計画付与予定日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "0:00",
+            "x": 1749.94287109375,
+            "y": 776.8285675048828,
+            "width": 32.91428756713867,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "0:00",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 1261.7142333984375,
+            "y": 748.2857131958008,
+            "width": 630.8571166992188,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.8676470518112183,
+                  "g": 0.8676470518112183,
+                  "b": 0.8676470518112183
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 630.8571166992188 0 L 630.8571166992188 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "[内訳] ――――",
+            "x": 1275.4285717010498,
+            "y": 756,
+            "width": 113.82857513427734,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.6000000238418579,
+                  "g": 0.6000000238418579,
+                  "b": 0.6000000238418579
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "[内訳] ――――",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "16 日",
+            "x": 1743.0857238769531,
+            "y": 799.971435546875,
+            "width": 39.771427154541016,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "16 日",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "right",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 170,
+        "y": 112,
+        "width": 11,
+        "height": 11,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.20000000298023224,
+              "g": 0.20000000298023224,
+              "b": 0.20000000298023224
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 11 5.5 C 11 8.53756609529508 8.537566048772392 11 5.5 11 C 2.462433951227608 11 0 8.53756609529508 0 5.5 C 0 2.4624339047049197 2.462433951227608 0 5.5 0 C 8.537566048772392 0 11 2.4624339047049197 11 5.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 173,
+        "y": 115,
+        "width": 5,
+        "height": 5,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 5 2.5 C 5 3.8807118614977636 3.880711840351087 5 2.5 5 C 1.1192881596489128 5 0 3.8807118614977636 0 2.5 C 0 1.1192881385022364 1.1192881596489128 0 2.5 0 C 3.880711840351087 0 5 1.1192881385022364 5 2.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 170,
+        "y": 219,
+        "width": 11,
+        "height": 11,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.20000000298023224,
+              "g": 0.20000000298023224,
+              "b": 0.20000000298023224
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 11 5.5 C 11 8.53756609529508 8.537566048772392 11 5.5 11 C 2.462433951227608 11 0 8.53756609529508 0 5.5 C 0 2.4624339047049197 2.462433951227608 0 5.5 0 C 8.537566048772392 0 11 2.4624339047049197 11 5.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 173,
+        "y": 222,
+        "width": 5,
+        "height": 5,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 5 2.5 C 5 3.8807118614977636 3.880711840351087 5 2.5 5 C 1.1192881596489128 5 0 3.8807118614977636 0 2.5 C 0 1.1192881385022364 1.1192881596489128 0 2.5 0 C 3.880711840351087 0 5 1.1192881385022364 5 2.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 170,
+        "y": 419,
+        "width": 11,
+        "height": 11,
+        "rotation": 0,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.20000000298023224,
+              "g": 0.20000000298023224,
+              "b": 0.20000000298023224
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 11 5.5 C 11 8.537566165129343 8.537566165129343 11 5.5 11 C 2.4624338348706565 11 0 8.537566165129343 0 5.5 C 0 2.4624338348706565 2.4624338348706565 0 5.5 0 C 8.537566165129343 0 11 2.4624338348706565 11 5.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 170,
+        "y": 451,
+        "width": 11,
+        "height": 11,
+        "rotation": 0,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.20000000298023224,
+              "g": 0.20000000298023224,
+              "b": 0.20000000298023224
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 11 5.5 C 11 8.537566165129343 8.537566165129343 11 5.5 11 C 2.4624338348706565 11 0 8.537566165129343 0 5.5 C 0 2.4624338348706565 2.4624338348706565 0 5.5 0 C 8.537566165129343 0 11 2.4624338348706565 11 5.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 170,
+        "y": 527,
+        "width": 11,
+        "height": 11,
+        "rotation": 0,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.20000000298023224,
+              "g": 0.20000000298023224,
+              "b": 0.20000000298023224
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 11 5.5 C 11 8.537566165129343 8.537566165129343 11 5.5 11 C 2.4624338348706565 11 0 8.537566165129343 0 5.5 C 0 2.4624338348706565 2.4624338348706565 0 5.5 0 C 8.537566165129343 0 11 2.4624338348706565 11 5.5 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "LINE",
+        "name": "Line 211",
+        "x": 124,
+        "y": 35,
+        "width": 30,
+        "height": 0,
+        "rotation": -90,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        }
+      },
+      {
+        "type": "LINE",
+        "name": "Line 212",
+        "x": 124,
+        "y": 50,
+        "width": 530.000732421875,
+        "height": 0,
+        "rotation": -0.09536553077539404,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        }
+      },
+      {
+        "type": "LINE",
+        "name": "Line 214",
+        "x": 655,
+        "y": 51,
+        "width": 438.00115966796875,
+        "height": 0,
+        "rotation": 0.13081205330369725,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        }
+      },
+      {
+        "type": "LINE",
+        "name": "Line 213",
+        "x": 655,
+        "y": 65,
+        "width": 30,
+        "height": 0,
+        "rotation": 90,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "strokeWeight": 1,
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        }
+      },
+      {
+        "type": "TEXT",
+        "name": "部署",
+        "x": 363,
+        "y": 37,
+        "width": 50,
+        "height": 11,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "text": "部署",
+        "fontSize": 10,
+        "fontName": {
+          "family": "Arial",
+          "style": "Regular"
+        },
+        "textAlign": "center",
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "children": []
+      }
+    ]
+  }
+}

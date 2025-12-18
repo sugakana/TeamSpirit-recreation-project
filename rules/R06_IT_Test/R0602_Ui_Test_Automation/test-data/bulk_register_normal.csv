@@ -1,0 +1,2 @@
+customerId,userFamilyName,userFirstName,userFamilyNameFurigana,userFirstNameFurigana,groupPath,enabledDate,disabledDate,serviceName1,serviceEnabledFlag1,serviceEnabledDate1,serviceDisabledDate1,faceRegistrationFlag1
+testuser2021aaa+10301@gmail.com,田中,太郎,タナカ,タロウ,管理者グループ,2024-02-01,2025-12-31,テストサービス001,True,2024-02-01,2025-12-31,False

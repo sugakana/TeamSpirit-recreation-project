@@ -1,0 +1,996 @@
+{
+  "type": "SPLIT_NODE",
+  "version": "1.0",
+  "node": {
+    "type": "FRAME",
+    "name": "teamspirit-monthly-report 1-1",
+    "children": [
+      {
+        "type": "VECTOR",
+        "name": "Vector",
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "rotation": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "color": {
+              "r": 0.95686274766922,
+              "g": 0.9647058844566345,
+              "b": 0.9764705896377563
+            },
+            "opacity": 1,
+            "visible": true
+          }
+        ],
+        "cornerRadius": 0,
+        "constraints": {
+          "horizontal": "SCALE",
+          "vertical": "SCALE"
+        },
+        "vectorPaths": [
+          {
+            "data": "M 0 0 L 1920 0 L 1920 1080 L 0 1080 L 0 0 Z",
+            "windingRule": "NONE"
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "header",
+        "x": 13.71435546875,
+        "y": 7.71435546875,
+        "width": 148.28526306152344,
+        "height": 21.600000381469727,
+        "rotation": 0,
+        "children": [
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 13.71435546875,
+            "y": 7.71435546875,
+            "width": 101.56550598144531,
+            "height": 21.600000381469727,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0.4000000059604645,
+                  "b": 0.800000011920929
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 3.0469651794433594 0 L 98.51854080200195 0 C 100.20133322662093 0 101.56550598144531 1.0361410085561715 101.56550598144531 2.3142857551574707 L 101.56550598144531 19.285714626312256 C 101.56550598144531 20.563859372913555 100.20133322662093 21.600000381469727 98.51854080200195 21.600000381469727 L 3.0469651794433594 21.600000381469727 C 1.3641727548243763 21.600000381469727 0 20.563859372913555 0 19.285714626312256 L 0 2.3142857551574707 C 0 1.0361410085561715 1.3641727548243763 0 3.0469651794433594 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "プリンタへ出力",
+            "x": 21.839420318603516,
+            "y": 13.1142578125,
+            "width": 85.31502532958984,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "プリンタへ出力",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "閉じる",
+            "x": 125.4362564086914,
+            "y": 13.1142578125,
+            "width": 36.56358337402344,
+            "height": 10.800000190734863,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0.4000000059604645,
+                  "b": 0.800000011920929
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "閉じる",
+            "fontSize": 12,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "textDecoration": "UNDERLINE",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "info-header",
+        "x": 6.85693359375,
+        "y": 34.71435546875,
+        "width": 1877.14306640625,
+        "height": 30.85714340209961,
+        "rotation": 0,
+        "children": [
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 6.85693359375,
+            "y": 34.71435546875,
+            "width": 1877.14306640625,
+            "height": 30.85714340209961,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 1877.14306640625 0 L 1877.14306640625 30.85714340209961 L 0 30.85714340209961 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "2025年11月",
+            "x": 62.141700744628906,
+            "y": 37,
+            "width": 65.97572326660156,
+            "height": 11,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "2025年11月",
+            "fontSize": 10,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "承認済み",
+            "x": 57.2181396484375,
+            "y": 52,
+            "width": 65.97572326660156,
+            "height": 11,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "承認済み",
+            "fontSize": 10,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "勤務表",
+            "x": 6.997812852263451,
+            "y": 37,
+            "width": 43.32734298706055,
+            "height": 11,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "勤務表",
+            "fontSize": 10,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "ステータス",
+            "x": 10.936662197113037,
+            "y": 52,
+            "width": 53.17446517944336,
+            "height": 11,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "ステータス",
+            "fontSize": 10,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "社員コード",
+            "x": 1227.056396484375,
+            "y": 37,
+            "width": 74.27544403076172,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.4000000059604645,
+                  "g": 0.4000000059604645,
+                  "b": 0.4000000059604645
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "社員コード",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "224104",
+            "x": 1084.2730712890625,
+            "y": 51,
+            "width": 49.96711730957031,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.20000000298023224,
+                  "b": 0.20000000298023224
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "224104",
+            "fontSize": 11,
+            "fontName": {
+              "family": "Arial",
+              "style": "Regular"
+            },
+            "textAlign": "left",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "attendance-table",
+        "x": 6.85693359375,
+        "y": 73.28564453125,
+        "width": 1873.14306640625,
+        "height": 29.71435546875,
+        "rotation": 0,
+        "children": [
+          {
+            "type": "VECTOR",
+            "name": "Vector",
+            "x": 6.85693359375,
+            "y": 73.28564453125,
+            "width": 1873.14306640625,
+            "height": 23.14285659790039,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.41960784792900085,
+                  "g": 0.6078431606292725,
+                  "b": 0.7647058963775635
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 0.3529411852359772,
+                  "g": 0.5411764979362488,
+                  "b": 0.6745098233222961
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "strokeWeight": 1,
+            "cornerRadius": 0,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "vectorPaths": [
+              {
+                "data": "M 0 0 L 1873.14306640625 0 L 1873.14306640625 23.14285659790039 L 0 23.14285659790039 L 0 0 Z",
+                "windingRule": "NONE"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "日付",
+            "x": 92,
+            "y": 79,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "日付",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "イベント/勤務状況/勤務場所",
+            "x": 292,
+            "y": 79,
+            "width": 187.31430053710938,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "イベント/勤務状況/勤務場所",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "出社",
+            "x": 583,
+            "y": 79,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "出社",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "退社",
+            "x": 719,
+            "y": 80,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "退社",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "休憩",
+            "x": 856,
+            "y": 79,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "休憩",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "実労働 時間",
+            "x": 977,
+            "y": 76,
+            "width": 45,
+            "height": 27,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "実労働\n時間",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "残業",
+            "x": 1119,
+            "y": 80,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "残業",
+            "fontSize": 11,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "休日",
+            "x": 1249,
+            "y": 79,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "休日",
+            "fontSize": 11,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "深夜",
+            "x": 1376,
+            "y": 80,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "深夜",
+            "fontSize": 11,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          },
+          {
+            "type": "TEXT",
+            "name": "備考",
+            "x": 1661,
+            "y": 80,
+            "width": 29.646867752075195,
+            "height": 10.028571128845215,
+            "rotation": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "opacity": 1,
+                "visible": true
+              }
+            ],
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "text": "備考",
+            "fontSize": 9,
+            "fontName": {
+              "family": "Arial",
+              "style": "Bold Italic"
+            },
+            "textAlign": "center",
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

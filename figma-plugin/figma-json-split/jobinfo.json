@@ -1,0 +1,2003 @@
+[
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 386",
+    "x": 182,
+    "y": 727,
+    "width": 339,
+    "height": 336,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.4588235318660736,
+          "g": 0.615686297416687,
+          "b": 0.7529411911964417
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 387",
+    "x": 182,
+    "y": 696,
+    "width": 339,
+    "height": 32,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.7490196228027344,
+          "g": 0.8745098114013672,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "2025年11月26日水曜日",
+    "x": 194,
+    "y": 739,
+    "width": 155,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "2025年11月26日水曜日",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "勤怠情報入力",
+    "x": 190,
+    "y": 705,
+    "width": 155,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "勤怠情報入力",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 388",
+    "x": 194,
+    "y": 760,
+    "width": 318,
+    "height": 217,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.9372549057006836,
+          "g": 0.9372549057006836,
+          "b": 0.9372549057006836
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 390",
+    "x": 211,
+    "y": 764,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.29411765933036804,
+          "g": 0.6196078658103943,
+          "b": 0.8941176533699036
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "出社",
+    "x": 242,
+    "y": 769,
+    "width": 59,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "出社",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 391",
+    "x": 211,
+    "y": 796,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.29411765933036804,
+          "g": 0.6196078658103943,
+          "b": 0.8941176533699036
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "退社",
+    "x": 242,
+    "y": 801,
+    "width": 59,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "退社",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 392",
+    "x": 211,
+    "y": 948,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.29411765933036804,
+          "g": 0.6196078658103943,
+          "b": 0.8941176533699036
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "勤務場所",
+    "x": 242,
+    "y": 953,
+    "width": 59,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "勤務場所",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 393",
+    "x": 211,
+    "y": 828,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.4117647111415863,
+          "b": 0.6705882549285889
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "休憩1",
+    "x": 242,
+    "y": 833,
+    "width": 59,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "休憩1",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Roboto",
+      "style": "Regular"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 394",
+    "x": 211,
+    "y": 859,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.4117647111415863,
+          "b": 0.6705882549285889
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "休憩2",
+    "x": 242,
+    "y": 864,
+    "width": 59,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "休憩2",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Roboto",
+      "style": "Regular"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 395",
+    "x": 211,
+    "y": 889,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.4117647111415863,
+          "b": 0.6705882549285889
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 396",
+    "x": 211,
+    "y": 919,
+    "width": 121,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.4117647111415863,
+          "b": 0.6705882549285889
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "公用外出1",
+    "x": 236,
+    "y": 894,
+    "width": 71,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "公用外出1",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Roboto",
+      "style": "Regular"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "公用外出2",
+    "x": 235,
+    "y": 924,
+    "width": 71,
+    "height": 16,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "公用外出2",
+    "fontSize": 13.319048881530762,
+    "fontName": {
+      "family": "Roboto",
+      "style": "Regular"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 397",
+    "x": 340,
+    "y": 764,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 398",
+    "x": 340,
+    "y": 796,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 399",
+    "x": 340,
+    "y": 828,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 400",
+    "x": 340,
+    "y": 860,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 401",
+    "x": 340,
+    "y": 889,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 402",
+    "x": 340,
+    "y": 919,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 403",
+    "x": 340,
+    "y": 948,
+    "width": 167,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "～",
+    "x": 384,
+    "y": 831,
+    "width": 52,
+    "height": 23,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "～",
+    "fontSize": 19.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "～",
+    "x": 384,
+    "y": 864,
+    "width": 52,
+    "height": 23,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "～",
+    "fontSize": 19.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "～",
+    "x": 384,
+    "y": 894,
+    "width": 52,
+    "height": 23,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "～",
+    "fontSize": 19.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "～",
+    "x": 384,
+    "y": 924,
+    "width": 52,
+    "height": 23,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "～",
+    "fontSize": 19.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 404",
+    "x": 427,
+    "y": 830,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 405",
+    "x": 427,
+    "y": 861,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 406",
+    "x": 427,
+    "y": 890,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 407",
+    "x": 427,
+    "y": 919,
+    "width": 48,
+    "height": 26,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      },
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "ELLIPSE",
+    "name": "Ellipse 93",
+    "x": 483,
+    "y": 864,
+    "width": 20,
+    "height": 20,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 256",
+    "x": 491,
+    "y": 869,
+    "width": 4,
+    "height": 10,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 257",
+    "x": 498.2734375,
+    "y": 872.1726684570312,
+    "width": 3.529411792755127,
+    "height": 10.588234901428223,
+    "rotation": -89.32200128191056,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "ELLIPSE",
+    "name": "Ellipse 94",
+    "x": 483,
+    "y": 922,
+    "width": 20,
+    "height": 20,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 408",
+    "x": 491,
+    "y": 927,
+    "width": 4,
+    "height": 10,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 409",
+    "x": 498.2734375,
+    "y": 930.1726684570312,
+    "width": 3.529411792755127,
+    "height": 10.588234901428223,
+    "rotation": -89.32200128191056,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "^",
+    "x": 505.9996643066406,
+    "y": 968.1002807617188,
+    "width": 15,
+    "height": 13,
+    "rotation": 179.61593843974828,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "^",
+    "fontSize": 19.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 410",
+    "x": 291,
+    "y": 990,
+    "width": 49,
+    "height": 30,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.062745101749897,
+          "g": 0.5529412031173706,
+          "b": 0.772549033164978
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "登録",
+    "x": 290,
+    "y": 996,
+    "width": 54,
+    "height": 24,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "登録",
+    "fontSize": 16.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "TEXT",
+    "name": "キャンセル",
+    "x": 351,
+    "y": 996,
+    "width": 82,
+    "height": 27,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.29019609093666077,
+          "g": 0.29019609093666077,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "キャンセル",
+    "fontSize": 14.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "textDecoration": "UNDERLINE",
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 411",
+    "x": 459,
+    "y": 982,
+    "width": 47,
+    "height": 18,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0.9411764740943909,
+          "g": 0.5686274766921997,
+          "b": 0.6000000238418579
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "リセット",
+    "x": 460,
+    "y": 985,
+    "width": 46,
+    "height": 14,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "リセット",
+    "fontSize": 9.319049835205078,
+    "fontName": {
+      "family": "Arial",
+      "style": "Bold Italic"
+    },
+    "textAlign": "center",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  },
+  {
+    "type": "RECTANGLE",
+    "name": "Rectangle 412",
+    "x": 322,
+    "y": 1036,
+    "width": 18,
+    "height": 15,
+    "rotation": 0,
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "strokeWeight": 1,
+    "cornerRadius": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "日時確定する",
+    "x": 348,
+    "y": 1036,
+    "width": 94,
+    "height": 19,
+    "rotation": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "opacity": 1,
+        "visible": true
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "text": "日時確定する",
+    "fontSize": 14.15900993347168,
+    "fontName": {
+      "family": "Arial",
+      "style": "Regular"
+    },
+    "textAlign": "left",
+    "lineHeight": {
+      "unit": "AUTO"
+    },
+    "letterSpacing": {
+      "unit": "PERCENT",
+      "value": 0
+    },
+    "children": []
+  }
+]
