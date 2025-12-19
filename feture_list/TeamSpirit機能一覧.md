@@ -20,7 +20,7 @@
 | 16 | ホーム | 画面 | SCR_TS_0102 | 勤怠入力 | AttendanceInput | N/A | N/A | SCR_TS_010201 | 勤怠入力 | AttendanceInput | 従業員 | ホーム画面での勤怠情報の入力（WEBタイムレコーダー） | 直行・直帰・直行直帰ボタン_押下 | 勤務場所を「直行」「直帰」「直行直帰」として設定する |
 | 17 | ホーム | 画面 | SCR_TS_0102 | 勤怠入力 | AttendanceInput | N/A | N/A | SCR_TS_010201 | 勤怠入力 | AttendanceInput | 従業員 | ホーム画面での勤怠情報の入力（WEBタイムレコーダー） | 出張ボタン_押下 | 勤務場所を「出張」として設定する |
 | 18 | ホーム | 画面 | SCR_TS_0103 | お知らせ表示 | NotificationDisplay | N/A | N/A | SCR_TS_010301 | お知らせ | Notification | 従業員 | システムからのお知らせを表示する | 初期表示 | 固定文言（ユーザー、グループ）でのお知らせを表示。切り替え大差異は不要 |
-| 19 | 勤務表 | 画面 | SCR_TS_0201 | 勤務表 | AttendanceTable | N/A | N/A | SCR_TS_020101 | メイン | Main |従業員 | 月間の勤務表を表示し、各種勤務情報の入力・確認を行う | 初期表示 | 月間カレンダー形式で勤務表を表示。出退勤時刻、休憩時間、工数などを表示。出退勤時刻は背景色で手入力と打刻を区別（打刻は黄色、手入力は白色） |
+| 19 | 勤務表 | 画面 | SCR_TS_0201 | 勤務表 | AttendanceTable | N/A | N/A | SCR_TS_020101 | メイン | Main |従業員 | 月間の勤務表を表示し、各種勤務情報の入力・確認を行う | 初期表示 | 月間カレンダー形式で勤務表を表示。出退勤時刻、休憩時間、工数などを表示。出退勤時刻は背景色で手入力と打刻を区別（打刻は白色、手入力は黄色） |
 | 20 | 勤務表 | 画面 | SCR_TS_0201 | 勤務表 | AttendanceTable | N/A | N/A | SCR_TS_020101 | メイン | Main |従業員 | 月間の勤務表を表示し、各種勤務情報の入力・確認を行う | 勤務状況グラフ_表示 | 勤務状況に応じてグラフの色を表示（本来勤務時間、実際の勤務時間、法定休日の勤務時間、休憩時間など） |
 | 21 | 勤務表 | 画面 | SCR_TS_0201 | 勤務表 | AttendanceTable | N/A | N/A | SCR_TS_020101 | メイン | Main |従業員 | 月間の勤務表を表示し、各種勤務情報の入力・確認を行う | 出勤欄_押下 | 出勤欄（左側）をクリックすると動意情報入力ダイアログが表示される |
 | 22 | 勤務表 | 画面 | SCR_TS_0201 | 勤務表 | AttendanceTable | N/A | N/A | SCR_TS_020101 | メイン | Main |従業員 | 月間の勤務表を表示し、各種勤務情報の入力・確認を行う | 退勤欄_押下 | 退勤欄（右側）をクリックすると動意情報入力ダイアログが表示される |
@@ -45,7 +45,15 @@
 | 41 | 勤務表 | 画面 | SCR_TS_0206 | UI表示ヘッダー | DisplayHeader | N/A | N/A | SCR_TS_020401 | ヘッダー | Header | 従業員 | 勤務表のヘッダー部分の表示 | 初期表示 | 年月選択、各種ボタンなどのヘッダー情報を表示 |
 | 42 | 勤務表 | 画面 | SCR_TS_0207 | UI表示勤務表 | DisplayAttendanceTable | N/A | N/A | SCR_TS_020501 | 勤務表 | AttendanceTable | 従業員 | 月間勤務表の表示（カレンダー形式） | 初期表示 | カレンダー形式で勤務状況を可視化。日別の勤務時間、休憩時間をグラフィカルに表示 |
 | 43 | 勤務表 | 画面 | SCR_TS_0208 | UI表示サマリー | DisplaySummary | N/A | N/A | SCR_TS_020601 | サマリー（下部） | Summary | 従業員 | 勤務表下部に表示される集計情報 | 初期表示 | 月間の勤務時間集計、残業時間、休暇日数などを表示 |
-| 44 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | N/A | N/A | SCR_TS_020701 | 申請 | Application | 従業員 | 各種勤務に関する申請機能 | 申請_押下 | 残業申請、振替休日申請などの申請処理を行う |
+| 44 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | N/A | N/A | SCR_TS_020701 | 申請 | Application | 従業員 | 各種勤務に関する申請機能 | 申請_押下 | 勤務表画面の申請列の+アイコンを押下すると勤怠関連申請ダイアログが表示される |
+| 44-1 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | 日次確定申請 | DailyConfirmation | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 日次確定申請を行う | 日次確定タブ_表示 | 日次確定タブを開くと、対象日付の勤務情報（出退社時刻、休憩時間、総労働時間、実労働時間、備考）が表示される |
+| 44-2 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | 休暇申請 | VacationApplication | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 休暇申請を行う | 休暇申請タブ_表示 | 休暇申請タブを開くと、休暇種類、期間（開始日・終了日）、備考、連絡先の入力欄が表示される。年次有給休暇を選択した場合は有休残日数が表示される。代休を選択した場合は代休取得可能日数が表示される |
+| 44-3 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | 休日出勤申請 | HolidayWorkApplication | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 休日出勤申請を行う | 休日出勤申請タブ_表示 | 休日出勤申請タブを開くと、当月時間外残業、時間（開始時間・終了時間）、休憩時間（変更可能）、備考の入力欄が表示される |
+| 44-4 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | 残業申請 | OvertimeApplication | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 残業申請を行う | 残業申請タブ_表示 | 残業申請タブを開くと、期間（開始日・終了日）、残業時間、備考の入力欄が表示される |
+| 44-5 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | 早朝勤務申請 | EarlyWorkApplication | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 早朝勤務申請を行う | 早朝勤務申請タブ_表示 | 早朝勤務申請タブを開くと、期間（開始日・終了日）、備考の入力欄が表示される |
+| 44-6 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | 振替申請 | TransferApplication | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 振替申請を行う | 振替申請タブ_表示 | 振替申請タブを開くと、振替元日、振替先日、備考の入力欄が表示される |
+| 44-7 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | N/A | N/A | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 申請取消を行う | 申請取消ボタン_押下 | 申請中（PENDING）または承認済み（APPROVED）の場合に申請取消ボタンが表示され、押下で申請取消確認ダイアログが表示される |
+| 44-8 | 勤務表 | 画面 | SCR_TS_0209 | 勤務関連申請 | AttendanceApplication | N/A | N/A | SCR_TS_020701 | 勤怠関連申請画面 | AttendanceApplicationDialog | 従業員 | 申請情報と承認履歴を表示する | 申請情報セクション_表示 | 申請中または承認済みの場合、申請日時、状況、承認履歴テーブルが表示される |
 | 45 | 勤務表 | 画面 | SCR_TS_0210 | 動意情報入力 | ManualAttendanceInput | N/A | N/A | SCR_TS_021001 | 動意情報入力画面 | ManualAttendanceInputDialog | 従業員 | WEBタイムレコーダーで打刻できなかった場合に手動で勤務時間を入力する機能 | 出勤退勤欄_押下 | 勤務表画面の出勤または退勤欄をクリックして動意情報入力画面を表示 |
 | 46 | 勤務表 | 画面 | SCR_TS_0210 | 動意情報入力 | ManualAttendanceInput | N/A | N/A | SCR_TS_021001 | 動意情報入力画面 | ManualAttendanceInputDialog | 従業員 | WEBタイムレコーダーで打刻できなかった場合に手動で勤務時間を入力する機能 | 初期表示 | 日付、出社時刻、退社時刻、休憩1、休憩2、公用外出1、公用外出2、勤務場所（ドロップダウン）の入力欄を表示 |
 | 47 | 勤務表 | 画面 | SCR_TS_0210 | 動意情報入力 | ManualAttendanceInput | N/A | N/A | SCR_TS_021001 | 動意情報入力画面 | ManualAttendanceInputDialog | 従業員 | WEBタイムレコーダーで打刻できなかった場合に手動で勤務時間を入力する機能 | 出社時刻_入力 | 出社時刻を手動で入力する |
@@ -138,6 +146,18 @@
 | 130 | マスタ | API | API_TS_0301 | 勤務場所マスタ取得 | GetWorkLocations | N/A | N/A | N/A | N/A | N/A | 従業員 | 勤務場所マスタを取得する | GET /api/master/work-locations | WORK_LOCATIONテーブルからIS_ACTIVE=TRUEの勤務場所をDISPLAY_ORDER順で取得 |
 | 131 | マスタ | API | API_TS_0302 | ジョブマスタ取得 | GetJobMaster | N/A | N/A | N/A | N/A | N/A | 従業員 | ジョブマスタを取得する | GET /api/master/jobs | JOB_MASTERテーブルからIS_ACTIVE=TRUEのジョブを取得。工数入力画面で使用 |
 | 132 | マスタ | API | API_TS_0303 | 休暇種別マスタ取得 | GetVacationTypes | N/A | N/A | N/A | N/A | N/A | 従業員 | 休暇種別マスタを取得する | GET /api/master/vacation-types | VACATION_TYPEテーブルからIS_ACTIVE=TRUEの休暇種別をDISPLAY_ORDER順で取得 |
+| 133 | 勤務表 | API | API_TS_0214 | 休暇申請 | ApplyVacation | N/A | N/A | N/A | N/A | N/A | 従業員 | 休暇申請を行う | POST /api/application/vacation/apply | リクエストにEMPLOYEE_ID、VACATION_TYPE_CODE、START_DATE、END_DATE、REASON、CONTACT_INFOを受け取り、VACATION_HISTORYテーブルに登録。有給休暇の場合はVACATION_BALANCEテーブルのUSED_DAYSとREMAINING_DAYSを更新 |
+| 134 | 勤務表 | API | API_TS_0215 | 休日出勤申請 | ApplyHolidayWork | N/A | N/A | N/A | N/A | N/A | 従業員 | 休日出勤申請を行う | POST /api/application/holiday-work | リクエストにEMPLOYEE_ID、WORK_DATE、START_TIME、END_TIME、BREAK_HOURS、REASONを受け取り、APPLICATION_HISTORYテーブルにAPPLICATION_TYPE='HOLIDAY_WORK'として登録 |
+| 135 | 勤務表 | API | API_TS_0216 | 休日出勤申請状態取得 | GetHolidayWorkStatus | N/A | N/A | N/A | N/A | N/A | 従業員 | 指定日の休日出勤申請状態を取得する | GET /api/application/holiday-work-status | リクエストにEMPLOYEE_ID、WORK_DATEを受け取り、APPLICATION_HISTORYテーブルからAPPLICATION_TYPE='HOLIDAY_WORK'の申請状態を取得 |
+| 136 | 勤務表 | API | API_TS_0217 | 休日出勤申請リスト取得 | GetHolidayWorkList | N/A | N/A | N/A | N/A | N/A | 従業員 | 指定期間の休日出勤申請リストを取得する（代休取得可能日数計算用） | GET /api/application/holiday-work-list | リクエストにEMPLOYEE_ID、startDate、endDateを受け取り、APPLICATION_HISTORYテーブルからAPPLICATION_TYPE='HOLIDAY_WORK'の申請リストを取得 |
+| 137 | 勤務表 | API | API_TS_0218 | 申請状態取得 | GetApplicationStatus | N/A | N/A | N/A | N/A | N/A | 従業員 | 指定申請タイプの申請状態を取得する | GET /api/application/application-status | リクエストにEMPLOYEE_ID、APPLICATION_TYPE、TARGET_DATEを受け取り、各申請タイプ（DAILY_CONFIRMATION/VACATION/HOLIDAY_WORK/OVERTIME/EARLY_WORK/TRANSFER）の申請状態を取得 |
+| 138 | 勤務表 | API | API_TS_0219 | 申請情報取得 | GetApplicationInfo | N/A | N/A | N/A | N/A | N/A | 従業員 | 申請情報と承認履歴を取得する | GET /api/application/application-info | リクエストにEMPLOYEE_ID、APPLICATION_TYPE、TARGET_DATEを受け取り、申請情報と承認履歴を取得。日次確定申請の場合はATTENDANCE_RECORD、休暇申請の場合はVACATION_HISTORY、その他はAPPLICATION_HISTORYから取得 |
+| 139 | 勤務表 | API | API_TS_0220 | 申請取消 | CancelApplication | N/A | N/A | N/A | N/A | N/A | 従業員 | 申請を取り消す | DELETE /api/application/application | リクエストにEMPLOYEE_ID、APPLICATION_IDを受け取り、申請タイプに応じて適切なテーブルのAPPROVAL_STATUSをNOT_SUBMITTEDに更新。休日出勤申請取消時は該当日の全ての勤怠データが削除される |
+| 140 | 勤務表 | API | API_TS_0221 | 月次承認履歴取得 | GetMonthlyApprovalHistory | N/A | N/A | N/A | N/A | N/A | 従業員 | 指定年月の月次承認履歴を取得する | GET /api/application/monthly-approval-history | リクエストにEMPLOYEE_ID、YEAR、MONTHを受け取り、MONTHLY_APPROVAL_HISTORYテーブルから該当年月の承認履歴をSEQ_NO順で取得 |
+| 141 | 勤務表 | API | API_TS_0222 | 月次確定申請取消 | CancelMonthlyApproval | N/A | N/A | N/A | N/A | N/A | 従業員 | 月次確定申請を取り消す | POST /api/application/monthly-approval/cancel | リクエストにEMPLOYEE_ID、YEAR、MONTHを受け取り、MONTHLY_APPROVAL_HISTORYにCANCEL履歴を追加し、MONTHLY_ATTENDANCEのMONTHLY_APPROVAL_STATUSをNOT_SUBMITTEDに更新 |
+| 142 | 勤務表 | API | API_TS_0223 | 残業申請 | ApplyOvertime | N/A | N/A | N/A | N/A | N/A | 従業員 | 残業申請を行う | POST /api/application/overtime | リクエストにEMPLOYEE_ID、START_DATE、END_DATE、OVERTIME_HOURS、REASONを受け取り、APPLICATION_HISTORYテーブルにAPPLICATION_TYPE='OVERTIME'として登録 |
+| 143 | 勤務表 | API | API_TS_0224 | 早朝勤務申請 | ApplyEarlyWork | N/A | N/A | N/A | N/A | N/A | 従業員 | 早朝勤務申請を行う | POST /api/application/early-work | リクエストにEMPLOYEE_ID、START_DATE、END_DATE、REASONを受け取り、APPLICATION_HISTORYテーブルにAPPLICATION_TYPE='EARLY_WORK'として登録 |
+| 144 | 勤務表 | API | API_TS_0225 | 振替申請 | ApplyTransfer | N/A | N/A | N/A | N/A | N/A | 従業員 | 振替申請を行う | POST /api/application/transfer | リクエストにEMPLOYEE_ID、FROM_DATE、TO_DATE、REASONを受け取り、APPLICATION_HISTORYテーブルにAPPLICATION_TYPE='TRANSFER'として登録 |
 
 ## 備考
 
@@ -145,8 +165,8 @@
 - ログイン画面: 社員コードとパスワードによる認証機能
 - ホーム画面: WEBタイムレコーダーでの勤怠入力（出勤・退勤・定時出勤・定時退勤・中断再開）、勤務場所選択（通勤・在宅・直行直帰・出張）、お知らせ表示
 - 勤務表画面: 出退勤時刻表示・入力、休憩入力、公用外出入力、勤務場所選択、備考入力、工数実績入力、動意情報入力（手入力）、月次サマリー表示、休暇情報、日次確定申請など
-- 各種入力画面: 勤怠情報入力画面、動意情報入力画面、備考入力画面、工数実績入力画面、月次サマリー画面、個人休暇表示画面
-- API機能: ログイン認証、従業員情報取得、ログアウト（未実装）、勤怠打刻（出勤・退勤・定時出勤・定時退勤）、当日勤怠情報取得、勤務場所設定、お知らせ取得、月間勤務表取得、日次勤怠記録取得、勤怠記録登録・更新、当月時間外残業取得、休憩時間登録・更新（未実装、PUT /api/attendance/recordで対応）、公用外出登録・更新（未実装）、備考登録・更新（PUT /api/attendance/recordで対応）、工数実績取得・登録・更新・削除、日次確定申請・取消、月次サマリー取得、休暇情報取得、有給残日数取得、マスタデータ取得（勤務場所・ジョブ・休暇種別）など
+- 各種入力画面: 勤怠情報入力画面、動意情報入力画面、備考入力画面、工数実績入力画面、月次サマリー画面、個人休暇表示画面、勤怠関連申請画面（日次確定、休暇申請、休日出勤申請、残業申請、早朝勤務申請、振替申請）
+- API機能: ログイン認証、従業員情報取得、ログアウト（未実装）、勤怠打刻（出勤・退勤・定時出勤・定時退勤）、当日勤怠情報取得、勤務場所設定、お知らせ取得、月間勤務表取得、日次勤怠記録取得、勤怠記録登録・更新、当月時間外残業取得、休憩時間登録・更新（未実装、PUT /api/attendance/recordで対応）、公用外出登録・更新（未実装）、備考登録・更新（PUT /api/attendance/recordで対応）、工数実績取得・登録・更新・削除、日次確定申請・取消、月次サマリー取得、休暇情報取得、有給残日数取得、申請関連（休暇申請、休日出勤申請、残業申請、早朝勤務申請、振替申請、申請状態取得、申請情報取得、申請取消）、月次承認履歴取得、月次確定申請取消、マスタデータ取得（勤務場所・ジョブ・休暇種別）など
 
 ### 対象外機能（透明紫で囲っている範囲）
 - **月次確定申請**: 月間の勤務内容を確定申請する機能
@@ -180,7 +200,7 @@
 18. 勤怠情報入力画面は、出社列、退社列、勤務場所列のテキストボックスを押下することで表示される
 19. 勤怠情報入力画面には「日次確定する」チェックボックスがあり、チェックすることで日次確定も同時に行える
 20. 勤怠情報入力画面のボタンは「登録」「キャンセル」「リセット」の3つ
-21. 出退勤の打刻と手入力は背景色で区別される（打刻：黄色、手入力：白色）
+21. 出退勤の打刻と手入力は背景色で区別される（打刻：白色、手入力：黄色）
 22. 動意情報入力（手入力）の場合は、備考欄に打刻できなかった理由を入力する必要がある
 23. 勤務場所を入力しないと日次確定申請を行えない
 24. 日次確定申請後は申請ボタンのアイコンが変わる
@@ -203,4 +223,17 @@
 41. 休暇情報取得APIは `/api/application/vacation-info` に実装されている
 42. 出勤打刻と退勤打刻は中断・再開機能にも対応しており、中断開始時は退勤打刻、再開時は出勤打刻を使用する
 43. 打刻時に勤務場所（WORK_LOCATION_CODE）を設定可能で、退勤打刻時に選択されている勤務場所が確定値として保存される
+44. 勤怠関連申請画面はタブ形式で管理され、常に1つの申請タイプのタブのみが開く。メニューから別の申請タイプを選択すると、以前開いていたタブは閉じて新しいタブが開く
+45. 申請タイプは日次確定、休暇申請、休日出勤申請、残業申請、早朝勤務申請、振替申請の6種類
+46. 休暇申請時、有給休暇（PAID_LEAVE）の場合は申請時にVACATION_BALANCEテーブルのUSED_DAYSとREMAINING_DAYSが更新される（日数は整数として処理）
+47. 代休は休日出勤申請を行っている場合のみ休暇種類のプルダウンに表示される。代休取得可能日数は休日出勤申請を行った日数に基づいて計算される
+48. 休日出勤申請取消時は、その日の全ての勤怠データ（ATTENDANCE_RECORD、BREAK_TIME、OFFICIAL_OUTING、WORK_HOURS）が削除される
+49. 申請中（PENDING）または承認済み（APPROVED）の申請がある場合、メニュー画面の各申請タイプのボタンは非活性（押せない状態）になる
+50. 申請状態に応じて、承認申請ボタンまたは申請取消ボタンが表示される。申請中（PENDING）の場合は「申請取消」、承認済み（APPROVED）の場合は「承認取消」と表示される
+51. 月次申請が申請中（PENDING）または承認済み（APPROVED）の場合、日次申請の取り消しはできない
+52. 申請情報セクションには申請日時、状況、承認履歴テーブルが表示される。承認履歴は過去の申請・取消・再申請の履歴も含めて、時系列で全ての履歴を表示する
+53. 申請状態取得APIは各申請タイプ（DAILY_CONFIRMATION/VACATION/HOLIDAY_WORK/OVERTIME/EARLY_WORK/TRANSFER）の申請状態を取得する
+54. 申請情報取得APIは申請タイプに応じて適切なテーブル（ATTENDANCE_RECORD/VACATION_HISTORY/APPLICATION_HISTORY）から申請情報と承認履歴を取得する
+55. 月次承認履歴取得APIはMONTHLY_APPROVAL_HISTORYテーブルからSEQ_NO順で取得する
+56. 月次確定申請取消APIはMONTHLY_APPROVAL_HISTORYにCANCEL履歴を追加し、MONTHLY_ATTENDANCEのMONTHLY_APPROVAL_STATUSをNOT_SUBMITTEDに更新する
 
