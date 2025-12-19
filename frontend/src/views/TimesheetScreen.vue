@@ -1014,6 +1014,8 @@ import WorkHoursInputDialog from '@/components/dialog/WorkHoursInputDialog.vue'
 import MonthlySummarySimple from '@/components/MonthlySummarySimple.vue'
 import HolidayJp from '@holiday-jp/holiday_jp'
 import { getMonthlyAttendance, getEmployeeInfo, submitDailyConfirmation, updateAttendanceRecord, getDailyAttendance, getWorkHours } from '@/services/api'
+import { formatTimeNoLeadingZero } from '@/utils/dateFormatter'
+import { formatHoursToTime } from '@/utils/timeFormatter'
 
 export default {
   name: 'TimesheetScreen',
@@ -2317,10 +2319,7 @@ export default {
     formatTimeForRemarks(timeStr) {
       if (!timeStr) return ''
       if (typeof timeStr === 'string' && timeStr.includes('T')) {
-        const date = new Date(timeStr)
-        const hours = date.getHours()
-        const minutes = String(date.getMinutes()).padStart(2, '0')
-        return `${hours}:${minutes}`
+        return formatTimeNoLeadingZero(timeStr)
       }
       if (typeof timeStr === 'string' && /^\d{2}:\d{2}$/.test(timeStr)) {
         const [hours, minutes] = timeStr.split(':')
@@ -3017,17 +3016,7 @@ export default {
     
     // 時間（小数）をH:MM形式に変換
     formatHoursToHMM(hours) {
-      if (!hours || hours === 0) {
-        return '0:00'
-      }
-      
-      // 浮動小数点数の誤差を考慮して、分単位で計算
-      // 例: 0.75時間 = 45分、0.733333...時間 = 44分
-      const totalMinutes = Math.round(hours * 60)
-      const wholeHours = Math.floor(totalMinutes / 60)
-      const minutes = totalMinutes % 60
-      
-      return `${wholeHours}:${String(minutes).padStart(2, '0')}`
+      return formatHoursToTime(hours)
     }
   }
 }

@@ -204,6 +204,6 @@ export default {
 }
 
 .summary-value-right.negative {
-  color: rgb(217, 83, 79); /* #D9534F */
+  color: rgb(0, 0, 0);
 }
 </style>

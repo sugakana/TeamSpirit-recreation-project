@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { login } from '@/services/api'
 
 export default {
   name: 'LoginScreen',
@@ -113,26 +113,23 @@ export default {
       this.isLoading = true
 
       try {
-        const response = await axios.post('/api/auth/login', {
-          employeeId: this.employeeId,
-          password: this.password
-        })
+        const response = await login(this.employeeId, this.password)
 
-        if (response.data.success) {
+        if (response.success) {
           // 認証成功：ログイン情報をlocalStorageに保存
-          localStorage.setItem('employeeId', response.data.employeeId)
-          localStorage.setItem('employeeName', response.data.employeeName)
+          localStorage.setItem('employeeId', response.employeeId)
+          localStorage.setItem('employeeName', response.employeeName)
           
           // ホーム画面へ遷移
           this.$router.push({
             name: 'Home',
             query: {
-              employeeId: response.data.employeeId,
-              employeeName: response.data.employeeName
+              employeeId: response.employeeId,
+              employeeName: response.employeeName
             }
           })
         } else {
-          this.errorMessage = response.data.message || '社員コードまたはパスワードが違います。'
+          this.errorMessage = response.message || '社員コードまたはパスワードが違います。'
         }
       } catch (error) {
         console.error('Login error:', error)
@@ -142,18 +139,14 @@ export default {
       }
     },
     handleErrorResponse(error) {
-      if (error.response) {
-        if (error.response.data && error.response.data.message) {
-          this.errorMessage = error.response.data.message
-        } else if (error.response.status === 500) {
-          this.errorMessage = 'サーバーエラーが発生しました。データベース接続を確認してください。'
-        } else {
-          this.errorMessage = '社員コードまたはパスワードが違います。'
-        }
-      } else if (error.request) {
-        this.errorMessage = 'サーバーに接続できません。バックエンドサーバーが起動しているか確認してください。'
+      if (error.status === 401) {
+        this.errorMessage = '社員コードまたはパスワードが違います。'
+      } else if (error.status === 500) {
+        this.errorMessage = 'サーバーエラーが発生しました。データベース接続を確認してください。'
+      } else if (error.message) {
+        this.errorMessage = error.message
       } else {
-        this.errorMessage = 'エラーが発生しました。'
+        this.errorMessage = 'サーバーに接続できません。バックエンドサーバーが起動しているか確認してください。'
       }
     }
   }

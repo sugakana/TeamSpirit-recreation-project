@@ -2,6 +2,8 @@
  * 申請コントローラー
  */
 const applicationService = require('../services/applicationService');
+const { sendSuccess, sendError } = require('../utils/responseHelper');
+const { validateQuery, validateBody } = require('../utils/validationHelper');
 
 /**
  * 休暇申請
@@ -10,11 +12,9 @@ const applyVacation = async (req, res, next) => {
   try {
     const { employeeId, vacationTypeCode, startDate, endDate, reason, contact } = req.body;
     
-    if (!employeeId || !vacationTypeCode || !startDate || !endDate) {
-      return res.status(400).json({
-        success: false,
-        message: '必須項目が不足しています。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'vacationTypeCode', 'startDate', 'endDate']);
+    if (validationError) {
+      return sendError(res, '必須項目が不足しています。');
     }
     
     const vacationId = await applicationService.applyVacation({
@@ -26,17 +26,10 @@ const applyVacation = async (req, res, next) => {
       contact
     });
     
-    res.json({
-      success: true,
-      message: '休暇申請が完了しました。',
-      vacationId
-    });
+    return sendSuccess(res, { vacationId }, '休暇申請が完了しました。');
   } catch (error) {
     if (error.message.includes('残日数が不足')) {
-      return res.status(400).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message);
     }
     next(error);
   }
@@ -49,26 +42,18 @@ const applyHolidayWork = async (req, res, next) => {
   try {
     const { employeeId, workDate, startTime, endTime, breakHours, reason } = req.body;
     
-    if (!employeeId || !workDate || !startTime || !endTime || breakHours === undefined) {
-      return res.status(400).json({
-        success: false,
-        message: '必須項目が不足しています。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'workDate', 'startTime', 'endTime']);
+    if (validationError || breakHours === undefined) {
+      return sendError(res, '必須項目が不足しています。');
     }
     
     // バリデーション
     if (startTime >= endTime) {
-      return res.status(400).json({
-        success: false,
-        message: '開始時間は終了時間より前の時刻を入力してください。'
-      });
+      return sendError(res, '開始時間は終了時間より前の時刻を入力してください。');
     }
     
     if (breakHours < 0) {
-      return res.status(400).json({
-        success: false,
-        message: '休憩時間を入力してください。'
-      });
+      return sendError(res, '休憩時間を入力してください。');
     }
     
     await applicationService.applyHolidayWork({ 
@@ -80,10 +65,7 @@ const applyHolidayWork = async (req, res, next) => {
       reason 
     });
     
-    res.json({
-      success: true,
-      message: '休日出勤申請が完了しました。'
-    });
+    return sendSuccess(res, {}, '休日出勤申請が完了しました。');
   } catch (error) {
     next(error);
   }
@@ -96,19 +78,14 @@ const applyOvertime = async (req, res, next) => {
   try {
     const { employeeId, startDate, endDate, overtimeHours, reason } = req.body;
     
-    if (!employeeId || !startDate || !endDate || !overtimeHours) {
-      return res.status(400).json({
-        success: false,
-        message: '必須項目が不足しています。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'startDate', 'endDate', 'overtimeHours']);
+    if (validationError) {
+      return sendError(res, '必須項目が不足しています。');
     }
     
     await applicationService.applyOvertime({ employeeId, startDate, endDate, overtimeHours, reason });
     
-    res.json({
-      success: true,
-      message: '残業申請が完了しました。'
-    });
+    return sendSuccess(res, {}, '残業申請が完了しました。');
   } catch (error) {
     next(error);
   }
@@ -121,19 +98,14 @@ const applyEarlyWork = async (req, res, next) => {
   try {
     const { employeeId, startDate, endDate, reason } = req.body;
     
-    if (!employeeId || !startDate || !endDate) {
-      return res.status(400).json({
-        success: false,
-        message: '必須項目が不足しています。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'startDate', 'endDate']);
+    if (validationError) {
+      return sendError(res, '必須項目が不足しています。');
     }
     
     await applicationService.applyEarlyWork({ employeeId, startDate, endDate, reason });
     
-    res.json({
-      success: true,
-      message: '早朝勤務申請が完了しました。'
-    });
+    return sendSuccess(res, {}, '早朝勤務申請が完了しました。');
   } catch (error) {
     next(error);
   }
@@ -146,25 +118,17 @@ const applyTransfer = async (req, res, next) => {
   try {
     const { employeeId, fromDate, toDate, reason } = req.body;
     
-    if (!employeeId || !fromDate || !toDate) {
-      return res.status(400).json({
-        success: false,
-        message: '必須項目が不足しています。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'fromDate', 'toDate']);
+    if (validationError) {
+      return sendError(res, '必須項目が不足しています。');
     }
     
     await applicationService.applyTransfer({ employeeId, fromDate, toDate, reason });
     
-    res.json({
-      success: true,
-      message: '振替申請が完了しました。'
-    });
+    return sendSuccess(res, {}, '振替申請が完了しました。');
   } catch (error) {
     if (error.message.includes('異なる日付')) {
-      return res.status(400).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message);
     }
     next(error);
   }
@@ -177,19 +141,14 @@ const getHolidayWorkStatus = async (req, res, next) => {
   try {
     const { employeeId, targetDate } = req.query;
     
-    if (!employeeId || !targetDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDと対象日が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'targetDate']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const result = await applicationService.getHolidayWorkStatus(employeeId, targetDate);
     
-    res.json({
-      success: true,
-      ...result
-    });
+    return sendSuccess(res, result);
   } catch (error) {
     next(error);
   }
@@ -202,11 +161,9 @@ const getMonthlyApprovalHistory = async (req, res, next) => {
   try {
     const { employeeId, year, month } = req.query;
     
-    if (!employeeId || !year || !month) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員ID、年、月が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'year', 'month']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const result = await applicationService.getMonthlyApprovalHistory(
@@ -215,10 +172,7 @@ const getMonthlyApprovalHistory = async (req, res, next) => {
       parseInt(month)
     );
     
-    res.json({
-      success: true,
-      ...result
-    });
+    return sendSuccess(res, result);
   } catch (error) {
     next(error);
   }
@@ -231,25 +185,17 @@ const cancelMonthlyApproval = async (req, res, next) => {
   try {
     const { employeeId, year, month } = req.body;
     
-    if (!employeeId || !year || !month) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員ID、年、月が必要です。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'year', 'month']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     await applicationService.cancelMonthlyApproval(employeeId, parseInt(year), parseInt(month));
     
-    res.json({
-      success: true,
-      message: '月次確定申請を取り消しました。'
-    });
+    return sendSuccess(res, {}, '月次確定申請を取り消しました。');
   } catch (error) {
     if (error.message.includes('申請中の月次確定のみ')) {
-      return res.status(400).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message);
     }
     next(error);
   }
@@ -262,19 +208,14 @@ const getVacationInfo = async (req, res, next) => {
   try {
     const { employeeId } = req.query;
     
-    if (!employeeId) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDが必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const result = await applicationService.getVacationInfo(employeeId);
     
-    res.json({
-      success: true,
-      ...result
-    });
+    return sendSuccess(res, result);
   } catch (error) {
     next(error);
   }
@@ -287,17 +228,14 @@ const getApplicationStatus = async (req, res, next) => {
   try {
     const { employeeId, applicationType, targetDate } = req.query;
     
-    if (!employeeId || !applicationType || !targetDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員ID、申請タイプ、対象日が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'applicationType', 'targetDate']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const result = await applicationService.getApplicationStatus(employeeId, applicationType, targetDate);
     
-    res.json({
-      success: true,
+    return sendSuccess(res, {
       status: result.status,
       applicationId: result.applicationId
     });
@@ -313,11 +251,9 @@ const getApplicationInfo = async (req, res, next) => {
   try {
     const { employeeId, applicationType, targetDate } = req.query;
     
-    if (!employeeId || !applicationType || !targetDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員ID、申請タイプ、対象日が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'applicationType', 'targetDate']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const applicationInfo = await applicationService.getApplicationInfo(
@@ -327,16 +263,14 @@ const getApplicationInfo = async (req, res, next) => {
     );
     
     if (!applicationInfo) {
-      return res.json({
-        success: true,
+      return sendSuccess(res, {
         applicationDate: null,
         status: null,
         history: []
       });
     }
     
-    res.json({
-      success: true,
+    return sendSuccess(res, {
       applicationId: applicationInfo.applicationId,
       applicationDate: applicationInfo.applicationDate,
       status: applicationInfo.status,
@@ -355,41 +289,27 @@ const cancelApplication = async (req, res, next) => {
   try {
     const { employeeId, applicationType, applicationId, targetDate } = req.body;
     
-    if (!employeeId || !applicationType) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDと申請タイプが必要です。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'applicationType']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     // 日次確定の場合はtargetDateが必要
     if (applicationType === 'DAILY_CONFIRMATION' && !targetDate) {
-      return res.status(400).json({
-        success: false,
-        message: '対象日が必要です。'
-      });
+      return sendError(res, '対象日が必要です。');
     }
     
     // その他の申請タイプの場合はapplicationIdが必要
     if (applicationType !== 'DAILY_CONFIRMATION' && !applicationId) {
-      return res.status(400).json({
-        success: false,
-        message: '申請IDが必要です。'
-      });
+      return sendError(res, '申請IDが必要です。');
     }
     
     await applicationService.cancelApplication(employeeId, applicationType, applicationId, targetDate);
     
-    res.json({
-      success: true,
-      message: '申請を取り消しました。'
-    });
+    return sendSuccess(res, {}, '申請を取り消しました。');
   } catch (error) {
     if (error.message.includes('月次申請を行っている場合')) {
-      return res.status(400).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message);
     }
     next(error);
   }

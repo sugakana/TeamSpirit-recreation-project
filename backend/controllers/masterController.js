@@ -2,6 +2,8 @@
  * マスタコントローラー
  */
 const masterService = require('../services/masterService');
+const { sendSuccess, sendError } = require('../utils/responseHelper');
+const { validateQuery } = require('../utils/validationHelper');
 
 /**
  * 勤務場所マスタ取得
@@ -10,10 +12,7 @@ const getWorkLocations = async (req, res, next) => {
   try {
     const workLocations = await masterService.getWorkLocations();
     
-    res.json({
-      success: true,
-      workLocations
-    });
+    return sendSuccess(res, { workLocations });
   } catch (error) {
     next(error);
   }
@@ -27,10 +26,7 @@ const getJobs = async (req, res, next) => {
     const { workDate } = req.query;
     const jobs = await masterService.getJobs(workDate);
     
-    res.json({
-      success: true,
-      jobs
-    });
+    return sendSuccess(res, { jobs });
   } catch (error) {
     next(error);
   }
@@ -43,10 +39,7 @@ const getVacationTypes = async (req, res, next) => {
   try {
     const vacationTypes = await masterService.getVacationTypes();
     
-    res.json({
-      success: true,
-      vacationTypes
-    });
+    return sendSuccess(res, { vacationTypes });
   } catch (error) {
     next(error);
   }
@@ -59,11 +52,9 @@ const getMonthlySummary = async (req, res, next) => {
   try {
     const { employeeId, year, month } = req.query;
     
-    if (!employeeId || !year || !month) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員ID、年、月が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'year', 'month']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const summary = await masterService.getMonthlySummary(
@@ -72,10 +63,7 @@ const getMonthlySummary = async (req, res, next) => {
       parseInt(month)
     );
     
-    res.json({
-      success: true,
-      summary
-    });
+    return sendSuccess(res, { summary });
   } catch (error) {
     next(error);
   }

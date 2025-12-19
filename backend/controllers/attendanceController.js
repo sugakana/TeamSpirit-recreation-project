@@ -2,6 +2,8 @@
  * 勤怠コントローラー
  */
 const attendanceService = require('../services/attendanceService');
+const { sendSuccess, sendError } = require('../utils/responseHelper');
+const { validateQuery, validateBody } = require('../utils/validationHelper');
 
 /**
  * 日次勤怠記録を取得する。
@@ -14,19 +16,14 @@ const getDailyAttendance = async (req, res, next) => {
   try {
     const { employeeId, workDate } = req.query;
     
-    if (!employeeId || !workDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDと勤務日が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'workDate']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const attendance = await attendanceService.getDailyAttendance(employeeId, workDate);
     
-    res.json({
-      success: true,
-      attendance
-    });
+    return sendSuccess(res, { attendance });
   } catch (error) {
     next(error);
   }
@@ -48,10 +45,7 @@ const updateAttendanceRecord = async (req, res, next) => {
     const workDate = updateData.workDate || updateData.WORK_DATE;
 
     if (!employeeId || !workDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDと勤務日が必要です。'
-      });
+      return sendError(res, '従業員IDと勤務日が必要です。');
     }
     
     // 小文字のキャメルケースに統一してサービスに渡す
@@ -73,11 +67,7 @@ const updateAttendanceRecord = async (req, res, next) => {
     
     const attendance = await attendanceService.updateAttendanceRecord(normalizedData);
     
-    res.json({
-      success: true,
-      message: '勤怠記録を更新しました。',
-      attendance
-    });
+    return sendSuccess(res, { attendance }, '勤怠記録を更新しました。');
   } catch (error) {
     next(error);
   }
@@ -94,11 +84,9 @@ const getMonthlyAttendance = async (req, res, next) => {
   try {
     const { employeeId, year, month } = req.query;
     
-    if (!employeeId || !year || !month) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員ID、年、月が必要です。'
-      });
+    const validationError = validateQuery(req.query, ['employeeId', 'year', 'month']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     const result = await attendanceService.getMonthlyAttendance(
@@ -107,10 +95,7 @@ const getMonthlyAttendance = async (req, res, next) => {
       parseInt(month)
     );
     
-    res.json({
-      success: true,
-      ...result
-    });
+    return sendSuccess(res, result);
   } catch (error) {
     next(error);
   }
@@ -127,26 +112,18 @@ const confirmDailyAttendance = async (req, res, next) => {
   try {
     const { employeeId, workDate } = req.body;
     
-    if (!employeeId || !workDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDと勤務日が必要です。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'workDate']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     await attendanceService.confirmDailyAttendance(employeeId, workDate);
     
-    res.json({
-      success: true,
-      message: '日次確定申請が完了しました。'
-    });
+    return sendSuccess(res, {}, '日次確定申請が完了しました。');
   } catch (error) {
     if (error.message.includes('出退社時刻') || error.message.includes('勤務場所') ||
         error.message.includes('備考') || error.message.includes('工数')) {
-      return res.status(400).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message);
     }
 
     next(error);
@@ -164,19 +141,14 @@ const cancelDailyConfirmation = async (req, res, next) => {
   try {
     const { employeeId, workDate } = req.body;
     
-    if (!employeeId || !workDate) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDと勤務日が必要です。'
-      });
+    const validationError = validateBody(req.body, ['employeeId', 'workDate']);
+    if (validationError) {
+      return sendError(res, validationError.message);
     }
     
     await attendanceService.cancelDailyConfirmation(employeeId, workDate);
     
-    res.json({
-      success: true,
-      message: '日次確定申請を取り消しました。'
-    });
+    return sendSuccess(res, {}, '日次確定申請を取り消しました。');
   } catch (error) {
     next(error);
   }

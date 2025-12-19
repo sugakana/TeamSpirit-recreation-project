@@ -216,7 +216,7 @@
 <script>
 import AppHeader from '@/components/AppHeader.vue'
 import HolidayJp from '@holiday-jp/holiday_jp'
-import { getHolidayWorkStatus } from '@/services/api.js'
+import { getHolidayWorkStatus, getTodayAttendance, clockIn, clockInScheduled, clockOut, clockOutScheduled, getNotifications } from '@/services/api.js'
 
 export default {
   name: 'HomeScreen',
@@ -337,8 +337,7 @@ export default {
     async fetchNotifications() {
       try {
         const employeeId = localStorage.getItem('employeeId') || '000001'
-        const response = await fetch(`http://localhost:3000/api/notifications?employeeId=${employeeId}`)
-        const data = await response.json()
+        const data = await getNotifications(employeeId)
         
         if (data.success && data.notifications && Array.isArray(data.notifications)) {
           // バックエンドから文字列配列が返されるので、そのまま使用
@@ -376,8 +375,7 @@ export default {
     async fetchTodayAttendance() {
       try {
         const employeeId = localStorage.getItem('employeeId') || '000001'
-        const response = await fetch(`http://localhost:3000/api/clock/today?employeeId=${employeeId}`)
-        const data = await response.json()
+        const data = await getTodayAttendance(employeeId)
         
         if (data.success && data.attendance) {
           const attendance = data.attendance
@@ -496,46 +494,20 @@ export default {
       const workLocationCode = this.convertWorkLocationCode(this.selectedWorkplace || 'commute')
       
       try {
-        if (this.isOnBreak) {
-          // 中断中の場合：再開打刻（出勤ボタンを押すことで休憩終了 + 再出勤）
-          const response = await fetch('http://localhost:3000/api/clock/clock-in', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              employeeId: localStorage.getItem('employeeId') || '000001',
-              workLocationCode: workLocationCode
-            })
-          })
-          
-          const data = await response.json()
-          if (data.success) {
+        const employeeId = localStorage.getItem('employeeId') || '000001'
+        const data = await clockIn(employeeId, workLocationCode)
+        
+        if (data.success) {
+          if (this.isOnBreak) {
+            // 中断中の場合：再開打刻（出勤ボタンを押すことで休憩終了 + 再出勤）
             this.isOnBreak = false
-            // 勤務場所の選択状態を維持（上書きしない）
           } else {
-            throw new Error(data.message || '再出勤に失敗しました')
-          }
-        } else {
-          // 通常の出勤打刻
-          const response = await fetch('http://localhost:3000/api/clock/clock-in', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              employeeId: localStorage.getItem('employeeId') || '000001',
-              workLocationCode: workLocationCode
-            })
-          })
-          
-          const data = await response.json()
-          if (data.success) {
+            // 通常の出勤打刻
             this.isClockInDone = true
-            // 勤務場所の選択状態を維持（上書きしない）
-          } else {
-            throw new Error(data.message || '出勤打刻に失敗しました')
           }
+          // 勤務場所の選択状態を維持（上書きしない）
+        } else {
+          throw new Error(data.message || '出勤打刻に失敗しました')
         }
       } catch (error) {
         console.error('出勤打刻に失敗しました:', error)
@@ -550,18 +522,9 @@ export default {
       const workLocationCode = this.convertWorkLocationCode(this.selectedWorkplace || 'commute')
       
       try {
-        const response = await fetch('http://localhost:3000/api/clock/clock-in-scheduled', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: localStorage.getItem('employeeId') || '000001',
-            workLocationCode: workLocationCode
-          })
-        })
+        const employeeId = localStorage.getItem('employeeId') || '000001'
+        const data = await clockInScheduled(employeeId, workLocationCode)
         
-        const data = await response.json()
         if (data.success) {
           this.isClockInDone = true
           // 勤務場所の選択状態を維持（上書きしない）
@@ -588,18 +551,9 @@ export default {
           workLocationCode = this.convertWorkLocationCode(this.selectedWorkplace)
         }
         
-        const response = await fetch('http://localhost:3000/api/clock/clock-out', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: localStorage.getItem('employeeId') || '000001',
-            workLocationCode: workLocationCode
-          })
-        })
+        const employeeId = localStorage.getItem('employeeId') || '000001'
+        const data = await clockOut(employeeId, workLocationCode)
         
-        const data = await response.json()
         if (data.success) {
           if (data.isOnBreak) {
             // 中断開始（休憩開始）
@@ -628,18 +582,9 @@ export default {
           workLocationCode = this.convertWorkLocationCode(this.selectedWorkplace)
         }
         
-        const response = await fetch('http://localhost:3000/api/clock/clock-out-scheduled', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: localStorage.getItem('employeeId') || '000001',
-            workLocationCode: workLocationCode
-          })
-        })
+        const employeeId = localStorage.getItem('employeeId') || '000001'
+        const data = await clockOutScheduled(employeeId, workLocationCode)
         
-        const data = await response.json()
         if (data.success) {
           this.isClockOutDone = true
         } else {

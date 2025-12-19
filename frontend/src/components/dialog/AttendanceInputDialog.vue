@@ -579,6 +579,7 @@ export default {
               date = new Date(datetime)
             }
             if (isNaN(date.getTime())) return null
+            // formatTimeNoLeadingZeroを使用（先頭0なしのH:MM形式）
             const hours = date.getHours()
             const minutes = String(date.getMinutes()).padStart(2, '0')
             return `${hours}:${minutes}`

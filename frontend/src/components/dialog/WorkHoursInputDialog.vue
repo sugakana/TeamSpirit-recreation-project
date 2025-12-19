@@ -130,7 +130,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { getJobs, getWorkHours, saveWorkHours, deleteWorkHours } from '@/services/api'
+import { formatHoursToTime as formatHoursToTimeUtil } from '@/utils/timeFormatter'
 
 export default {
   name: 'WorkHoursInputDialog',
@@ -229,10 +230,7 @@ export default {
   
   methods: {
     formatHoursToTime(hours) {
-      if (!hours && hours !== 0) return '0:00'
-      const h = Math.floor(hours)
-      const m = Math.round((hours - h) * 60)
-      return `${h}:${m.toString().padStart(2, '0')}`
+      return formatHoursToTimeUtil(hours)
     },
     
     parseTimeToHours(timeStr) {
@@ -259,39 +257,21 @@ export default {
         })
         
         const [jobsRes, workHoursRes] = await Promise.all([
-          axios.get('/api/master/jobs', {
-            params: {
-              workDate: this.workDate
-            }
-          }),
-          axios.get('/api/work-hours', {
-            params: {
-              employeeId: this.employeeId,
-              workDate: this.workDate
-            }
-          })
+          getJobs(this.workDate),
+          getWorkHours(this.employeeId, this.workDate)
         ])
         
-        console.log('ジョブマスタ取得結果:', jobsRes.data)
-        console.log('工数実績取得結果:', workHoursRes.data)
-        
-        if (jobsRes.data.success) {
-          this.jobMaster = jobsRes.data.jobs || []
-          console.log('取得したジョブマスタ数:', this.jobMaster.length)
+        if (jobsRes.success) {
+          this.jobMaster = jobsRes.jobs || []
           if (this.jobMaster.length === 0) {
             console.warn('ジョブマスタが空です。データベースにジョブが登録されているか確認してください。')
           }
         } else {
-          console.error('ジョブマスタ取得失敗:', jobsRes.data.message)
-          this.errorMessage = jobsRes.data.message || 'ジョブマスタの取得に失敗しました。'
+          this.errorMessage = jobsRes.message || 'ジョブマスタの取得に失敗しました。'
         }
         
-        if (workHoursRes.data.success) {
-          this.existingWorkHours = workHoursRes.data.workHours || []
-          console.log('取得した工数実績数:', this.existingWorkHours.length)
-        } else {
-          console.error('工数実績取得失敗:', workHoursRes.data.message)
-          // 工数実績の取得失敗は致命的ではないので、エラーは表示しない
+        if (workHoursRes.success) {
+          this.existingWorkHours = workHoursRes.workHours || []
         }
         
         this.buildTaskList()
@@ -478,13 +458,13 @@ export default {
         this.isLoading = true
         
         for (const existing of this.existingWorkHours) {
-          await axios.delete(`/api/work-hours/${existing.WORK_HOURS_ID}`)
+          await deleteWorkHours(existing.WORK_HOURS_ID)
         }
         
         const tasksToSave = this.tasks.filter(task => task.workHours > 0)
         
         for (const task of tasksToSave) {
-          await axios.post('/api/work-hours', {
+          await saveWorkHours({
             attendanceId: this.attendanceId,
             employeeId: this.employeeId,
             workDate: this.workDate,

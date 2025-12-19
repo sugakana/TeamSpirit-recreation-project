@@ -3,6 +3,7 @@
  */
 const authService = require('../services/authService');
 const { validateEmployeeId } = require('../middleware/validator');
+const { sendSuccess, sendError } = require('../utils/responseHelper');
 
 /**
  * ログイン
@@ -23,34 +24,23 @@ const login = async (req, res, next) => {
     
     const employeeIdResult = validateEmployeeId(employeeIdInput);
     if (!employeeIdResult.valid) {
-      return res.status(400).json({
-        success: false,
-        message: employeeIdResult.message
-      });
+      return sendError(res, employeeIdResult.message);
     }
     
     const password = passwordInput.trim();
     if (!password) {
-      return res.status(400).json({
-        success: false,
-        message: 'パスワードを入力してください。'
-      });
+      return sendError(res, 'パスワードを入力してください。');
     }
     
     const result = await authService.login(employeeIdResult.value, password);
     
-    res.json({
-      success: true,
+    return sendSuccess(res, {
       employeeId: result.employeeId,
-      employeeName: result.employeeName,
-      message: 'ログインに成功しました。'
-    });
+      employeeName: result.employeeName
+    }, 'ログインに成功しました。');
   } catch (error) {
     if (error.message === '社員コードまたはパスワードが違います。') {
-      return res.status(401).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message, 401);
     }
     next(error);
   }
@@ -64,24 +54,15 @@ const getEmployee = async (req, res, next) => {
     const { employeeId } = req.params;
     
     if (!employeeId) {
-      return res.status(400).json({
-        success: false,
-        message: '従業員IDが必要です。'
-      });
+      return sendError(res, '従業員IDが必要です。');
     }
     
     const employee = await authService.getEmployee(employeeId);
     
-    res.json({
-      success: true,
-      employee
-    });
+    return sendSuccess(res, { employee });
   } catch (error) {
     if (error.message === '従業員が見つかりません。') {
-      return res.status(404).json({
-        success: false,
-        message: error.message
-      });
+      return sendError(res, error.message, 404);
     }
     next(error);
   }

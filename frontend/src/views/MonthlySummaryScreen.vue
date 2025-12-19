@@ -451,6 +451,8 @@
 
 <script>
 import { getMonthlySummaryDetail } from '@/services/api'
+import { formatTimeNoLeadingZero } from '@/utils/dateFormatter'
+import { formatHoursToTime } from '@/utils/timeFormatter'
 
 export default {
   name: 'MonthlySummaryScreen',
@@ -731,10 +733,7 @@ export default {
     formatTime(timeStr) {
       if (!timeStr) return ''
       if (typeof timeStr === 'string' && timeStr.includes('T')) {
-        const date = new Date(timeStr)
-        const hours = date.getHours() // 先頭0を削除
-        const minutes = String(date.getMinutes()).padStart(2, '0')
-        return `${hours}:${minutes}`
+        return formatTimeNoLeadingZero(timeStr)
       }
       // 既にHH:MM形式の場合は、先頭0を削除
       if (typeof timeStr === 'string' && /^\d{2}:\d{2}$/.test(timeStr)) {
@@ -746,19 +745,11 @@ export default {
     },
     formatHours(hours) {
       if (hours === null || hours === undefined) return ''
-      // 浮動小数点数の誤差を考慮して、分単位で計算
-      const totalMinutes = Math.round(hours * 60)
-      const h = Math.floor(totalMinutes / 60)
-      const m = totalMinutes % 60
-      return `${h}:${String(m).padStart(2, '0')}`
+      return formatHoursToTime(hours)
     },
     formatHoursLong(hours) {
       if (hours === null || hours === undefined) return ''
-      // 浮動小数点数の誤差を考慮して、分単位で計算
-      const totalMinutes = Math.round(hours * 60)
-      const h = Math.floor(totalMinutes / 60)
-      const m = totalMinutes % 60
-      return `${h}:${String(m).padStart(2, '0')}`
+      return formatHoursToTime(hours)
     },
     formatOverUnder(hours) {
       if (hours === null || hours === undefined) return ''
@@ -1792,7 +1783,7 @@ export default {
 }
 
 .section-value.negative {
-  color: rgb(217, 83, 79);
+  color: rgb(0, 0, 0);
 }
 
 .section-detail {
