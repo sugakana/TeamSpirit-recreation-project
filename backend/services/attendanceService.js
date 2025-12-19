@@ -12,10 +12,10 @@ const {
   formatHours, 
   formatOverUnder,
   getMonthRange,
-  getScheduledWorkDays,
   normalizeDate,
   calculateMinutes
 } = require('../utils/dateUtils');
+const { calculateBasicMonthlySummary } = require('./monthlySummaryCalculationService');
 const db = require('../config/database');
 
 /**
@@ -430,118 +430,19 @@ const getMonthlyAttendance = async (employeeId, year, month) => {
     }
   }
   
-  // 月次サマリーを計算
-  const todayStr = getTodayJST();
-  const isCurrentMonth = parseInt(year) === new Date().getFullYear() && parseInt(month) === new Date().getMonth() + 1;
-  let cutoffDate = endDate;
-
-  if (isCurrentMonth) {
-    cutoffDate = todayStr;
-  }
-
-  // 当日退勤していない場合は前日までの過不足時間を計算
-  if (isCurrentMonth) {
-    const todayRecord = attendanceRows.find(row => {
-      const workDateStr = normalizeDate(row.WORK_DATE);
-      return workDateStr === todayStr;
-    });
-    
-    if (todayRecord && todayRecord.CLOCK_IN_TIME && !todayRecord.CLOCK_OUT_TIME) {
-      const yesterday = new Date(todayStr);
-      yesterday.setDate(yesterday.getDate() - 1);
-      cutoffDate = yesterday.toISOString().split('T')[0];
-    }
-  }
-  
-  // 所定出勤日数を計算
-  const scheduledWorkDays = getScheduledWorkDays(year, month);
-  const scheduledWorkDaysUntilCutoff = getScheduledWorkDays(year, month, cutoffDate);
-
-  // 実出勤日数
-  const actualWorkDays = attendanceRows.filter(row => 
-    row.CLOCK_IN_TIME && row.CLOCK_OUT_TIME && normalizeDate(row.WORK_DATE) <= cutoffDate
-  ).length;
-  
-  // 所定労働時間
-  const scheduledWorkHours = scheduledWorkDays * 7.5;
-  const scheduledWorkHoursUntilCutoff = scheduledWorkDaysUntilCutoff * 7.5;
-  
-  // 総労働時間（丸め誤差を避けるため、各日の出退勤時刻と休憩時間から直接計算）
-  let totalWorkMinutes = 0;
-
-  for (const row of attendanceRows) {
-    const workDateStr = normalizeDate(row.WORK_DATE);
-
-    if (workDateStr > cutoffDate) {
-      continue;
-    }
-
-    if (row.CLOCK_IN_TIME && row.CLOCK_OUT_TIME) {
-      const totalMinutes = calculateMinutes(row.CLOCK_IN_TIME, row.CLOCK_OUT_TIME);
-      const breakTimes = await breakTimeModel.getBreakTimes(row.ATTENDANCE_ID);
-      const officialOutings = await breakTimeModel.getOfficialOutings(row.ATTENDANCE_ID);
-
-      let breakMinutes = 0;
-
-      for (const bt of breakTimes) {
-        breakMinutes += bt.BREAK_DURATION_MINUTES || 0;
-      }
-
-      for (const outing of officialOutings) {
-        breakMinutes += outing.OUTING_DURATION_MINUTES || 0;
-      }
-
-      totalWorkMinutes += totalMinutes - breakMinutes;
-    }
-  }
-
-  const totalWorkHours = totalWorkMinutes / 60;
-
-  // 過不足時間
-  // 計算方法: 前日までの実作業時間 - (前日までの想定出勤日数 * 7:30)
-  const overUnderTime = totalWorkHours - scheduledWorkHoursUntilCutoff;
-  
-  // 法定休日労働
-  const legalHolidayWork = attendanceRows
-    .filter(row => normalizeDate(row.WORK_DATE) <= cutoffDate)
-    .reduce((sum, row) => sum + (parseFloat(row.HOLIDAY_WORK_HOURS) || 0), 0);
-  
-  // 法定時間内残業・法定時間外残業
-  // 計算方法:
-  // - 実労働時間が所定労働時間を超えた場合にのみ残業が発生
-  // - 法定時間内残業: 実労働時間が所定労働時間を超えた部分のうち、法定労働時間（8時間/日 × 所定出勤日数）以内の部分
-  // - 法定時間外残業: 実労働時間が法定労働時間を超えた部分
-  const legalWorkHoursUntilCutoff = scheduledWorkDaysUntilCutoff * 8;
-  
-  // 実労働時間が所定労働時間を超えている場合のみ残業を計算
-  let withinLegalOvertime = 0;
-  let overLegalOvertime = 0;
-
-  if (totalWorkHours > scheduledWorkHoursUntilCutoff) {
-    // 実労働時間が所定労働時間を超えている
-    const overtimeHours = totalWorkHours - scheduledWorkHoursUntilCutoff;
-
-    // 法定時間内残業: 超過分のうち、法定労働時間以内の部分
-    // 上限: (所定出勤日数 * 8:00) - 所定労働時間
-    const maxWithinLegalOvertime = legalWorkHoursUntilCutoff - scheduledWorkHoursUntilCutoff;
-    withinLegalOvertime = Math.min(overtimeHours, maxWithinLegalOvertime);
-
-    // 法定時間外残業: 実労働時間が法定労働時間を超えた部分
-    if (totalWorkHours > legalWorkHoursUntilCutoff) {
-      overLegalOvertime = totalWorkHours - legalWorkHoursUntilCutoff;
-    }
-  }
+  // 月次サマリーを計算（共通サービスを使用）
+  const basicSummary = await calculateBasicMonthlySummary(year, month, endDate, attendanceRows);
   
   const monthlySummary = {
-    scheduledWorkDays,
-    actualWorkDays,
-    scheduledWorkHours: formatHours(scheduledWorkHours),
-    totalWorkHours: formatHours(totalWorkHours),
-    overUnderTime: formatOverUnder(overUnderTime),
-    legalHolidayWork: formatHours(legalHolidayWork),
-    withinLegalOvertime: formatHours(withinLegalOvertime),
-    overLegalOvertime: formatHours(overLegalOvertime),
-    cutoffDate: cutoffDate.split('-').slice(1).join('/')
+    scheduledWorkDays: basicSummary.scheduledWorkDays,
+    actualWorkDays: basicSummary.actualWorkDays,
+    scheduledWorkHours: formatHours(basicSummary.scheduledWorkHours),
+    totalWorkHours: formatHours(basicSummary.totalWorkHours),
+    overUnderTime: formatOverUnder(basicSummary.overUnderHours),
+    legalHolidayWork: formatHours(basicSummary.legalHolidayWorkHours),
+    withinLegalOvertime: formatHours(basicSummary.withinLegalOvertime),
+    overLegalOvertime: formatHours(basicSummary.overLegalOvertime),
+    cutoffDate: basicSummary.cutoffDateFormatted
   };
 
   return {

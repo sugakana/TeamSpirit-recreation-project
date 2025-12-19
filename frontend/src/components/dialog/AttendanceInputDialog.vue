@@ -1043,7 +1043,7 @@ export default {
     
     // 未来日付・勤務当日チェック
     validateFutureDate() {
-      // 対象日付が未来の日付（今日より後）または勤務当日（今日）かチェック
+      // 対象日付が未来の日付（今日より後）かチェック
       const today = new Date()
       today.setHours(0, 0, 0, 0)
       // 日付文字列（YYYY-MM-DD）をローカルタイムゾーンで正しく解釈する
@@ -1051,8 +1051,8 @@ export default {
       const targetDate = new Date(parseInt(dateParts[0]), parseInt(dateParts[1]) - 1, parseInt(dateParts[2]))
       targetDate.setHours(0, 0, 0, 0)
       
-      // 今日または未来の日付の場合
-      if (targetDate >= today) {
+      // 未来の日付（今日より後）の場合のみエラー
+      if (targetDate > today) {
         // 勤務場所のみの変更の場合は例外として許可
         const hasClockIn = this.form.clockIn && this.form.clockIn.trim() !== ''
         const hasClockOut = this.form.clockOut && this.form.clockOut.trim() !== ''
@@ -1918,6 +1918,8 @@ export default {
   line-height: 1.5;
 }
 </style>
+
+
 
 
 

@@ -215,7 +215,12 @@
         <path d="M 0 0 L 603 0" stroke="rgb(0, 0, 0)" stroke-width="1" fill="none" />
       </svg>
       <div class="section-row section-row-gray" style="top: 63px;">
-        <span class="section-label">過不足時間</span>
+        <span class="section-label">
+          過不足時間
+          <span v-if="monthlySummary?.cutoffDate" style="font-size: 10px; margin-left: 4px;">
+            ({{ monthlySummary.cutoffDate }}まで)
+          </span>
+        </span>
         <span class="section-value" :class="{ 'negative': (monthlySummary?.overUnderHours || 0) < 0 }">
           {{ formatOverUnder(monthlySummary?.overUnderHours || 0) }}
         </span>

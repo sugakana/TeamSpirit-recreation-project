@@ -12,7 +12,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000
  * @param {Object} options リクエストオプション
  * @returns {Promise<Object>} レスポンスデータ
  */
-async function apiRequest(endpoint, options = {}) {
+export async function apiRequest(endpoint, options = {}) {
   const url = `${API_BASE_URL}${endpoint}`
 
   const defaultOptions = {
@@ -245,6 +245,138 @@ export async function cancelApplication(employeeId, applicationType, application
   return await apiRequest(endpoint, {
     method: 'DELETE',
     body: JSON.stringify(body)
+  })
+}
+
+/**
+ * 休暇種別マスタを取得する。
+ *
+ * @returns {Promise<Object>} 休暇種別マスタデータ
+ */
+export async function getVacationTypes() {
+  const endpoint = `/master/vacation-types`
+  return await apiRequest(endpoint, { method: 'GET' })
+}
+
+/**
+ * 休暇残日数を取得する。
+ *
+ * @param {string} employeeId 従業員ID
+ * @param {string} vacationTypeCode 休暇種別コード
+ * @returns {Promise<Object>} 休暇残日数データ
+ */
+export async function getVacationBalance(employeeId, vacationTypeCode) {
+  const endpoint = `/application/vacation/balance?employeeId=${employeeId}&vacationTypeCode=${vacationTypeCode}`
+  return await apiRequest(endpoint, { method: 'GET' })
+}
+
+/**
+ * 休日出勤申請リストを取得する。
+ *
+ * @param {string} employeeId 従業員ID
+ * @param {string} startDate 開始日（YYYY-MM-DD形式）
+ * @param {string} endDate 終了日（YYYY-MM-DD形式）
+ * @returns {Promise<Object>} 休日出勤申請リストデータ
+ */
+export async function getHolidayWorkList(employeeId, startDate, endDate) {
+  const endpoint = `/application/holiday-work-list?employeeId=${employeeId}&startDate=${startDate}&endDate=${endDate}`
+  return await apiRequest(endpoint, { method: 'GET' })
+}
+
+/**
+ * 当月時間外残業を取得する。
+ *
+ * @param {string} employeeId 従業員ID
+ * @param {string} year 年（YYYY形式）
+ * @param {string} month 月（MM形式）
+ * @returns {Promise<Object>} 当月時間外残業データ
+ */
+export async function getMonthlyOvertime(employeeId, year, month) {
+  const endpoint = `/attendance/monthly-overtime?employeeId=${employeeId}&year=${year}&month=${month}`
+  return await apiRequest(endpoint, { method: 'GET' })
+}
+
+/**
+ * 休暇申請を行う。
+ *
+ * @param {Object} applicationData 申請データ
+ * @returns {Promise<Object>} レスポンスデータ
+ */
+export async function submitVacationApplication(applicationData) {
+  const endpoint = `/application/vacation/apply`
+  return await apiRequest(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(applicationData)
+  })
+}
+
+/**
+ * 休日出勤申請を行う。
+ *
+ * @param {Object} applicationData 申請データ
+ * @returns {Promise<Object>} レスポンスデータ
+ */
+export async function submitHolidayWorkApplication(applicationData) {
+  const endpoint = `/application/holiday-work`
+  return await apiRequest(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(applicationData)
+  })
+}
+
+/**
+ * 残業申請を行う。
+ *
+ * @param {Object} applicationData 申請データ
+ * @returns {Promise<Object>} レスポンスデータ
+ */
+export async function submitOvertimeApplication(applicationData) {
+  const endpoint = `/application/overtime`
+  return await apiRequest(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(applicationData)
+  })
+}
+
+/**
+ * 早朝勤務申請を行う。
+ *
+ * @param {Object} applicationData 申請データ
+ * @returns {Promise<Object>} レスポンスデータ
+ */
+export async function submitEarlyWorkApplication(applicationData) {
+  const endpoint = `/application/early-work`
+  return await apiRequest(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(applicationData)
+  })
+}
+
+/**
+ * 振替申請を行う。
+ *
+ * @param {Object} applicationData 申請データ
+ * @returns {Promise<Object>} レスポンスデータ
+ */
+export async function submitTransferApplication(applicationData) {
+  const endpoint = `/application/transfer`
+  return await apiRequest(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(applicationData)
+  })
+}
+
+/**
+ * 備考を保存する。
+ *
+ * @param {Object} recordData 記録データ
+ * @returns {Promise<Object>} レスポンスデータ
+ */
+export async function saveRemark(recordData) {
+  const endpoint = `/attendance/record`
+  return await apiRequest(endpoint, {
+    method: 'PUT',
+    body: JSON.stringify(recordData)
   })
 }
 

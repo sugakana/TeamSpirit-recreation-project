@@ -110,7 +110,7 @@
             <span class="tab-title">メニュー</span>
           </div>
           <div class="tab active">
-            <span class="tab-title">{{ getTabName('dailyConfirmation') }}</span>
+            <span class="tab-title">{{ getTabName(currentTab) }}</span>
             <button class="tab-close-button" @click="closeApplicationTab">×</button>
           </div>
         </div>
@@ -181,14 +181,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="(history, index) in applicationInfo.dailyConfirmation.approvalHistory" :key="index">
+                        <tr v-for="(history, index) in getApprovalHistory('dailyConfirmation')" :key="index">
                           <td>{{ history.seqNo }}</td>
                           <td>{{ history.actionDateTime }}</td>
                           <td>{{ history.status }}</td>
                           <td>{{ history.actorName }}</td>
                           <td>{{ history.comment || '' }}</td>
                         </tr>
-                        <tr v-if="applicationInfo.dailyConfirmation.approvalHistory.length === 0">
+                        <tr v-if="getApprovalHistory('dailyConfirmation').length === 0">
                           <td colspan="5" class="no-history">承認履歴はありません</td>
                         </tr>
                       </tbody>
@@ -229,7 +229,7 @@
             <span class="tab-title">メニュー</span>
           </div>
           <div class="tab active">
-            <span class="tab-title">{{ getTabName('vacation') }}</span>
+            <span class="tab-title">{{ getTabName(currentTab) }}</span>
             <button class="tab-close-button" @click="closeApplicationTab">×</button>
           </div>
         </div>
@@ -252,9 +252,9 @@
                 <div v-if="vacationForm.vacationType !== 'SUBSTITUTE_HOLIDAY'" class="form-group form-group-inline">
                   <label class="label-inline">期間</label>
                   <div class="info-text info-text-inline">
-                    {{ formatDate(vacationForm.startDate) }}
+                    {{ this.formatDate(vacationForm.startDate) }}
                     <span v-if="vacationForm.enableEndDate && vacationForm.endDate && vacationForm.endDate !== vacationForm.startDate">
-                      ～ {{ formatDate(vacationForm.endDate) }}
+                      ～ {{ this.formatDate(vacationForm.endDate) }}
                     </span>
                   </div>
                 </div>
@@ -296,14 +296,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr v-for="(history, index) in applicationInfo.vacation.approvalHistory" :key="index">
+                          <tr v-for="(history, index) in getApprovalHistory('vacation')" :key="index">
                             <td>{{ history.seqNo }}</td>
                             <td>{{ history.actionDateTime }}</td>
                             <td>{{ history.status }}</td>
                             <td>{{ history.actorName }}</td>
                             <td>{{ history.comment || '' }}</td>
                           </tr>
-                          <tr v-if="applicationInfo.vacation.approvalHistory.length === 0">
+                          <tr v-if="getApprovalHistory('vacation').length === 0">
                             <td colspan="5" class="no-history">承認履歴はありません</td>
                           </tr>
                         </tbody>
@@ -427,7 +427,7 @@
             <span class="tab-title">メニュー</span>
           </div>
           <div class="tab active">
-            <span class="tab-title">{{ getTabName('holidayWork') }}</span>
+            <span class="tab-title">{{ getTabName(currentTab) }}</span>
             <button class="tab-close-button" @click="closeApplicationTab">×</button>
           </div>
         </div>
@@ -510,14 +510,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="(history, index) in applicationInfo.holidayWork.approvalHistory" :key="index">
+                        <tr v-for="(history, index) in getApprovalHistory('holidayWork')" :key="index">
                           <td>{{ history.seqNo }}</td>
                           <td>{{ history.actionDateTime }}</td>
                           <td>{{ history.status }}</td>
                           <td>{{ history.actorName }}</td>
                           <td>{{ history.comment || '' }}</td>
                         </tr>
-                        <tr v-if="applicationInfo.holidayWork.approvalHistory.length === 0">
+                        <tr v-if="getApprovalHistory('holidayWork').length === 0">
                           <td colspan="5" class="no-history">承認履歴はありません</td>
                         </tr>
                       </tbody>
@@ -605,7 +605,7 @@
             <span class="tab-title">メニュー</span>
           </div>
           <div class="tab active">
-            <span class="tab-title">{{ getTabName('overtime') }}</span>
+            <span class="tab-title">{{ getTabName(currentTab) }}</span>
             <button class="tab-close-button" @click="closeApplicationTab">×</button>
           </div>
         </div>
@@ -688,14 +688,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="(history, index) in applicationInfo.overtime.approvalHistory" :key="index">
+                        <tr v-for="(history, index) in getApprovalHistory('overtime')" :key="index">
                           <td>{{ history.seqNo }}</td>
                           <td>{{ history.actionDateTime }}</td>
                           <td>{{ history.status }}</td>
                           <td>{{ history.actorName }}</td>
                           <td>{{ history.comment || '' }}</td>
                         </tr>
-                        <tr v-if="applicationInfo.overtime.approvalHistory.length === 0">
+                        <tr v-if="getApprovalHistory('overtime').length === 0">
                           <td colspan="5" class="no-history">承認履歴はありません</td>
                         </tr>
                       </tbody>
@@ -736,7 +736,7 @@
             <span class="tab-title">メニュー</span>
           </div>
           <div class="tab active">
-            <span class="tab-title">{{ getTabName('earlyWork') }}</span>
+            <span class="tab-title">{{ getTabName(currentTab) }}</span>
             <button class="tab-close-button" @click="closeApplicationTab">×</button>
           </div>
         </div>
@@ -805,14 +805,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="(history, index) in applicationInfo.earlyWork.approvalHistory" :key="index">
+                        <tr v-for="(history, index) in getApprovalHistory('earlyWork')" :key="index">
                           <td>{{ history.seqNo }}</td>
                           <td>{{ history.actionDateTime }}</td>
                           <td>{{ history.status }}</td>
                           <td>{{ history.actorName }}</td>
                           <td>{{ history.comment || '' }}</td>
                         </tr>
-                        <tr v-if="applicationInfo.earlyWork.approvalHistory.length === 0">
+                        <tr v-if="getApprovalHistory('earlyWork').length === 0">
                           <td colspan="5" class="no-history">承認履歴はありません</td>
                         </tr>
                       </tbody>
@@ -853,7 +853,7 @@
             <span class="tab-title">メニュー</span>
           </div>
           <div class="tab active">
-            <span class="tab-title">{{ getTabName('transfer') }}</span>
+            <span class="tab-title">{{ getTabName(currentTab) }}</span>
             <button class="tab-close-button" @click="closeApplicationTab">×</button>
           </div>
         </div>
@@ -923,14 +923,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="(history, index) in applicationInfo.transfer.approvalHistory" :key="index">
+                        <tr v-for="(history, index) in getApprovalHistory('transfer')" :key="index">
                           <td>{{ history.seqNo }}</td>
                           <td>{{ history.actionDateTime }}</td>
                           <td>{{ history.status }}</td>
                           <td>{{ history.actorName }}</td>
                           <td>{{ history.comment || '' }}</td>
                         </tr>
-                        <tr v-if="applicationInfo.transfer.approvalHistory.length === 0">
+                        <tr v-if="getApprovalHistory('transfer').length === 0">
                           <td colspan="5" class="no-history">承認履歴はありません</td>
                         </tr>
                       </tbody>
@@ -993,7 +993,41 @@
 
 <script lang="js">
 import HolidayJp from '@holiday-jp/holiday_jp'
-import { getHolidayWorkStatus, getWorkHours, getApplicationStatus, getApplicationInfo, cancelApplication } from '@/services/api'
+import { 
+  getHolidayWorkStatus, 
+  getWorkHours, 
+  getApplicationStatus, 
+  getApplicationInfo, 
+  cancelApplication,
+  getVacationTypes,
+  getVacationBalance,
+  getHolidayWorkList,
+  getMonthlyOvertime,
+  getDailyAttendance,
+  submitDailyConfirmation,
+  saveRemark,
+  apiRequest
+} from '@/services/api'
+import { formatDateWithWeekday, formatDate, formatDateTime, formatTime } from '@/utils/dateFormatter'
+import { formatHoursMinutes, formatMonthlyOvertime, formatBreakTime } from '@/utils/timeFormatter'
+
+// 申請タイプの定数リスト（共通化）
+const APPLICATION_TYPES = ['dailyConfirmation', 'vacation', 'holidayWork', 'overtime', 'earlyWork', 'transfer']
+
+// 申請ステータスの表示名マッピング（共通化）
+const STATUS_DISPLAY_NAMES = {
+  PENDING: '申請済み',
+  APPROVED: '承認済み',
+  REJECTED: '却下',
+  NOT_SUBMITTED: '未申請'
+}
+
+// 申請取消ボタンのラベルマッピング（共通化）
+const CANCEL_BUTTON_LABELS = {
+  PENDING: '申請取消',
+  APPROVED: '承認取消',
+  default: '取消'
+}
 
 export default {
   name: 'AttendanceApplicationDialog',
@@ -1105,85 +1139,39 @@ export default {
       // 休憩時間リスト
       breakTimeList: [],
       
-      // 申請状態（各申請タイプごと）
-      applicationStatuses: {
-        dailyConfirmation: 'NOT_SUBMITTED',
-        vacation: 'NOT_SUBMITTED',
-        holidayWork: 'NOT_SUBMITTED',
-        overtime: 'NOT_SUBMITTED',
-        earlyWork: 'NOT_SUBMITTED',
-        transfer: 'NOT_SUBMITTED'
-      },
+      // 申請状態（各申請タイプごと）（共通定数から生成）
+      applicationStatuses: APPLICATION_TYPES.reduce((acc, type) => {
+        acc[type] = 'NOT_SUBMITTED'
+        return acc
+      }, {}),
       
-      // 申請ID（各申請タイプごと）
-      applicationIds: {
-        dailyConfirmation: null,
-        vacation: null,
-        holidayWork: null,
-        overtime: null,
-        earlyWork: null,
-        transfer: null
-      },
+      // 申請ID（各申請タイプごと）（共通定数から生成）
+      applicationIds: APPLICATION_TYPES.reduce((acc, type) => {
+        acc[type] = null
+        return acc
+      }, {}),
       
-      // 申請情報（申請日時、状況など）
-      applicationInfo: {
-        dailyConfirmation: {
+      // 申請情報（申請日時、状況など）（共通定数から生成）
+      applicationInfo: APPLICATION_TYPES.reduce((acc, type) => {
+        acc[type] = {
           applicationDate: null,
-          status: 'NOT_SUBMITTED',
-          approvalHistory: []
-        },
-        vacation: {
-          applicationDate: null,
-          status: 'NOT_SUBMITTED',
-          approvalHistory: []
-        },
-        holidayWork: {
-          applicationDate: null,
-          status: 'NOT_SUBMITTED',
-          approvalHistory: []
-        },
-        overtime: {
-          applicationDate: null,
-          status: 'NOT_SUBMITTED',
-          approvalHistory: []
-        },
-        earlyWork: {
-          applicationDate: null,
-          status: 'NOT_SUBMITTED',
-          approvalHistory: []
-        },
-        transfer: {
-          applicationDate: null,
-          status: 'NOT_SUBMITTED',
+          status: null,
           approvalHistory: []
         }
-      },
+        return acc
+      }, {}),
       
     }
   },
   computed: {
     formattedDate() {
-      if (!this.targetDate) return ''
-      const date = new Date(this.targetDate)
-      const year = date.getFullYear()
-      const month = date.getMonth() + 1
-      const day = date.getDate()
-      const dayNames = ['日', '月', '火', '水', '木', '金', '土']
-      const dayOfWeek = dayNames[date.getDay()]
-      return `${year}年${month}月${day}日${dayOfWeek}曜日`
+      return formatDateWithWeekday(this.targetDate)
     },
     formattedMonthlyOvertime() {
-      if (!this.monthlyOvertime || isNaN(this.monthlyOvertime)) {
-        return '0:00'
-      }
-      const hours = Math.floor(this.monthlyOvertime)
-      const minutes = Math.floor((this.monthlyOvertime - hours) * 60)
-      return `${hours}:${String(minutes).padStart(2, '0')}`
+      return formatMonthlyOvertime(this.monthlyOvertime)
     },
     formattedBreakTime() {
-      const hours = Math.floor(this.holidayWorkForm.breakHours)
-      const minutes = Math.floor((this.holidayWorkForm.breakHours - hours) * 60)
-      return `${hours}:${String(minutes).padStart(2, '0')}`
+      return formatBreakTime(this.holidayWorkForm.breakHours)
     },
     currentDescription() {
       if (this.currentTab === 'menu') {
@@ -1193,15 +1181,7 @@ export default {
     },
     // 選択中のメニュー項目の説明文
     currentMenuDescription() {
-      const descriptions = {
-        dailyConfirmation: '日次確定を申請します。',
-        vacation: '休暇、代休、時間単位休暇を申請します。',
-        holidayWork: '休日出勤を申請します。',
-        overtime: '残業を申請します。',
-        earlyWork: '早朝勤務を申請します。',
-        transfer: '振替を申請します。'
-      }
-      return descriptions[this.selectedMenuItem] || '日次確定を申請します。'
+      return this.menuDescriptions[this.selectedMenuItem] || '日次確定を申請します。'
     },
     // フィルタ済み休暇種別リスト（代休は条件付きで表示）
     filteredVacationTypes() {
@@ -1254,7 +1234,6 @@ export default {
       try {
         return HolidayJp.isHoliday(date)
       } catch (error) {
-        console.error('祝日判定エラー:', error)
         return false
       }
     },
@@ -1432,7 +1411,6 @@ export default {
           this.activeApplicationTab = null
         }
       } catch (error) {
-        console.error('初期化エラー:', error)
         this.showError('初期化に失敗しました。')
       } finally {
         this.loading = false
@@ -1460,18 +1438,21 @@ export default {
       this.vacationForm.contact = ''
       
       // 休日出勤申請フォームの初期値は既に設定済み（startTime: '09:00', endTime: '17:30'）
-      this.overtimeForm.startDate = this.targetDate
-      this.overtimeForm.endDate = this.targetDate
-      this.earlyWorkForm.startDate = this.targetDate
-      this.earlyWorkForm.endDate = this.targetDate
-      this.transferForm.fromDate = this.targetDate
-      this.transferForm.toDate = this.targetDate
+      // 日付範囲フォームの初期化（共通処理）
+      const dateRangeForms = [
+        { form: this.overtimeForm, startField: 'startDate', endField: 'endDate' },
+        { form: this.earlyWorkForm, startField: 'startDate', endField: 'endDate' },
+        { form: this.transferForm, startField: 'fromDate', endField: 'toDate' }
+      ]
+      dateRangeForms.forEach(({ form, startField, endField }) => {
+        form[startField] = this.targetDate
+        form[endField] = this.targetDate
+      })
     },
     
     async loadVacationTypes() {
       try {
-        const response = await fetch('http://localhost:3000/api/master/vacation-types')
-        const data = await response.json()
+        const data = await getVacationTypes()
         if (data.success) {
           this.vacationTypes = data.vacationTypes.map(type => ({
             code: type.VACATION_TYPE_CODE,
@@ -1480,21 +1461,18 @@ export default {
           }))
         }
       } catch (error) {
-        console.error('休暇種別マスタ取得エラー:', error)
+        // エラー時は何もしない
       }
     },
     
     async loadPaidLeaveBalance() {
       try {
-        const response = await fetch(
-          `http://localhost:3000/api/application/vacation/balance?employeeId=${this.employeeId}&vacationTypeCode=PAID_LEAVE`
-        )
-        const data = await response.json()
+        const data = await getVacationBalance(this.employeeId, 'PAID_LEAVE')
         if (data.success) {
           this.paidLeaveBalance = data.balance || 0
         }
       } catch (error) {
-        console.error('有給残日数取得エラー:', error)
+        // エラー時は何もしない
       }
     },
     
@@ -1510,41 +1488,33 @@ export default {
           }
         }
       } catch (error) {
-        console.error('休日出勤申請状態取得エラー:', error)
         // エラー時はfalseとして扱う
         this.hasHolidayWorkApplication = false
       }
     },
     
     async loadApplicationStatuses() {
-      // 各申請タイプの申請状態を取得
-      const applicationTypes = [
-        { key: 'dailyConfirmation', apiType: 'DAILY_CONFIRMATION' },
-        { key: 'vacation', apiType: 'VACATION' },
-        { key: 'holidayWork', apiType: 'HOLIDAY_WORK' },
-        { key: 'overtime', apiType: 'OVERTIME' },
-        { key: 'earlyWork', apiType: 'EARLY_WORK' },
-        { key: 'transfer', apiType: 'TRANSFER' }
-      ]
-      
-      for (const appType of applicationTypes) {
+      // 各申請タイプの申請状態を取得（共通定数を使用）
+      for (const applicationType of APPLICATION_TYPES) {
         // 初期申請状態が指定されている場合は、APIを呼び出さずにそれを使用
-        if (this.initialApplicationType === appType.key && this.initialApplicationStatus) {
-          this.applicationStatuses[appType.key] = this.initialApplicationStatus
+        if (this.initialApplicationType === applicationType && this.initialApplicationStatus) {
+          this.applicationStatuses[applicationType] = this.initialApplicationStatus
           continue
         }
         
         try {
-          const response = await getApplicationStatus(this.employeeId, appType.apiType, this.targetDate)
+          const apiType = this.getApiType(applicationType)
+          if (!apiType) continue
+          
+          const response = await getApplicationStatus(this.employeeId, apiType, this.targetDate)
           if (response.success) {
-            this.applicationStatuses[appType.key] = response.status || 'NOT_SUBMITTED'
-            this.applicationIds[appType.key] = response.applicationId || null
+            this.applicationStatuses[applicationType] = response.status || 'NOT_SUBMITTED'
+            this.applicationIds[applicationType] = response.applicationId || null
           }
         } catch (error) {
-          console.error(`${appType.key}申請状態取得エラー:`, error)
           // エラー時はNOT_SUBMITTEDとして扱う
-          this.applicationStatuses[appType.key] = 'NOT_SUBMITTED'
-          this.applicationIds[appType.key] = null
+          this.applicationStatuses[applicationType] = 'NOT_SUBMITTED'
+          this.applicationIds[applicationType] = null
         }
       }
     },
@@ -1557,10 +1527,7 @@ export default {
         oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
         const oneYearAgoStr = oneYearAgo.toISOString().split('T')[0];
         
-        const response = await fetch(
-          `http://localhost:3000/api/application/holiday-work-list?employeeId=${this.employeeId}&startDate=${oneYearAgoStr}&endDate=${this.targetDate}`
-        );
-        const data = await response.json();
+        const data = await getHolidayWorkList(this.employeeId, oneYearAgoStr, this.targetDate);
         
         if (data.success && data.applications) {
           // 承認済みまたは申請中の休日出勤申請の日数をカウント
@@ -1578,17 +1545,13 @@ export default {
           this.compensatoryLeaveBalance = 0;
         }
       } catch (error) {
-        console.error('代休取得可能日数取得エラー:', error)
         this.compensatoryLeaveBalance = 0
       }
     },
     
     async loadClockStatus() {
       try {
-        const response = await fetch(
-          `http://localhost:3000/api/attendance/daily?employeeId=${this.employeeId}&workDate=${this.targetDate}`
-        )
-        const data = await response.json()
+        const data = await getDailyAttendance(this.employeeId, this.targetDate)
         
         if (data.success && data.attendance) {
           const attendance = data.attendance
@@ -1600,7 +1563,6 @@ export default {
           this.hasClockOut = false
         }
       } catch (error) {
-        console.error('打刻時刻状態取得エラー:', error)
         // エラー時はfalseとして扱う
         this.hasClockIn = false
         this.hasClockOut = false
@@ -1609,10 +1571,7 @@ export default {
     
     async loadAttendanceDataForButtonControl() {
       try {
-        const response = await fetch(
-          `http://localhost:3000/api/attendance/daily?employeeId=${this.employeeId}&workDate=${this.targetDate}`
-        )
-        const data = await response.json()
+        const data = await getDailyAttendance(this.employeeId, this.targetDate)
         
         if (data.success && data.attendance) {
           this.attendanceData = data.attendance
@@ -1624,7 +1583,6 @@ export default {
           await this.$nextTick()
         }
       } catch (error) {
-        console.error('勤怠データ取得エラー（ボタン制御用）:', error)
         // エラー時はnullとして扱う
         this.attendanceData = null
         await this.$nextTick()
@@ -1633,10 +1591,7 @@ export default {
     
     async loadDailyAttendanceData() {
       try {
-        const response = await fetch(
-          `http://localhost:3000/api/attendance/daily?employeeId=${this.employeeId}&workDate=${this.targetDate}`
-        )
-        const data = await response.json()
+        const data = await getDailyAttendance(this.employeeId, this.targetDate)
         
         if (data.success && data.attendance) {
           const attendance = data.attendance
@@ -1645,20 +1600,20 @@ export default {
           let clockIn = '--:--'
 
           if (attendance.CLOCK_IN_TIME) {
-            clockIn = this.formatTime(attendance.CLOCK_IN_TIME)
+            clockIn = formatTime(attendance.CLOCK_IN_TIME)
           }
 
           let clockOut = '--:--'
 
           if (attendance.CLOCK_OUT_TIME) {
-            clockOut = this.formatTime(attendance.CLOCK_OUT_TIME)
+            clockOut = formatTime(attendance.CLOCK_OUT_TIME)
           }
           this.dailyConfirmationForm.clockInOut = `${clockIn}-${clockOut}`
           
           // 休憩時間を設定
           if (attendance.breakTimes && attendance.breakTimes.length > 0) {
             this.dailyConfirmationForm.breakTime = attendance.breakTimes
-              .map(bt => `${this.formatTime(bt.BREAK_START_TIME)}-${this.formatTime(bt.BREAK_END_TIME)}`)
+              .map(bt => `${formatTime(bt.BREAK_START_TIME)}-${formatTime(bt.BREAK_END_TIME)}`)
               .join(', ')
           } else {
             this.dailyConfirmationForm.breakTime = '---:---'
@@ -1669,35 +1624,29 @@ export default {
             const clockInDate = new Date(attendance.CLOCK_IN_TIME)
             const clockOutDate = new Date(attendance.CLOCK_OUT_TIME)
             const totalMinutes = Math.floor((clockOutDate - clockInDate) / 1000 / 60)
-            this.dailyConfirmationForm.totalWorkHours = this.formatHoursMinutes(totalMinutes)
+            this.dailyConfirmationForm.totalWorkHours = formatHoursMinutes(totalMinutes)
           } else {
             this.dailyConfirmationForm.totalWorkHours = '0:00'
           }
           
           // 実労働時間を設定
-          this.dailyConfirmationForm.actualWorkHours = this.formatHoursMinutes(Math.floor((attendance.ACTUAL_WORK_HOURS || 0) * 60))
+          this.dailyConfirmationForm.actualWorkHours = formatHoursMinutes(Math.floor((attendance.ACTUAL_WORK_HOURS || 0) * 60))
           
           // 備考を設定
           this.dailyConfirmationForm.remark = attendance.REMARK_TEXT || ''
         }
       } catch (error) {
-        console.error('日次勤怠データ取得エラー:', error)
         this.showError('日次勤怠データの取得に失敗しました。')
       }
     },
     
+    // 日付・時刻フォーマット関数はutilsの共通関数を直接使用（メソッドとして残すのは後方互換性のため）
     formatTime(dateTimeString) {
-      if (!dateTimeString) return '--:--'
-      const date = new Date(dateTimeString)
-      const hours = String(date.getHours()).padStart(2, '0')
-      const minutes = String(date.getMinutes()).padStart(2, '0')
-      return `${hours}:${minutes}`
+      return formatTime(dateTimeString)
     },
     
     formatHoursMinutes(totalMinutes) {
-      const hours = Math.floor(totalMinutes / 60)
-      const minutes = totalMinutes % 60
-      return `${hours}:${String(minutes).padStart(2, '0')}`
+      return formatHoursMinutes(totalMinutes)
     },
     
     // 申請日時をフォーマット
@@ -1717,43 +1666,113 @@ export default {
         // applicationInfoから取得したstatusを使用
         return info.status
       }
-      // フォールバック：applicationStatusesから取得
+      // フォールバック：applicationStatusesから取得（共通定数を使用）
       const status = this.applicationStatuses[applicationType]
-      if (status === 'PENDING') {
-        return '申請済み'
-      } else if (status === 'APPROVED') {
-        return '承認済み'
-      } else if (status === 'REJECTED') {
-        return '却下'
-      }
-      return '未申請'
+      return STATUS_DISPLAY_NAMES[status] || STATUS_DISPLAY_NAMES.NOT_SUBMITTED
     },
     
-    // 申請取消ボタンのラベルを取得
+    // 申請取消ボタンのラベルを取得（共通定数を使用）
     getCancelButtonLabel(applicationType) {
       const status = this.applicationStatuses[applicationType]
-      if (status === 'PENDING') {
-        return '申請取消'
-      } else if (status === 'APPROVED') {
-        return '承認取消'
+      return CANCEL_BUTTON_LABELS[status] || CANCEL_BUTTON_LABELS.default
+    },
+    
+    // 承認履歴を取得（共通メソッド）
+    getApprovalHistory(applicationType) {
+      const info = this.applicationInfo[applicationType]
+      return info && info.approvalHistory ? info.approvalHistory : []
+    },
+    
+    // 申請タイプをAPIタイプに変換（共通メソッド）
+    getApiType(applicationType) {
+      const apiTypeMap = {
+        dailyConfirmation: 'DAILY_CONFIRMATION',
+        vacation: 'VACATION',
+        holidayWork: 'HOLIDAY_WORK',
+        overtime: 'OVERTIME',
+        earlyWork: 'EARLY_WORK',
+        transfer: 'TRANSFER'
       }
-      return '取消'
+      return apiTypeMap[applicationType]
+    },
+    
+    // 申請送信メソッドを取得（共通メソッド）
+    getSubmitMethod(applicationType) {
+      const methodMap = {
+        dailyConfirmation: this.submitDailyConfirmation,
+        vacation: this.submitVacationApplication,
+        holidayWork: this.submitHolidayWorkApplication,
+        overtime: this.submitOvertimeApplication,
+        earlyWork: this.submitEarlyWorkApplication,
+        transfer: this.submitTransferApplication
+      }
+      return methodMap[applicationType]
+    },
+    
+    // 申請取消メソッドを取得（共通メソッド）
+    getCancelMethod(applicationType) {
+      return () => this.cancelApplication(applicationType)
+    },
+    
+    // 日付範囲のバリデーション（共通メソッド）
+    validateDateRange(startDate, endDate, startLabel = '開始日', endLabel = '終了日') {
+      if (!startDate) {
+        this.showError(`${startLabel}を入力してください。`)
+        return false
+      }
+      if (!endDate) {
+        this.showError(`${endLabel}を入力してください。`)
+        return false
+      }
+      if (startDate > endDate) {
+        this.showError(`${startLabel}は${endLabel}より前の日付を入力してください。`)
+        return false
+      }
+      return true
+    },
+    
+    // 申請送信の共通処理（API呼び出しとエラーハンドリング）
+    async submitApplicationCommon(config) {
+      const {
+        url,
+        endpoint, // エンドポイント（優先的に使用）
+        body,
+        errorMessage,
+        successCallback,
+        errorLogMessage
+      } = config
+      
+      this.loading = true
+      try {
+        // エンドポイントを抽出（endpointが指定されていない場合はURLから抽出）
+        const apiEndpoint = endpoint || (url ? url.replace(/^https?:\/\/[^\/]+/, '').replace(/^\/api/, '') : '')
+        const data = await apiRequest(apiEndpoint, {
+          method: 'POST',
+          body: JSON.stringify(body)
+        })
+        
+        if (data.success) {
+          // 成功時の追加処理があれば実行
+          if (successCallback) {
+            successCallback()
+          }
+          this.$emit('application-submitted')
+          this.closeDialog()
+        } else {
+          this.showError(data.message || errorMessage)
+        }
+      } catch (error) {
+        this.showError(errorMessage)
+      } finally {
+        this.loading = false
+      }
     },
     
     
     // 申請情報を取得
     async loadApplicationInfo(applicationType) {
       try {
-        const apiTypeMap = {
-          dailyConfirmation: 'DAILY_CONFIRMATION',
-          vacation: 'VACATION',
-          holidayWork: 'HOLIDAY_WORK',
-          overtime: 'OVERTIME',
-          earlyWork: 'EARLY_WORK',
-          transfer: 'TRANSFER'
-        }
-        
-        const apiType = apiTypeMap[applicationType]
+        const apiType = this.getApiType(applicationType)
         if (!apiType) return
         
         // 申請情報取得APIを呼び出し
@@ -1778,41 +1797,32 @@ export default {
               comment: h.COMMENT || h.comment || ''
             }))
           } else {
-            // 申請情報がない場合
-            this.applicationInfo[applicationType].applicationDate = null
-            this.applicationInfo[applicationType].status = 'NOT_SUBMITTED'
-            this.applicationInfo[applicationType].approvalHistory = []
-            this.applicationIds[applicationType] = null
+            // 申請情報がない場合（共通メソッドを使用）
+            this.resetApplicationInfo(applicationType)
           }
         }
       } catch (error) {
-        console.error(`${applicationType}申請情報取得エラー:`, error)
-        this.applicationInfo[applicationType].applicationDate = null
-        this.applicationInfo[applicationType].status = 'NOT_SUBMITTED'
-        this.applicationInfo[applicationType].approvalHistory = []
+        // エラー時も共通メソッドを使用
+        this.resetApplicationInfo(applicationType)
       }
+    },
+    
+    // 申請情報をリセット（共通メソッド）
+    resetApplicationInfo(applicationType) {
+      this.applicationInfo[applicationType].applicationDate = null
+      this.applicationInfo[applicationType].status = 'NOT_SUBMITTED'
+      this.applicationInfo[applicationType].approvalHistory = []
+      this.applicationIds[applicationType] = null
     },
     
     // 日時をフォーマット（YYYY/MM/DD HH:MM形式）
     formatDateTime(dateTimeString) {
-      if (!dateTimeString) return '---'
-      const date = new Date(dateTimeString)
-      const year = date.getFullYear()
-      const month = String(date.getMonth() + 1).padStart(2, '0')
-      const day = String(date.getDate()).padStart(2, '0')
-      const hours = String(date.getHours()).padStart(2, '0')
-      const minutes = String(date.getMinutes()).padStart(2, '0')
-      return `${year}/${month}/${day} ${hours}:${minutes}`
+      return formatDateTime(dateTimeString)
     },
     
     // 日付をフォーマット（YYYY/MM/DD形式）
     formatDate(dateString) {
-      if (!dateString) return '---'
-      const date = new Date(dateString)
-      const year = date.getFullYear()
-      const month = String(date.getMonth() + 1).padStart(2, '0')
-      const day = String(date.getDate()).padStart(2, '0')
-      return `${year}/${month}/${day}`
+      return formatDate(dateString)
     },
     
     // 休暇種類の表示名を取得
@@ -1832,25 +1842,26 @@ export default {
         return
       }
       
-      // 非活性の場合は説明文のみ更新し、タブは開かない
-      if (applicationType === 'dailyConfirmation' && this.isDailyConfirmationDisabled) {
-        return
-      }
-      if (applicationType === 'vacation' && this.isVacationDisabled) {
-        return
-      }
-      if (applicationType === 'holidayWork' && this.isHolidayWorkDisabled) {
-        return
-      }
-      if (applicationType === 'overtime' && this.isOvertimeDisabled) {
-        return
-      }
-      if (applicationType === 'earlyWork' && this.isEarlyWorkDisabled) {
+      // 非活性の場合は説明文のみ更新し、タブは開かない（共通処理）
+      if (this.isApplicationDisabled(applicationType)) {
         return
       }
       
       // 非活性でない場合のみタブを開く
       this.openApplicationTab(applicationType)
+    },
+    
+    // 申請タイプが非活性かどうかを判定（共通メソッド）
+    isApplicationDisabled(applicationType) {
+      const disabledMap = {
+        dailyConfirmation: this.isDailyConfirmationDisabled,
+        vacation: this.isVacationDisabled,
+        holidayWork: this.isHolidayWorkDisabled,
+        overtime: this.isOvertimeDisabled,
+        earlyWork: this.isEarlyWorkDisabled,
+        transfer: false // 振替申請は常に有効
+      }
+      return disabledMap[applicationType] || false
     },
     
     async openApplicationTab(applicationType) {
@@ -1867,53 +1878,34 @@ export default {
         await this.loadApplicationStatus(applicationType)
       }
       
-      // 日次確定タブを開いた場合、勤怠データを取得
-      if (applicationType === 'dailyConfirmation') {
-        await this.loadDailyAttendanceData()
-        // 申請中または承認済みの場合、申請情報を取得
-        if (this.isPendingOrApproved('dailyConfirmation')) {
-          await this.loadApplicationInfo('dailyConfirmation')
+      // タブを開いた際の追加データ取得処理（共通マップを使用）
+      const tabOpenDataLoadMap = {
+        dailyConfirmation: this.loadDailyAttendanceData,
+        holidayWork: this.loadMonthlyOvertime
+      }
+      const dataLoadMethod = tabOpenDataLoadMap[applicationType]
+      if (dataLoadMethod) {
+        await dataLoadMethod()
+      }
+      
+      // 申請中または承認済みの場合、申請情報を取得（共通処理）
+      if (this.isPendingOrApproved(applicationType)) {
+        await this.loadApplicationInfo(applicationType)
+      }
+      
+      // 申請中または承認済みの場合、申請データを読み込む（共通処理）
+      if (this.isPendingOrApproved(applicationType)) {
+        const loadApplicationDataMap = {
+          vacation: this.loadVacationApplicationData,
+          holidayWork: this.loadHolidayWorkApplicationData,
+          overtime: this.loadOvertimeApplicationData,
+          earlyWork: this.loadEarlyWorkApplicationData,
+          transfer: this.loadTransferApplicationData
         }
-      }
-      
-      // その他の申請タイプで申請中または承認済みの場合、申請情報を取得
-      if (applicationType === 'vacation' && this.isPendingOrApproved('vacation')) {
-        await this.loadApplicationInfo('vacation')
-      }
-      if (applicationType === 'holidayWork' && this.isPendingOrApproved('holidayWork')) {
-        await this.loadApplicationInfo('holidayWork')
-      }
-      if (applicationType === 'overtime' && this.isPendingOrApproved('overtime')) {
-        await this.loadApplicationInfo('overtime')
-      }
-      if (applicationType === 'earlyWork' && this.isPendingOrApproved('earlyWork')) {
-        await this.loadApplicationInfo('earlyWork')
-      }
-      if (applicationType === 'transfer' && this.isPendingOrApproved('transfer')) {
-        await this.loadApplicationInfo('transfer')
-      }
-      
-      // 休日出勤申請タブを開いた場合、当月時間外残業を取得
-      if (applicationType === 'holidayWork') {
-        await this.loadMonthlyOvertime()
-        // 申請中または承認済みの場合、申請データを読み込む
-        if (this.isPendingOrApproved('holidayWork')) {
-          await this.loadHolidayWorkApplicationData()
+        const loadMethod = loadApplicationDataMap[applicationType]
+        if (loadMethod) {
+          await loadMethod()
         }
-      }
-      
-      // その他の申請タイプで申請中または承認済みの場合、申請データを読み込む
-      if (applicationType === 'vacation' && this.isPendingOrApproved('vacation')) {
-        await this.loadVacationApplicationData()
-      }
-      if (applicationType === 'overtime' && this.isPendingOrApproved('overtime')) {
-        await this.loadOvertimeApplicationData()
-      }
-      if (applicationType === 'earlyWork' && this.isPendingOrApproved('earlyWork')) {
-        await this.loadEarlyWorkApplicationData()
-      }
-      if (applicationType === 'transfer' && this.isPendingOrApproved('transfer')) {
-        await this.loadTransferApplicationData()
       }
     },
     
@@ -1928,16 +1920,7 @@ export default {
       }
       
       // 申請タイプをAPIタイプに変換
-      const apiTypeMap = {
-        dailyConfirmation: 'DAILY_CONFIRMATION',
-        vacation: 'VACATION',
-        holidayWork: 'HOLIDAY_WORK',
-        overtime: 'OVERTIME',
-        earlyWork: 'EARLY_WORK',
-        transfer: 'TRANSFER'
-      }
-      
-      const apiType = apiTypeMap[applicationType]
+      const apiType = this.getApiType(applicationType)
       if (!apiType) return
       
       try {
@@ -1947,7 +1930,6 @@ export default {
           this.applicationIds[applicationType] = response.applicationId || null
         }
       } catch (error) {
-        console.error(`${applicationType}申請状態取得エラー:`, error)
         this.applicationStatuses[applicationType] = 'NOT_SUBMITTED'
         this.applicationIds[applicationType] = null
       }
@@ -1962,7 +1944,7 @@ export default {
           // TODO: 申請データ取得APIを実装して、申請時の値をフォームに設定
         }
       } catch (error) {
-        console.error('休日出勤申請データ取得エラー:', error)
+        // エラー時は何もしない
       }
     },
     
@@ -1995,7 +1977,7 @@ export default {
           }
         }
       } catch (error) {
-        console.error('休暇申請データ取得エラー:', error)
+        // エラー時は何もしない
       }
     },
     
@@ -2058,10 +2040,7 @@ export default {
       // チェック仕様No.1に基づくバリデーション
       try {
         // 1. 対象日付の勤怠記録が存在するかチェック
-        const attendanceResponse = await fetch(
-          `http://localhost:3000/api/attendance/daily?employeeId=${this.employeeId}&workDate=${this.targetDate}`
-        )
-        const attendanceData = await attendanceResponse.json()
+        const attendanceData = await getDailyAttendance(this.employeeId, this.targetDate)
         
         if (!attendanceData.success || !attendanceData.attendance) {
           this.dailyConfirmationError = '対象日の勤怠記録が存在しません。'
@@ -2121,55 +2100,39 @@ export default {
         
         // 日次確定申請を送信
         this.loading = true
-        const response = await fetch('http://localhost:3000/api/attendance/daily-confirmation', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            workDate: this.targetDate
-          })
-        })
-        
-        const data = await response.json()
-        
-        if (data.success) {
-          this.$emit('application-submitted')
-          this.closeDialog()
-        } else {
+        try {
+          const data = await submitDailyConfirmation(this.employeeId, this.targetDate)
+          
+          if (data.success) {
+            this.$emit('application-submitted')
+            this.closeDialog()
+          } else {
+            // エラーメッセージをフォーム上に表示（赤文字）
+            this.dailyConfirmationError = data.message || '日次確定申請に失敗しました'
+          }
+        } catch (error) {
           // エラーメッセージをフォーム上に表示（赤文字）
-          this.dailyConfirmationError = data.message || '日次確定申請に失敗しました'
+          this.dailyConfirmationError = '日次確定申請中にエラーが発生しました'
+        } finally {
+          this.loading = false
         }
       } catch (error) {
-        console.error('日次確定申請エラー:', error)
-        // エラーメッセージをフォーム上に表示（赤文字）
-        this.dailyConfirmationError = '日次確定申請中にエラーが発生しました'
-      } finally {
-        this.loading = false
+        this.dailyConfirmationError = 'バリデーション中にエラーが発生しました'
       }
     },
     
     async saveRemark() {
       try {
-        const response = await fetch('http://localhost:3000/api/attendance/record', {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            workDate: this.targetDate,
-            remarkText: this.dailyConfirmationForm.remark
-          })
+        const data = await saveRemark({
+          employeeId: this.employeeId,
+          workDate: this.targetDate,
+          remarkText: this.dailyConfirmationForm.remark
         })
-        
-        const data = await response.json()
         if (!data.success) {
-          console.error('備考保存エラー:', data.message)
+          // エラー時は何もしない
         }
       } catch (error) {
-        console.error('備考保存エラー:', error)
+        // エラー時は何もしない
       }
     },
     
@@ -2191,37 +2154,19 @@ export default {
         }
       }
       
-      this.loading = true
-      try {
-        const response = await fetch('http://localhost:3000/api/application/vacation/apply', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            vacationTypeCode: this.vacationForm.vacationType,
-            startDate: this.vacationForm.startDate,
-            endDate: this.vacationForm.endDate,
-            reason: this.vacationForm.reason,
-            contact: this.vacationForm.contact
-          })
-        })
-        
-        const data = await response.json()
-        
-        if (data.success) {
-          this.$emit('application-submitted')
-          this.closeDialog()
-        } else {
-          this.showError(data.message || '休暇申請に失敗しました')
-        }
-      } catch (error) {
-        console.error('休暇申請エラー:', error)
-        this.showError('休暇申請中にエラーが発生しました')
-      } finally {
-        this.loading = false
-      }
+      await this.submitApplicationCommon({
+        endpoint: '/application/vacation/apply',
+        body: {
+          employeeId: this.employeeId,
+          vacationTypeCode: this.vacationForm.vacationType,
+          startDate: this.vacationForm.startDate,
+          endDate: this.vacationForm.endDate,
+          reason: this.vacationForm.reason,
+          contact: this.vacationForm.contact
+        },
+        errorMessage: '休暇申請に失敗しました',
+        errorLogMessage: '休暇申請エラー:'
+      })
     },
     
     async loadMonthlyOvertime() {
@@ -2230,10 +2175,7 @@ export default {
         const year = today.getFullYear()
         const month = String(today.getMonth() + 1).padStart(2, '0')
         
-        const response = await fetch(
-          `http://localhost:3000/api/attendance/monthly-overtime?employeeId=${this.employeeId}&year=${year}&month=${month}`
-        )
-        const data = await response.json()
+        const data = await getMonthlyOvertime(this.employeeId, String(year), month)
         
         if (data.success) {
           this.monthlyOvertime = data.overtimeHours || 0
@@ -2241,7 +2183,6 @@ export default {
           this.monthlyOvertime = 0
         }
       } catch (error) {
-        console.error('当月時間外残業取得エラー:', error)
         this.monthlyOvertime = 0
       }
     },
@@ -2337,53 +2278,28 @@ export default {
         return
       }
       
-      this.loading = true
-      try {
-        const response = await fetch('http://localhost:3000/api/application/holiday-work', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            workDate: this.targetDate,
-            startTime: this.holidayWorkForm.startTime,
-            endTime: this.holidayWorkForm.endTime,
-            breakHours: this.holidayWorkForm.breakHours,
-            reason: this.holidayWorkForm.reason
-          })
-        })
-        
-        const data = await response.json()
-        
-        if (data.success) {
+      await this.submitApplicationCommon({
+        endpoint: '/application/holiday-work',
+        body: {
+          employeeId: this.employeeId,
+          workDate: this.targetDate,
+          startTime: this.holidayWorkForm.startTime,
+          endTime: this.holidayWorkForm.endTime,
+          breakHours: this.holidayWorkForm.breakHours,
+          reason: this.holidayWorkForm.reason
+        },
+        errorMessage: '休日出勤申請に失敗しました',
+        errorLogMessage: '休日出勤申請エラー:',
+        successCallback: () => {
           // 休日出勤申請状態を更新
           this.hasHolidayWorkApplication = true
-          this.$emit('application-submitted')
-          this.closeDialog()
-        } else {
-          this.showError(data.message || '休日出勤申請に失敗しました')
         }
-      } catch (error) {
-        console.error('休日出勤申請エラー:', error)
-        this.showError('休日出勤申請中にエラーが発生しました')
-      } finally {
-        this.loading = false
-      }
+      })
     },
     
     async submitOvertimeApplication() {
       // バリデーション
-      if (!this.overtimeForm.startDate) {
-        this.showError('開始日を入力してください。')
-        return
-      }
-      if (!this.overtimeForm.endDate) {
-        this.showError('終了日を入力してください。')
-        return
-      }
-      if (this.overtimeForm.startDate > this.overtimeForm.endDate) {
-        this.showError('開始日は終了日より前の日付を入力してください。')
+      if (!this.validateDateRange(this.overtimeForm.startDate, this.overtimeForm.endDate)) {
         return
       }
       if (!this.overtimeForm.hours || this.overtimeForm.hours <= 0) {
@@ -2391,82 +2307,37 @@ export default {
         return
       }
       
-      this.loading = true
-      try {
-        const response = await fetch('http://localhost:3000/api/application/overtime', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            startDate: this.overtimeForm.startDate,
-            endDate: this.overtimeForm.endDate,
-            hours: this.overtimeForm.hours,
-            reason: this.overtimeForm.reason
-          })
-        })
-        
-        const data = await response.json()
-        
-        if (data.success) {
-          this.$emit('application-submitted')
-          this.closeDialog()
-        } else {
-          this.showError(data.message || '残業申請に失敗しました')
-        }
-      } catch (error) {
-        console.error('残業申請エラー:', error)
-        this.showError('残業申請中にエラーが発生しました')
-      } finally {
-        this.loading = false
-      }
+      await this.submitApplicationCommon({
+        endpoint: '/application/overtime',
+        body: {
+          employeeId: this.employeeId,
+          startDate: this.overtimeForm.startDate,
+          endDate: this.overtimeForm.endDate,
+          hours: this.overtimeForm.hours,
+          reason: this.overtimeForm.reason
+        },
+        errorMessage: '残業申請に失敗しました',
+        errorLogMessage: '残業申請エラー:'
+      })
     },
     
     async submitEarlyWorkApplication() {
       // バリデーション
-      if (!this.earlyWorkForm.startDate) {
-        this.showError('開始日を入力してください。')
-        return
-      }
-      if (!this.earlyWorkForm.endDate) {
-        this.showError('終了日を入力してください。')
-        return
-      }
-      if (this.earlyWorkForm.startDate > this.earlyWorkForm.endDate) {
-        this.showError('開始日は終了日より前の日付を入力してください。')
+      if (!this.validateDateRange(this.earlyWorkForm.startDate, this.earlyWorkForm.endDate)) {
         return
       }
       
-      this.loading = true
-      try {
-        const response = await fetch('http://localhost:3000/api/application/early-work', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            startDate: this.earlyWorkForm.startDate,
-            endDate: this.earlyWorkForm.endDate,
-            reason: this.earlyWorkForm.reason
-          })
-        })
-        
-        const data = await response.json()
-        
-        if (data.success) {
-          this.$emit('application-submitted')
-          this.closeDialog()
-        } else {
-          this.showError(data.message || '早朝勤務申請に失敗しました')
-        }
-      } catch (error) {
-        console.error('早朝勤務申請エラー:', error)
-        this.showError('早朝勤務申請中にエラーが発生しました')
-      } finally {
-        this.loading = false
-      }
+      await this.submitApplicationCommon({
+        endpoint: '/application/early-work',
+        body: {
+          employeeId: this.employeeId,
+          startDate: this.earlyWorkForm.startDate,
+          endDate: this.earlyWorkForm.endDate,
+          reason: this.earlyWorkForm.reason
+        },
+        errorMessage: '早朝勤務申請に失敗しました',
+        errorLogMessage: '早朝勤務申請エラー:'
+      })
     },
     
     async submitTransferApplication() {
@@ -2486,35 +2357,17 @@ export default {
         return
       }
       
-      this.loading = true
-      try {
-        const response = await fetch('http://localhost:3000/api/application/transfer', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            employeeId: this.employeeId,
-            fromDate: this.transferForm.fromDate,
-            toDate: this.transferForm.toDate,
-            reason: this.transferForm.reason
-          })
-        })
-        
-        const data = await response.json()
-        
-        if (data.success) {
-          this.$emit('application-submitted')
-          this.closeDialog()
-        } else {
-          this.showError(data.message || '振替申請に失敗しました')
-        }
-      } catch (error) {
-        console.error('振替申請エラー:', error)
-        this.showError('振替申請中にエラーが発生しました')
-      } finally {
-        this.loading = false
-      }
+      await this.submitApplicationCommon({
+        endpoint: '/application/transfer',
+        body: {
+          employeeId: this.employeeId,
+          fromDate: this.transferForm.fromDate,
+          toDate: this.transferForm.toDate,
+          reason: this.transferForm.reason
+        },
+        errorMessage: '振替申請に失敗しました',
+        errorLogMessage: '振替申請エラー:'
+      })
     },
     
     showError(message) {
@@ -2531,88 +2384,43 @@ export default {
       this.$emit('close')
     },
     
-    // 日次確定申請取消
+    // 申請取消（共通メソッド）
+    async cancelApplication(applicationType) {
+      // 申請情報を取得（applicationIdを取得するため）
+      await this.loadApplicationInfo(applicationType)
+      
+      // applicationIdが取得できていない場合は、申請状態を取得
+      if (!this.applicationIds[applicationType]) {
+        await this.loadApplicationStatus(applicationType)
+      }
+      
+      // 直接申請取消を実行
+      await this.executeCancelApplication(applicationType)
+    },
+    
+    // 各申請タイプごとの取消メソッド（後方互換性のため残す）
     async cancelDailyConfirmation() {
-      // 申請情報を取得（applicationIdを取得するため）
-      await this.loadApplicationInfo('dailyConfirmation')
-      
-      // applicationIdが取得できていない場合は、申請状態を取得
-      if (!this.applicationIds['dailyConfirmation']) {
-        await this.loadApplicationStatus('dailyConfirmation')
-      }
-      
-      // 直接申請取消を実行
-      await this.executeCancelApplication('dailyConfirmation')
+      return this.cancelApplication('dailyConfirmation')
     },
     
-    // 休暇申請取消
     async cancelVacationApplication() {
-      // 申請情報を取得（applicationIdを取得するため）
-      await this.loadApplicationInfo('vacation')
-      
-      // applicationIdが取得できていない場合は、申請状態を取得
-      if (!this.applicationIds['vacation']) {
-        await this.loadApplicationStatus('vacation')
-      }
-      
-      // 直接申請取消を実行
-      await this.executeCancelApplication('vacation')
+      return this.cancelApplication('vacation')
     },
     
-    // 休日出勤申請取消
     async cancelHolidayWorkApplication() {
-      // 申請情報を取得（applicationIdを取得するため）
-      await this.loadApplicationInfo('holidayWork')
-      
-      // applicationIdが取得できていない場合は、申請状態を取得
-      if (!this.applicationIds['holidayWork']) {
-        await this.loadApplicationStatus('holidayWork')
-      }
-      
-      // 直接申請取消を実行
-      await this.executeCancelApplication('holidayWork')
+      return this.cancelApplication('holidayWork')
     },
     
-    // 残業申請取消
     async cancelOvertimeApplication() {
-      // 申請情報を取得（applicationIdを取得するため）
-      await this.loadApplicationInfo('overtime')
-      
-      // applicationIdが取得できていない場合は、申請状態を取得
-      if (!this.applicationIds['overtime']) {
-        await this.loadApplicationStatus('overtime')
-      }
-      
-      // 直接申請取消を実行
-      await this.executeCancelApplication('overtime')
+      return this.cancelApplication('overtime')
     },
     
-    // 早朝勤務申請取消
     async cancelEarlyWorkApplication() {
-      // 申請情報を取得（applicationIdを取得するため）
-      await this.loadApplicationInfo('earlyWork')
-      
-      // applicationIdが取得できていない場合は、申請状態を取得
-      if (!this.applicationIds['earlyWork']) {
-        await this.loadApplicationStatus('earlyWork')
-      }
-      
-      // 直接申請取消を実行
-      await this.executeCancelApplication('earlyWork')
+      return this.cancelApplication('earlyWork')
     },
     
-    // 振替申請取消
     async cancelTransferApplication() {
-      // 申請情報を取得（applicationIdを取得するため）
-      await this.loadApplicationInfo('transfer')
-      
-      // applicationIdが取得できていない場合は、申請状態を取得
-      if (!this.applicationIds['transfer']) {
-        await this.loadApplicationStatus('transfer')
-      }
-      
-      // 直接申請取消を実行
-      await this.executeCancelApplication('transfer')
+      return this.cancelApplication('transfer')
     },
     
     // 申請取消を実行
@@ -2626,33 +2434,38 @@ export default {
       
       this.loading = true
       try {
-        const apiTypeMap = {
-          dailyConfirmation: 'DAILY_CONFIRMATION',
-          vacation: 'VACATION',
-          holidayWork: 'HOLIDAY_WORK',
-          overtime: 'OVERTIME',
-          earlyWork: 'EARLY_WORK',
-          transfer: 'TRANSFER'
-        }
+        const apiType = this.getApiType(applicationType)
+        if (!apiType) return
         
-        const apiType = apiTypeMap[applicationType]
         const applicationId = this.applicationIds[applicationType]
+        
+        // 日次確定の場合はtargetDateを渡す（共通マップを使用）
+        const cancelDateMap = {
+          dailyConfirmation: this.targetDate
+        }
+        const cancelDate = cancelDateMap[applicationType] || null
         
         const response = await cancelApplication(
           this.employeeId,
           apiType,
           applicationId,
-          applicationType === 'dailyConfirmation' ? this.targetDate : null
+          cancelDate
         )
         
         if (response.success) {
-          // 休日出勤申請を取り消した場合、代休取得可能日数を再計算
-          if (applicationType === 'holidayWork') {
-            await this.loadHolidayWorkStatus()
-            // 代休が選択されている場合、代休取得可能日数を再計算
-            if (this.vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY') {
-              await this.loadCompensatoryLeaveBalance()
+          // 申請取消成功後の追加処理（共通マップを使用）
+          const cancelSuccessCallbackMap = {
+            holidayWork: async () => {
+              await this.loadHolidayWorkStatus()
+              // 代休が選択されている場合、代休取得可能日数を再計算
+              if (this.vacationForm.vacationType === 'SUBSTITUTE_HOLIDAY') {
+                await this.loadCompensatoryLeaveBalance()
+              }
             }
+          }
+          const successCallback = cancelSuccessCallbackMap[applicationType]
+          if (successCallback) {
+            await successCallback()
           }
           this.$emit('application-submitted')
           this.closeDialog()
@@ -2660,7 +2473,6 @@ export default {
           this.showError(response.message || '申請取消に失敗しました')
         }
       } catch (error) {
-        console.error('申請取消エラー:', error)
         this.showError(error.message || '申請取消中にエラーが発生しました')
       } finally {
         this.loading = false

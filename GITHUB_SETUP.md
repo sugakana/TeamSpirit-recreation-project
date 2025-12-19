@@ -112,3 +112,5 @@ git pull origin main --allow-unrelated-histories
 # その後、再度プッシュ
 git push origin main
 ```
+
+

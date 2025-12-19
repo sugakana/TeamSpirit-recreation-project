@@ -11,9 +11,9 @@ const {
   getScheduledWorkDays,
   normalizeDate,
   formatHours,
-  formatOverUnder,
-  calculateMinutes
+  formatOverUnder
 } = require('../utils/dateUtils');
+const { calculateBasicMonthlySummary } = require('./monthlySummaryCalculationService');
 const HolidayJp = require('@holiday-jp/holiday_jp');
 const db = require('../config/database');
 
@@ -223,47 +223,17 @@ const getMonthlySummary = async (employeeId, yearMonth) => {
   }
   
   // 3. 月次サマリーデータ取得（計算）
-  const actualWorkDays = attendanceRows.filter(row => 
-    row.CLOCK_IN_TIME && row.CLOCK_OUT_TIME
-  ).length;
+  // 基本サマリーを共通サービスで計算
+  const basicSummary = await calculateBasicMonthlySummary(year, month, endDate, attendanceRows);
+  const cutoffDate = basicSummary.cutoffDate;
   
   // 法定休日出勤日数、所定休日出勤日数は簡易的に計算
   // （実際の実装では、祝日マスタやカレンダーマスタを参照する必要がある）
   const legalHolidayWorkDays = 0; // TODO: 法定休日出勤日数を計算
   const scheduledHolidayWorkDays = 0; // TODO: 所定休日出勤日数を計算
   
-  // 所定労働時間（1日7.5時間 × 所定出勤日数）
-  const scheduledWorkHours = scheduledWorkDays * 7.5;
-  
-  // 総労働時間（丸め誤差を避けるため、各日の出退勤時刻と休憩時間から直接計算）
-  let totalWorkMinutes = 0;
-  for (const row of attendanceRows) {
-    if (row.CLOCK_IN_TIME && row.CLOCK_OUT_TIME) {
-      const totalMinutes = calculateMinutes(row.CLOCK_IN_TIME, row.CLOCK_OUT_TIME);
-      const breakTimes = await breakTimeModel.getBreakTimes(row.ATTENDANCE_ID);
-      const officialOutings = await breakTimeModel.getOfficialOutings(row.ATTENDANCE_ID);
-      
-      let breakMinutes = 0;
-      for (const bt of breakTimes) {
-        breakMinutes += bt.BREAK_DURATION_MINUTES || 0;
-      }
-      for (const outing of officialOutings) {
-        breakMinutes += outing.OUTING_DURATION_MINUTES || 0;
-      }
-      
-      totalWorkMinutes += totalMinutes - breakMinutes;
-    }
-  }
-  const totalWorkHours = totalWorkMinutes / 60;
-  
-  // 総労働時間-法定休日労働
-  const totalWorkHoursExcludingLegalHoliday = totalWorkHours - 
-    attendanceRows.reduce((sum, row) => sum + (parseFloat(row.HOLIDAY_WORK_HOURS) || 0), 0);
-  
-  // 過不足時間
-  // 計算方法: 前日までの実作業時間 - (前日までの想定出勤日数 * 7:30)
-  // 注意: このAPIでは月全体の過不足時間を計算（cutoffDateの考慮はattendanceService.jsで実装）
-  const overUnderHours = totalWorkHours - scheduledWorkHours;
+  // 総労働時間-法定休日労働（cutoffDateまで）
+  const totalWorkHoursExcludingLegalHoliday = basicSummary.totalWorkHours - basicSummary.legalHolidayWorkHours;
   
   // 当月度の超過時間、安全配慮上の超過時間は簡易的に0とする
   const currentMonthOvertime = 0;
@@ -277,10 +247,14 @@ const getMonthlySummary = async (employeeId, yearMonth) => {
   
   // 法定時間内残業・法定時間外残業
   // 日次の計算結果を集計（浮動小数点数の誤差を避けるため分単位で集計）
+  // cutoffDateまでのデータのみを集計
   let totalWithinLegalOvertimeMinutes = 0;
   let totalOverLegalOvertimeMinutes = 0;
   
   for (const day of dailyData) {
+    if (day.workDate > cutoffDate) {
+      continue;
+    }
     if (day.withinLegalOvertimeMinutes) {
       totalWithinLegalOvertimeMinutes += day.withinLegalOvertimeMinutes;
     }
@@ -293,15 +267,19 @@ const getMonthlySummary = async (employeeId, yearMonth) => {
   const withinLegalOvertime = totalWithinLegalOvertimeMinutes / 60;
   const overLegalOvertime = totalOverLegalOvertimeMinutes / 60;
   
-  // 法定休日労働時間
-  const legalHolidayWorkHours = attendanceRows.reduce((sum, row) => 
-    sum + (parseFloat(row.HOLIDAY_WORK_HOURS) || 0), 0
-  );
+  // 法定休日労働時間（cutoffDateまで）
+  const legalHolidayWorkHours = attendanceRows
+    .filter(row => normalizeDate(row.WORK_DATE) <= cutoffDate)
+    .reduce((sum, row) => 
+      sum + (parseFloat(row.HOLIDAY_WORK_HOURS) || 0), 0
+    );
   
-  // 深夜労働時間
-  const nightWorkHours = attendanceRows.reduce((sum, row) => 
-    sum + (parseFloat(row.NIGHT_WORK_HOURS) || 0), 0
-  );
+  // 深夜労働時間（cutoffDateまで）
+  const nightWorkHours = attendanceRows
+    .filter(row => normalizeDate(row.WORK_DATE) <= cutoffDate)
+    .reduce((sum, row) => 
+      sum + (parseFloat(row.NIGHT_WORK_HOURS) || 0), 0
+    );
   
   // 45時間を超える時間外労働、60時間を超える時間外労働は簡易的に0とする
   const overtimeOver45Hours = 0;
@@ -315,30 +293,34 @@ const getMonthlySummary = async (employeeId, yearMonth) => {
   const privateOutingCount = 0;
   const privateOutingHours = 0;
   
-  // 休憩時間合計
+  // 休憩時間合計（cutoffDateまで）
   let totalBreakHours = 0;
   for (const attendance of attendanceRows) {
+    const workDateStr = normalizeDate(attendance.WORK_DATE);
+    if (workDateStr > cutoffDate) {
+      continue;
+    }
     const breakTimes = await breakTimeModel.getBreakTimes(attendance.ATTENDANCE_ID);
     const breakMinutes = breakTimes.reduce((sum, bt) => sum + (bt.BREAK_DURATION_MINUTES || 0), 0);
     totalBreakHours += breakMinutes / 60;
   }
   
   const monthlySummary = {
-    scheduledWorkDays,
-    actualWorkDays,
+    scheduledWorkDays: basicSummary.scheduledWorkDays,
+    actualWorkDays: basicSummary.actualWorkDays,
     legalHolidayWorkDays,
     scheduledHolidayWorkDays,
-    scheduledWorkHours,
-    totalWorkHours,
+    scheduledWorkHours: basicSummary.scheduledWorkHours,
+    totalWorkHours: basicSummary.totalWorkHours,
     totalWorkHoursExcludingLegalHoliday,
-    overUnderHours,
+    overUnderHours: basicSummary.overUnderHours,
     currentMonthOvertime,
     safetyOvertime,
     legalWorkHours,
     actualWorkHoursExcludingLegalHoliday,
-    withinLegalOvertime,
-    overLegalOvertime,
-    legalHolidayWorkHours,
+    withinLegalOvertime: basicSummary.withinLegalOvertime,
+    overLegalOvertime: basicSummary.overLegalOvertime,
+    legalHolidayWorkHours: basicSummary.legalHolidayWorkHours,
     nightWorkHours,
     overtimeOver45Hours,
     overtimeOver60Hours,
@@ -348,7 +330,8 @@ const getMonthlySummary = async (employeeId, yearMonth) => {
     earlyLeaveHours,
     privateOutingCount,
     privateOutingHours,
-    totalBreakHours
+    totalBreakHours,
+    cutoffDate: basicSummary.cutoffDateFormatted
   };
   
   // 4. 休暇情報取得（月次サマリー用の集計）
